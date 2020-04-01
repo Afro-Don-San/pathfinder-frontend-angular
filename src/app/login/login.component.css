@@ -51,14 +51,14 @@
 }
 
 .bgimage {
-  background: url(../../assets/img/rsz_clint-adair-68588.jpg) no-repeat center center fixed;
+  background: url(../../assets/img/bg-fp.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .bgcolor {
-  background-color: rgba(45,105,165,0.8);
+  background-color: rgba(77, 113, 148, 0.8);
 }
 
 
