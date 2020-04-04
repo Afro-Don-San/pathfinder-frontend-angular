@@ -7,8 +7,7 @@ export class HttpClientService {
   public DHISAPIURL = '../../../dhis/api/';
   public OPENSRPAPIURL = '../../../opensrp/';
   public OPENMRSURL = '../../../openmrs/ws/rest/v1/';
-  public DJANGOURL = 'http://127.0.0.1:8000/rest-auth/';
-
+  
   constructor(private http: HttpClient, public snackBar: MatSnackBar) {
   }
 
@@ -17,9 +16,9 @@ export class HttpClientService {
     const password = credentials.password;
     const token = btoa(username + ':' + password);
     // const token = '58da5b0c26192b28525fa86dde9c4605275bee11';
-    localStorage.setItem('smartpos-web-token', token);
+    localStorage.setItem('htmr-web-token', token);
     if (typeof(Storage) !== undefined) {
-      window.sessionStorage.setItem('smartpos-web-token', token);
+      window.sessionStorage.setItem('htmr-web-token', token);
       console.log('ipo feeded tayari...');
     } else {
       // TODO: execute block of codes if there is not local storage support
@@ -29,7 +28,7 @@ export class HttpClientService {
   }
 
   getToken() {
-    const token = localStorage.getItem('smartpos-web-token');
+    const token = localStorage.getItem('htmr-web-token');
     console.log("generated token is here",token);
     return token;
   }
@@ -154,17 +153,6 @@ x
     return this.http.get<any>(this.OPENSRPAPIURL + url, {
       headers: new HttpHeaders()
         .set('Authorization', headers)
-    });
-  }
-
-  getDjango(url, credentials: { username, password }){
-    const username = credentials.username;
-    const password = credentials.password;
-    const headers: string = this.createDjangoAuthorizationHeader(this.getToken());
-    const data = {'username': username, 'password': password};
-    return this.http.post(this.DJANGOURL + url,data, {
-      headers: new HttpHeaders()
-      .set('Authorization', headers)
     });
   }
 

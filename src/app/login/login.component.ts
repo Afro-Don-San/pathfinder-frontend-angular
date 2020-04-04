@@ -38,31 +38,24 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.loginNotification.loading = true;
       try {
-        // const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
-        // const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
-        const djangoResult: any = await this.userService.login2(loginCredentials).toPromise();
-
-        if (djangoResult) {
-
-          console.log("Django authentication works");
+        const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
+        const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
+        if (openSrpResult) {
+          if (openSrpResult.team && openSrpResult.team.team) {
+            if (openSrpResult.team.team.location) {
+              const location = openSrpResult.team.team.location;
+              const starting_location = location ? location.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
+              localStorage.setItem('htmr-starting-location', starting_location);
+            }
+          }
         }
-
-        // if (openSrpResult) {
-        //   if (openSrpResult.team && openSrpResult.team.team) {
-        //     if (openSrpResult.team.team.location) {
-        //       const location = openSrpResult.team.team.location;
-        //       const starting_location = location ? location.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
-        //       localStorage.setItem('htmr-starting-location', starting_location);
-        //     }
-        //   }
-        // }
-        // if (openMrsResult && openMrsResult.results) {
-        //   if (openMrsResult.results.length > 0) {
-        //       const username = openMrsResult.results[0].display;
-        //       localStorage.setItem('trcmis-user', username);
-        //       this.userService.setNavigation(openMrsResult);
-        //   }
-        // }
+        if (openMrsResult && openMrsResult.results) {
+          if (openMrsResult.results.length > 0) {
+              const username = openMrsResult.results[0].display;
+              localStorage.setItem('trcmis-user', username);
+              this.userService.setNavigation(openMrsResult);
+          }
+        }
         this.loginNotification.isError = false;
         this.loginNotification.message = 'Login successful';
         this.loginNotification.attempted = true;
@@ -79,7 +72,7 @@ export class LoginComponent implements OnInit {
         this.loginNotification.attempted = true;
         this.loginNotification.loading = false;
         this.userService.loggedIn = false;
-        localStorage.removeItem('smartpos-web-token');
+        localStorage.removeItem('htmr-web-token');
         // this.router.navigate(['', 'dashboard']);
         setTimeout(() => {
           this.closeNotification();

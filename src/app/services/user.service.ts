@@ -164,11 +164,6 @@ export class UserService {
     return this.http.getOpenSRP('security/authenticate');
   }
 
-  login2(loginCredentials){
-    this.http.prepareToken(loginCredentials);
-    return this.http.getDjango('login/', loginCredentials);
-  }
-
   sessionCheck() {
 
   }
