@@ -39,8 +39,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    // const token = localStorage.getItem('htmr-web-token');
-    const token = localStorage.getItem('smartpos-web-token');
+    const token = localStorage.getItem('htmr-web-token');
     const location = localStorage.getItem('htmr-starting-location');
     this.username = localStorage.getItem('trcmis-user');
     if (!token || !location) {

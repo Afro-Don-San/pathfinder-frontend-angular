@@ -1,0 +1,15 @@
+{
+  "/opensrp/": {
+    "target": "http://172.105.87.198:8082",
+    "secure": "true",
+    "auth": "chwtwo:Pathfinder123",
+    "changeOrigin": true
+  },
+  "/openmrs/": {
+    "target": "http://172.105.87.198:8081",
+    "secure": "true",
+    "auth": "chwtwo:Pathfinder123",
+    "changeOrigin": true
+  }
+}
+

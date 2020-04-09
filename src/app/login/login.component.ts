@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     const token = localStorage.getItem('htmr-web-token');
     const location = localStorage.getItem('htmr-starting-location');
-    console.log(token);
     if (token && location) {
+      console.log("credentials previously saved");
       this.router.navigate( ['', 'dashboard']);
     }
   }
@@ -40,7 +40,12 @@ export class LoginComponent implements OnInit {
       try {
         const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
         const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
+
+        console.log(openSrpResult.team.team.location.uuid);
+        console.log(openMrsResult.results);
+
         if (openSrpResult) {
+          console.log("am in srp");
           if (openSrpResult.team && openSrpResult.team.team) {
             if (openSrpResult.team.team.location) {
               const location = openSrpResult.team.team.location;
@@ -50,6 +55,7 @@ export class LoginComponent implements OnInit {
           }
         }
         if (openMrsResult && openMrsResult.results) {
+          console.log("am in mrs");
           if (openMrsResult.results.length > 0) {
               const username = openMrsResult.results[0].display;
               localStorage.setItem('trcmis-user', username);
@@ -65,54 +71,22 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['', 'dashboard']);
         }, 2000);
       } catch (e) {
+        if (e.status == 401)
+        {
+          this.loginNotification.message = 'Login failure, wrong username or password';
+        }
         console.log(e);
         this.loginNotification.isError = true;
-        this.loginNotification.message = e.status === 0 ? e.message : e.error.error.message;
-        // this.loginNotification.message = 'Login failure, wrong username or password';
         this.loginNotification.attempted = true;
         this.loginNotification.loading = false;
         this.userService.loggedIn = false;
         localStorage.removeItem('htmr-web-token');
-        // this.router.navigate(['', 'dashboard']);
         setTimeout(() => {
           this.closeNotification();
         }, 6000);
       }
+      
     }
-    // const loginCredentials = loginForm.value;
-    //
-    // this.loginNotification.loading = true;
-    // this.userService.login(loginCredentials).subscribe((openSrpResult: any) => {
-    //
-    // });
-    // this.userService.login(loginCredentials).subscribe((results: any) => {
-    //   console.log({results});
-    //   const username = results && results.results ? results.results[0].display : '';
-    //   localStorage.setItem('trcmis-user', username);
-    //   this.loginNotification.isError = false;
-    //   this.loginNotification.message = 'Login successful';
-    //   this.loginNotification.attempted = true;
-    //   this.loginNotification.loading = false;
-    //   this.userService.loggedIn = true;
-    //   this.userService.setNavigation(results);
-    //   setTimeout(() => {
-    //     this.router.navigate(['', 'dashboard']);
-    //   }, 2000);
-    //
-    // }, (error) => {
-    //
-    //   this.loginNotification.isError = true;
-    //   this.loginNotification.message = error.status === 0 ? error.message : error.error.error.message;
-    //   // this.loginNotification.message = 'Login failure, wrong username or password';
-    //   this.loginNotification.attempted = true;
-    //   this.loginNotification.loading = false;
-    //   this.userService.loggedIn = false;
-    //   localStorage.removeItem('htmr-web-token');
-    //   // this.router.navigate(['', 'dashboard']);
-    //   setTimeout(() => {
-    //     this.closeNotification();
-    //   }, 6000);
-    // });
   }
 
   closeNotification() {

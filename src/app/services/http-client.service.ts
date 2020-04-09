@@ -5,9 +5,12 @@ declare var window;
 @Injectable({providedIn: 'root'})
 export class HttpClientService {
   public DHISAPIURL = '../../../dhis/api/';
-  public OPENSRPAPIURL = '../../../opensrp/';
-  public OPENMRSURL = '../../../openmrs/ws/rest/v1/';
-  
+  // public OPENSRPAPIURL = '../../../opensrp/';
+  //   public OPENMRSURL = '../../../openmrs/ws/rest/v1/';
+  public OPENSRPAPIURL = '/opensrp/';
+    public OPENMRSURL = '/openmrs/ws/rest/v1/';
+
+
   constructor(private http: HttpClient, public snackBar: MatSnackBar) {
   }
 
@@ -15,7 +18,7 @@ export class HttpClientService {
     const username = credentials.username;
     const password = credentials.password;
     const token = btoa(username + ':' + password);
-    // const token = '58da5b0c26192b28525fa86dde9c4605275bee11';
+
     localStorage.setItem('htmr-web-token', token);
     if (typeof(Storage) !== undefined) {
       window.sessionStorage.setItem('htmr-web-token', token);
