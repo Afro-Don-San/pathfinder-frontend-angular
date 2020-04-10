@@ -18,13 +18,23 @@
 
     <div class="main-stats-container p-3" style="margin-bottom: 25px">
       <app-summary-card
+        image="registration"
+        [value]="total_registration || 0"
+        [loading]="location_loading || label3DataLoading"
+        [route]="['report']"
+        [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
+        top_title="Clients"
+        low_title="Registered">
+      </app-summary-card>
+
+      <app-summary-card
         image="icons8-send-job-list-80"
         [route]="['report']"
         [loading]="location_loading || label1DataLoading"
         [value]="total_refferals || 0"
         [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
         top_title="Clients"
-        low_title="Refereed">
+        low_title="Referred">
       </app-summary-card>
 
       <app-summary-card
@@ -33,18 +43,8 @@
         [value]="total_ltfs || 0"
         [loading]="location_loading || label2DataLoading"
         [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
-        top_title="Lost to"
-        low_title="Followup">
-      </app-summary-card>
-
-      <app-summary-card
-        image="registration"
-        [value]="total_registration || 0"
-        [loading]="location_loading || label3DataLoading"
-        [route]="['report']"
-        [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
         top_title="Clients"
-        low_title="Registered">
+        low_title="Discontinued FP">
       </app-summary-card>
 
       <app-summary-card

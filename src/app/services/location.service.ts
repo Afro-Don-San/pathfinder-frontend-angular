@@ -17,7 +17,7 @@ export class LocationService {
 
     return Observable.create(observer => {
 
-      this.http.getOpenMRS(`location?v=full&limit=100`)
+      this.http.getOpenMRS(`location?v=full&limit=8000`)
         .subscribe((locationResponse: any) => {
 
             this.locations = locationResponse.results.map((location) => {
@@ -53,7 +53,7 @@ export class LocationService {
         observer.next(this.locations);
         observer.complete();
       } else {
-        this.http.getOpenMRS(`location?v=default&limit=100`)
+        this.http.getOpenMRS(`location?v=default&limit=8000`)
           .subscribe((locationResponse: any) => {
 
               this.locations = locationResponse.results

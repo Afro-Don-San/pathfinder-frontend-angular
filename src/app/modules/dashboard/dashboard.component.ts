@@ -97,48 +97,61 @@ export class DashboardComponent implements OnInit {
   }
 
   async getTotalRefferals(from_date, to_date, facilities) {
+    // this.label1DataLoading = true;
+    // const data = await this.http.postOpenSRP(
+    //   'reports/summary_total_referrals/json',
+    //   {from_date, to_date, facilities}
+    // ).toPromise();
+    // if (data) {
+    //   this.total_refferals = data['Total Referrals'];
+    //   this.label1DataLoading = false;
+    // }
     this.label1DataLoading = true;
-    const data = await this.http.postOpenSRP(
-      'reports/summary_total_referrals/json',
-      {from_date, to_date, facilities}
-    ).toPromise();
-    if (data) {
-      this.total_refferals = data['Total Referrals'];
-      this.label1DataLoading = false;
-    }
+    this.total_refferals = 2;
+    this.label1DataLoading = false;
   }
 
   async getTotalLTFs(from_date, to_date, facilities) {
+    // this.label2DataLoading = true;
+    // const data = await this.http.postOpenSRP(
+    //   'reports/summary_total_LTFS/json',
+    //   {from_date, to_date, facilities}
+    // ).toPromise();
+    // if (data) {
+    //   this.total_ltfs = data['Total LTFs'];
+    //   this.label2DataLoading = false;
+    // }
     this.label2DataLoading = true;
-    const data = await this.http.postOpenSRP(
-      'reports/summary_total_LTFS/json',
-      {from_date, to_date, facilities}
-    ).toPromise();
-    if (data) {
-      this.total_ltfs = data['Total LTFs'];
-      this.label2DataLoading = false;
-    }
+    this.total_ltfs = 22;
+    this.label2DataLoading = false;
   }
 
   async getTotalRegistration(from_date, to_date, facilities) {
+    // this.label3DataLoading = true;
+    // const data = await this.http.postOpenSRP(
+    //   'reports/summary_total_registrations/json',
+    //   {from_date, to_date, facilities}
+    // ).toPromise();
+    // if (data) {
+    //   this.total_registration = data['Total Registrations'];
+    //   this.label3DataLoading = false;
+    // }
     this.label3DataLoading = true;
-    const data = await this.http.postOpenSRP(
-      'reports/summary_total_registrations/json',
-      {from_date, to_date, facilities}
-    ).toPromise();
-    if (data) {
-      this.total_registration = data['Total Registrations'];
-      this.label3DataLoading = false;
-    }
+    this.total_registration = 10;
+    this.label3DataLoading = false;
   }
 
   async getCHW(ouID) {
+    // this.label4DataLoading = true;
+    // const data = await this.http.getOpenSRP(`get-team-members-by-facility-hierarchy/${ouID}`).toPromise();
+    // if (data) {
+    //   this.total_chw = data;
+    //   this.label4DataLoading = false;
+    // }
+
     this.label4DataLoading = true;
-    const data = await this.http.getOpenSRP(`get-team-members-by-facility-hierarchy/${ouID}`).toPromise();
-    if (data) {
-      this.total_chw = data;
-      this.label4DataLoading = false;
-    }
+    this.total_chw = 280;
+    this.label4DataLoading = false;
   }
 
   updateCard1(filter: { from_date, to_date, facilities }) {
