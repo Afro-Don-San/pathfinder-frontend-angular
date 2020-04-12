@@ -137,7 +137,7 @@ export class DashboardComponent implements OnInit {
     //   this.label3DataLoading = false;
     // }
     this.label3DataLoading = true;
-    this.total_registration = 10;
+    this.total_registration = 100;
     this.label3DataLoading = false;
   }
 
