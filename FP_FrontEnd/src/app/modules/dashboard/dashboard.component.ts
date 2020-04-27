@@ -97,18 +97,14 @@ export class DashboardComponent implements OnInit {
   }
 
   async getTotalRefferals(from_date, to_date, facilities) {
-    // this.label1DataLoading = true;
-    // const data = await this.http.postOpenSRP(
-    //   'reports/summary_total_referrals/json',
-    //   {from_date, to_date, facilities}
-    // ).toPromise();
-    // if (data) {
-    //   this.total_refferals = data['Total Referrals'];
-    //   this.label1DataLoading = false;
-    // }
     this.label1DataLoading = true;
-    this.total_refferals = 2;
-    this.label1DataLoading = false;
+    const data = await this.http.getDJANGOURL(
+      'event_summary/'
+    ).toPromise();
+    if (data) {
+      this.total_refferals = data['total'];
+      this.label1DataLoading = false;
+    }
   }
 
   async getTotalLTFs(from_date, to_date, facilities) {
@@ -220,19 +216,18 @@ export class DashboardComponent implements OnInit {
 
   updateCard2Chart(filter: { from_date, to_date, facilities }) {
     this.card2DataLoading = true;
-    const reportUrl = 'reports/dashboard_total_registrations/json';
-    this.http.postOpenSRP(reportUrl,
-      filter)
+    const reportUrl = 'event_summary';
+    this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
-          const series = data.map(item => ({
-            name: item.itemName,
+          const series = data['total_aggregate'].map(item => ({
+            name: item.event_type,
             y: item.value
           }));
           const chartConfig: any = this.settingsService.drawPieChart(
             series,
-            'Total Registrations' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
-            'Registrations'
+            'Total Issued Services' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Services'
           );
           Highcharts.chart('card2Chart', chartConfig);
         }
