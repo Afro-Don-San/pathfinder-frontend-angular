@@ -102,7 +102,7 @@ export class DashboardComponent implements OnInit {
       'event_summary/'
     ).toPromise();
     if (data) {
-      this.total_refferals = data['total'];
+      this.total_refferals = data['total_referral'];
       this.label1DataLoading = false;
     }
   }
@@ -249,21 +249,20 @@ export class DashboardComponent implements OnInit {
 
   updateCard3Chart(filter: { from_date, to_date, facilities }) {
     this.card3DataLoading = true;
-    const reportUrl = 'reports/dashboard_ltf_feedbacks/json';
-    this.http.postOpenSRP(reportUrl,
-      filter)
+    const reportUrl = 'event_summary';
+    this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'LTFs',
-            data: data.map(item => item.value)
+            name: 'Referrals',
+            data: data['total_issued_referrals_by_team'].map(item => item.value)
           }];
-          const categories = data.map(item => item.itemName);
+          const categories = data['total_issued_referrals_by_team'].map(item => item.team);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'LTFs',
-            'LTF Feedback' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Referrals',
+            'Total Issued Referrals by Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             '',
             'line'
           );
@@ -287,21 +286,20 @@ export class DashboardComponent implements OnInit {
 
   updateCard4Chart(filter: { from_date, to_date, facilities }) {
     this.card4DataLoading = true;
-    const reportUrl = 'reports/dashboard_total_failed_referrals/json';
-    this.http.postOpenSRP(reportUrl,
-      filter)
+    const reportUrl = 'event_summary';
+    this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Referrals',
-            data: data.map(item => item.value)
+            name: 'Family Planning Registration',
+            data: data['total_family_planning_registration_by_team'].map(item => item.value)
           }];
-          const categories = data.map(item => item.itemName);
+          const categories = data['total_family_planning_registration_by_team'].map(item => item.team);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Referrals',
-            'Total Failed Referrals' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Family Planning Registration',
+            'Total Family Planning Registrations By Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             '',
             'line'
           );
