@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
+import { NgModule, InjectionToken } from '@angular/core';
+import {Routes, RouterModule, PreloadAllModules, ActivatedRouteSnapshot} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './modules/dashboard/dashboard.component';
@@ -17,6 +17,7 @@ import {RegistrationReasonComponent} from './modules/settings/registration-reaso
 import {LocationsComponent} from './modules/locations/locations.component';
 import {UsersComponent} from './modules/users/users.component';
 
+const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 const routes: Routes = [
   {
     path: '',
@@ -41,6 +42,14 @@ const routes: Routes = [
         path: 'reports',
         component: ReportsComponent,
         data: {state: 'reports'}
+      },
+      {
+        path: 'superset',
+        resolve: {
+          url: externalUrlProvider,
+      },
+      // We need a component here because we cannot define the route otherwise
+      component: DashboardComponent,
       },
       {
         path: 'providers_report',
@@ -93,7 +102,7 @@ const routes: Routes = [
             path: 'registration-reason',
             component: RegistrationReasonComponent,
             data: {state: 'registration-reason'}
-          }
+          },
         ]
       },
     ]
@@ -106,6 +115,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  providers: [
+    {
+        provide: externalUrlProvider,
+        useValue: (route: ActivatedRouteSnapshot) => {
+            const externalUrl = route.paramMap.get('superset');
+            window.open('http://45.56.117.65', 'Superset');
+        },
+    },
+],
   imports: [RouterModule.forRoot(routes, {
     useHash: true,
     preloadingStrategy: PreloadAllModules

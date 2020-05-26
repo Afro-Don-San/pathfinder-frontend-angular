@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
     const token = localStorage.getItem('htmr-web-token');
     const location = localStorage.getItem('htmr-starting-location');
     if (token && location) {
-      console.log("credentials previously saved");
       this.router.navigate( ['', 'dashboard']);
     }
   }
@@ -70,12 +69,11 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['', 'dashboard']);
         }, 2000);
       } catch (e) {
-        if (e.status == 401)
-        {
+        // tslint:disable-next-line: triple-equals
+        if (e.status == 401) {
           this.loginNotification.message = 'Login failure, wrong username or password';
-        }
-        else if (e.status = 500)
-        {
+        // tslint:disable-next-line: no-conditional-assignment
+        } else if (e.status = 500) {
           this.loginNotification.message = 'Something went wrong, please try again.'
         }
 
@@ -89,7 +87,6 @@ export class LoginComponent implements OnInit {
           this.closeNotification();
         }, 6000);
       }
-      
     }
   }
 

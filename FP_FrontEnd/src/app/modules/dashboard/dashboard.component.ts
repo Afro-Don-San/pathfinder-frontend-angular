@@ -118,7 +118,7 @@ export class DashboardComponent implements OnInit {
     //   this.label2DataLoading = false;
     // }
     this.label2DataLoading = true;
-    this.total_ltfs = 22;
+    this.total_ltfs = 4;
     this.label2DataLoading = false;
   }
 
@@ -128,7 +128,7 @@ export class DashboardComponent implements OnInit {
       'client_summary/'
     ).toPromise();
     if (data) {
-      this.total_registration = data['total'];
+      this.total_registration = data['total_clients'];
       this.label3DataLoading = false;
     }
   }
