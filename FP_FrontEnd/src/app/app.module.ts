@@ -37,6 +37,7 @@ import { AddMemberComponent } from './modules/users/add-member/add-member.compon
 import { TeamInfoComponent } from './modules/users/team-info/team-info.component';
 import { AddTeamComponent } from './modules/users/add-team/add-team.component';
 import { UpdateMemberComponent } from './modules/users/update-member/update-member.component';
+import { SupersetComponent } from './modules/superset/superset.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { UpdateMemberComponent } from './modules/users/update-member/update-memb
     TeamInfoComponent,
     AddTeamComponent,
     UpdateMemberComponent,
+    SupersetComponent,
   ],
   imports: [
     BrowserModule,

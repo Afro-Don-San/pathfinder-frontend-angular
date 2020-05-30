@@ -16,6 +16,7 @@ import {RefferealTypeComponent} from './modules/settings/reffereal-type/refferea
 import {RegistrationReasonComponent} from './modules/settings/registration-reason/registration-reason.component';
 import {LocationsComponent} from './modules/locations/locations.component';
 import {UsersComponent} from './modules/users/users.component';
+import {SupersetComponent} from './modules/superset/superset.component';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 const routes: Routes = [
@@ -49,7 +50,7 @@ const routes: Routes = [
           url: externalUrlProvider,
       },
       // We need a component here because we cannot define the route otherwise
-      component: DashboardComponent,
+      component: SupersetComponent,
       },
       {
         path: 'providers_report',

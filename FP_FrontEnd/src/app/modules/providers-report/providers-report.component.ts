@@ -11,15 +11,15 @@ export class ProvidersReportComponent implements OnInit {
   title = 'Providers Reports';
   navLinks = [
     {
-      label: 'Providers Report',
+      label: 'Issued Methods',
       link: ['', 'providers_report', 'provide-report'],
       index: 0
     }, {
-      label: 'Facility Provider Referral Reports',
+      label: 'Issued Method Referrals',
       link: ['', 'providers_report', 'facility-report'],
       index: 1
     }, {
-      label: 'Inter Facility Referral Summary',
+      label: 'Total Issued Referrals',
       link: ['', 'providers_report', 'inter-facility-report'],
       index: 2
     },

@@ -99,10 +99,10 @@ export class DashboardComponent implements OnInit {
   async getTotalRefferals(from_date, to_date, facilities) {
     this.label1DataLoading = true;
     const data = await this.http.getDJANGOURL(
-      'event_summary/'
+      'referral_summary/'
     ).toPromise();
     if (data) {
-      this.total_refferals = data['total_referral'];
+      this.total_refferals = data['total_referrals'];
       this.label1DataLoading = false;
     }
   }
@@ -125,10 +125,10 @@ export class DashboardComponent implements OnInit {
   async getTotalRegistration(from_date, to_date, facilities) {
     this.label3DataLoading = true;
     const data = await this.http.getDJANGOURL(
-      'client_summary/'
+      'family_planning_registration_summary/'
     ).toPromise();
     if (data) {
-      this.total_registration = data['total_clients'];
+      this.total_registration = data['total_family_planning_registrations'];
       this.label3DataLoading = false;
     }
   }
@@ -181,12 +181,12 @@ export class DashboardComponent implements OnInit {
     //     this.card1DataLoading = false;
     //   }, error1 => this.card1DataLoading = false);
 
-    const reportUrl = 'client_summary/';
+    const reportUrl = 'family_planning_registration_summary/';
     this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-              name: 'Client Registrations By Gender',
+              name: 'Family Planning Registrations By Gender',
               data: data['total_aggregate'].map(item => item.value)
             }];
           const categories = data['total_aggregate'].map(item => item.gender);
@@ -194,7 +194,7 @@ export class DashboardComponent implements OnInit {
             categories,
             series,
             'Registrations',
-            'Total Registrations' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
+            'Total Family Planning Registrations' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
           );
           Highcharts.chart('card1Chart', chartConfig);
         }
@@ -216,7 +216,7 @@ export class DashboardComponent implements OnInit {
 
   updateCard2Chart(filter: { from_date, to_date, facilities }) {
     this.card2DataLoading = true;
-    const reportUrl = 'event_summary';
+    const reportUrl = 'referral_summary';
     this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
@@ -226,7 +226,7 @@ export class DashboardComponent implements OnInit {
           }));
           const chartConfig: any = this.settingsService.drawPieChart(
             series,
-            'Total Issued Services' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Total Issued Methods' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             'Services'
           );
           Highcharts.chart('card2Chart', chartConfig);
@@ -249,7 +249,7 @@ export class DashboardComponent implements OnInit {
 
   updateCard3Chart(filter: { from_date, to_date, facilities }) {
     this.card3DataLoading = true;
-    const reportUrl = 'event_summary';
+    const reportUrl = 'referral_summary';
     this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
@@ -262,7 +262,7 @@ export class DashboardComponent implements OnInit {
             categories,
             series,
             'Referrals',
-            'Total Issued Referrals by Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Total Issued Method Referrals by Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             '',
             'line'
           );
@@ -286,20 +286,20 @@ export class DashboardComponent implements OnInit {
 
   updateCard4Chart(filter: { from_date, to_date, facilities }) {
     this.card4DataLoading = true;
-    const reportUrl = 'event_summary';
+    const reportUrl = 'referral_summary';
     this.http.getDJANGOURL(reportUrl)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Family Planning Registration',
-            data: data['total_family_planning_registration_by_team'].map(item => item.value)
+            name: 'Referrals',
+            data: data['total_family_planning_referral_by_team'].map(item => item.value)
           }];
-          const categories = data['total_family_planning_registration_by_team'].map(item => item.team);
+          const categories = data['total_family_planning_referral_by_team'].map(item => item.team);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Family Planning Registration',
-            'Total Family Planning Registrations By Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Referrals',
+            'Total Family Planning Referrals By Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             '',
             'line'
           );

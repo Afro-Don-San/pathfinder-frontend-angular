@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClientService} from './http-client.service';
 import {Observable} from 'rxjs';
+import { color } from 'highcharts';
 
 @Injectable({providedIn: 'root'})
 export class SettingsService {
@@ -190,10 +191,12 @@ export class SettingsService {
           style: {
             fontSize: '10px',
             fontFamily: 'Verdana, sans-serif'
+
           }
         }
       },
       yAxis: {
+
         min: 0,
         title: {
           text: yAxisLabel

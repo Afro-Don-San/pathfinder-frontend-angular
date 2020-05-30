@@ -38,26 +38,26 @@ export class UserService {
     //   accessibility: false
     // },
     {
-      name: 'Providers Reports',
+      name: 'Charts & Reports',
       links: ['', 'providers_report', 'provide-report'],
       icon: 'fa fa-pie-chart',
       roles: ['System Developer'],
       accessibility: false
     },
-    {
-      name: 'Other Reports',
-      links: ['', 'reports'],
-      icon: 'fa fa-bar-chart',
-      roles: ['System Developer'],
-      accessibility: false
-    },
-    {
-      name: 'Settings',
-      links: ['', 'settings', 'services'],
-      icon: 'fa fa-cogs',
-      roles: ['System Developer'],
-      accessibility: false
-    },
+    // {
+    //   name: 'Other Reports',
+    //   links: ['', 'reports'],
+    //   icon: 'fa fa-bar-chart',
+    //   roles: ['System Developer'],
+    //   accessibility: false
+    // },
+    // {
+    //   name: 'Settings',
+    //   links: ['', 'settings', 'services'],
+    //   icon: 'fa fa-cogs',
+    //   roles: ['System Developer'],
+    //   accessibility: false
+    // },
     {
       name: 'Team Management',
       links: ['', 'users'],
@@ -79,7 +79,7 @@ export class UserService {
       roles: ['System Developer'],
       accessibility: false
     }, {
-      name: 'Superset Reporting',
+      name: 'Superset Analytics',
       links: ['', 'superset'],
       icon: 'fa fa-line-chart',
       roles: ['System Developer'],
