@@ -38,7 +38,7 @@ export class UserService {
     //   accessibility: false
     // },
     {
-      name: 'Charts & Reports',
+      name: 'Reports',
       links: ['', 'providers_report', 'provide-report'],
       icon: 'fa fa-pie-chart',
       roles: ['System Developer'],
@@ -51,13 +51,13 @@ export class UserService {
     //   roles: ['System Developer'],
     //   accessibility: false
     // },
-    // {
-    //   name: 'Settings',
-    //   links: ['', 'settings', 'services'],
-    //   icon: 'fa fa-cogs',
-    //   roles: ['System Developer'],
-    //   accessibility: false
-    // },
+    {
+      name: 'Settings',
+      links: ['', 'settings', 'services'],
+      icon: 'fa fa-cogs',
+      roles: ['System Developer'],
+      accessibility: false
+    },
     {
       name: 'Team Management',
       links: ['', 'users'],

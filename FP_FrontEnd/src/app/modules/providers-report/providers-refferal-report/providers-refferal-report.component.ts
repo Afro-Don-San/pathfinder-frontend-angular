@@ -55,7 +55,7 @@ export class ProvidersRefferalReportComponent implements OnInit {
     this.loading_failed = false;
     this.done_loading = false;
     const facilities = this.orgunitService.getLevel4OrgunitsIds(this.orgunit.visit_locations, this.orgunit.value);
-    this.httpClient.postOpenSRP('get-team-members-by-facility-uuid', facilities)
+    this.httpClient.getDJANGOURL('family_planning_registration_summary')
       .subscribe(( data: any[]) => {
         if ( data && data.length !== 0) {
           this.providers = data.map(d => {

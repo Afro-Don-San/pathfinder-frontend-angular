@@ -5,7 +5,7 @@ import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './modules/dashboard/dashboard.component';
 import {ProvidersReportComponent} from './modules/providers-report/providers-report.component';
 import {InterFacilityRefferalReportComponent} from './modules/providers-report/inter-facility-refferal-report/inter-facility-refferal-report.component';
-import {FacilityRefferalReportComponent} from './modules/providers-report/facility-refferal-report/facility-refferal-report.component';
+import {FacilityRefferalReportComponent} from './modules/providers-report/facility-referral-report/facility-refferal-report.component';
 import {ProvidersRefferalReportComponent} from './modules/providers-report/providers-refferal-report/providers-refferal-report.component';
 import {ReportsComponent} from './modules/reports/reports.component';
 import {SettingsComponent} from './modules/settings/settings.component';
@@ -17,6 +17,7 @@ import {RegistrationReasonComponent} from './modules/settings/registration-reaso
 import {LocationsComponent} from './modules/locations/locations.component';
 import {UsersComponent} from './modules/users/users.component';
 import {SupersetComponent} from './modules/superset/superset.component';
+import {IssuedReferralsByLocationComponent} from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component'
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 const routes: Routes = [
@@ -58,6 +59,11 @@ const routes: Routes = [
         data: {state: 'providers-report'},
         children: [
           {
+          path: 'issued-referrals-by-location-report',
+          component: IssuedReferralsByLocationComponent,
+          data: {state: 'providers-report'}
+          },
+          {
             path: 'provide-report',
             component: ProvidersRefferalReportComponent,
             data: {state: 'providers-report'}
@@ -74,6 +80,7 @@ const routes: Routes = [
           }
         ]
       },
+
       {
         path: 'settings',
         component: SettingsComponent,

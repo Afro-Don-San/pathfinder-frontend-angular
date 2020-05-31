@@ -11,7 +11,7 @@ import {HomeComponent} from './home/home.component';
 import {SummaryCardComponent} from './modules/dashboard/summary-card/summary-card.component';
 import {DashboardComponent} from './modules/dashboard/dashboard.component';
 import { ProvidersReportComponent } from './modules/providers-report/providers-report.component';
-import { FacilityRefferalReportComponent } from './modules/providers-report/facility-refferal-report/facility-refferal-report.component';
+import { FacilityRefferalReportComponent } from './modules/providers-report/facility-referral-report/facility-refferal-report.component';
 import { InterFacilityRefferalReportComponent } from './modules/providers-report/inter-facility-refferal-report/inter-facility-refferal-report.component';
 import { ProvidersRefferalReportComponent } from './modules/providers-report/providers-refferal-report/providers-refferal-report.component';
 import {ReportsComponent} from './modules/reports/reports.component';
@@ -38,6 +38,8 @@ import { TeamInfoComponent } from './modules/users/team-info/team-info.component
 import { AddTeamComponent } from './modules/users/add-team/add-team.component';
 import { UpdateMemberComponent } from './modules/users/update-member/update-member.component';
 import { SupersetComponent } from './modules/superset/superset.component';
+import { IssuedReferralsByLocationComponent } from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component';
+import { IssuedReferralsComponent } from './modules/fp-reports/issued-referrals/issued-referrals.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,8 @@ import { SupersetComponent } from './modules/superset/superset.component';
     AddTeamComponent,
     UpdateMemberComponent,
     SupersetComponent,
+    IssuedReferralsByLocationComponent,
+    IssuedReferralsComponent,
   ],
   imports: [
     BrowserModule,

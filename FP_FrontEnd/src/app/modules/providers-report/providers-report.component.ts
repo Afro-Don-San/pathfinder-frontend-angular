@@ -8,11 +8,11 @@ import {Router} from '@angular/router';
 })
 export class ProvidersReportComponent implements OnInit {
   activeLinkIndex = -1;
-  title = 'Providers Reports';
+  title = 'Family Planning Reports';
   navLinks = [
     {
-      label: 'Issued Methods',
-      link: ['', 'providers_report', 'provide-report'],
+      label: 'Issued Referrals By Location',
+      link: ['', 'providers_report', 'issued-referrals-by-location-report'],
       index: 0
     }, {
       label: 'Issued Method Referrals',
