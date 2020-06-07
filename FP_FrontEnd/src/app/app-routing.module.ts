@@ -18,6 +18,7 @@ import {LocationsComponent} from './modules/locations/locations.component';
 import {UsersComponent} from './modules/users/users.component';
 import {SupersetComponent} from './modules/superset/superset.component';
 import {IssuedReferralsByLocationComponent} from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component'
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 const routes: Routes = [
@@ -129,6 +130,7 @@ const routes: Routes = [
         useValue: (route: ActivatedRouteSnapshot) => {
             const externalUrl = route.paramMap.get('superset');
             window.open('http://45.56.117.65', 'Superset');
+        
         },
     },
 ],

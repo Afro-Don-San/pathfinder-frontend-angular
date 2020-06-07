@@ -98,11 +98,11 @@ export class DashboardComponent implements OnInit {
 
   async getTotalRefferals(from_date, to_date, facilities) {
     this.label1DataLoading = true;
-    const data = await this.http.getDJANGOURL(
-      'referral_summary/'
+    const reportUrl = 'events_summary/';
+    const data = await this.http.getDJANGOURL(reportUrl
     ).toPromise();
     if (data) {
-      this.total_refferals = data['total_referrals'];
+      this.total_refferals = data['total_events'];
       this.label1DataLoading = false;
     }
   }
@@ -117,13 +117,20 @@ export class DashboardComponent implements OnInit {
     //   this.total_ltfs = data['Total LTFs'];
     //   this.label2DataLoading = false;
     // }
+
     this.label2DataLoading = true;
-    this.total_ltfs = 4;
-    this.label2DataLoading = false;
+    const data = await this.http.getDJANGOURL(
+      'events_summary/'
+    ).toPromise();
+    if (data) {
+      this.total_ltfs = data['total_family_planning_initiations'];
+      this.label2DataLoading = false;
+    }
   }
 
   async getTotalRegistration(from_date, to_date, facilities) {
     this.label3DataLoading = true;
+    
     const data = await this.http.getDJANGOURL(
       'family_planning_registration_summary/'
     ).toPromise();
@@ -142,8 +149,13 @@ export class DashboardComponent implements OnInit {
     // }
 
     this.label4DataLoading = true;
-    this.total_chw = 280;
-    this.label4DataLoading = false;
+    const data = await this.http.getDJANGOURL(
+      'events_summary/'
+    ).toPromise();
+    if (data) {
+      this.total_chw = data['total_family_planning_discontinuations'];
+      this.label4DataLoading = false;
+    }
   }
 
   updateCard1(filter: { from_date, to_date, facilities }) {
@@ -182,7 +194,7 @@ export class DashboardComponent implements OnInit {
     //   }, error1 => this.card1DataLoading = false);
 
     const reportUrl = 'family_planning_registration_summary/';
-    this.http.getDJANGOURL(reportUrl)
+    this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
@@ -216,17 +228,17 @@ export class DashboardComponent implements OnInit {
 
   updateCard2Chart(filter: { from_date, to_date, facilities }) {
     this.card2DataLoading = true;
-    const reportUrl = 'referral_summary';
-    this.http.getDJANGOURL(reportUrl)
+    const reportUrl = 'events_summary/';
+    this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
-          const series = data['total_aggregate'].map(item => ({
+          const series = data['total_services_aggregate'].map(item => ({
             name: item.event_type,
             y: item.value
           }));
           const chartConfig: any = this.settingsService.drawPieChart(
             series,
-            'Total Issued Methods' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Total Issued Services' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             'Services'
           );
           Highcharts.chart('card2Chart', chartConfig);
@@ -249,20 +261,20 @@ export class DashboardComponent implements OnInit {
 
   updateCard3Chart(filter: { from_date, to_date, facilities }) {
     this.card3DataLoading = true;
-    const reportUrl = 'referral_summary';
-    this.http.getDJANGOURL(reportUrl)
+    const reportUrl = 'events_summary/';
+    this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Referrals',
-            data: data['total_issued_referrals_by_team'].map(item => item.value)
+            name: 'Services',
+            data: data['total_issued_services_by_team'].map(item => item.value)
           }];
-          const categories = data['total_issued_referrals_by_team'].map(item => item.team);
+          const categories = data['total_issued_services_by_team'].map(item => item.team);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Referrals',
-            'Total Issued Method Referrals by Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Services',
+            'Total Issued Services by Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             '',
             'line'
           );
@@ -286,22 +298,22 @@ export class DashboardComponent implements OnInit {
 
   updateCard4Chart(filter: { from_date, to_date, facilities }) {
     this.card4DataLoading = true;
-    const reportUrl = 'referral_summary';
-    this.http.getDJANGOURL(reportUrl)
+    const reportUrl = 'events_summary/';
+    this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Referrals',
-            data: data['total_family_planning_referral_by_team'].map(item => item.value)
+            name: 'Family Planning Registrations',
+            data: data['total_family_planning_registrations_by_team'].map(item => item.value)
           }];
-          const categories = data['total_family_planning_referral_by_team'].map(item => item.team);
+          const categories = data['total_family_planning_registrations_by_team'].map(item => item.team);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Referrals',
-            'Total Family Planning Referrals By Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
-            '',
-            'line'
+            'Family Planning Registrations',
+            'Total Family Planning Registrations By Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            // '',
+            // 'line'
           );
           Highcharts.chart('card4Chart', chartConfig);
         }

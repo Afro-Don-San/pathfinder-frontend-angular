@@ -161,7 +161,21 @@ x
     });
   }
 
+  postDJANGOURL(url, data, options?) {
+    return this.http.post(this.DJANGOURL + url, data, {
+      headers: new HttpHeaders()
+      .set('Content-Type', 'application/json')
+    });
+  }
+
   getDJANGOURL(url){
+    return this.http.get(this.DJANGOURL + url, {
+      headers: new HttpHeaders()
+        .set('Content-Type', 'application/json')
+    });
+  }
+
+  getDJANGOURL1(url, data, options?){
     return this.http.get(this.DJANGOURL + url, {
       headers: new HttpHeaders()
         .set('Content-Type', 'application/json')

@@ -51,13 +51,13 @@ export class UserService {
     //   roles: ['System Developer'],
     //   accessibility: false
     // },
-    {
-      name: 'Settings',
-      links: ['', 'settings', 'services'],
-      icon: 'fa fa-cogs',
-      roles: ['System Developer'],
-      accessibility: false
-    },
+    // {
+    //   name: 'Settings',
+    //   links: ['', 'settings', 'services'],
+    //   icon: 'fa fa-cogs',
+    //   roles: ['System Developer'],
+    //   accessibility: false
+    // },
     {
       name: 'Team Management',
       links: ['', 'users'],
