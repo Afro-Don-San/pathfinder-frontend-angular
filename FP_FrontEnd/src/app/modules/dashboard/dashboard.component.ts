@@ -26,9 +26,9 @@ export class DashboardComponent implements OnInit {
   end_date: any;
 
   total_registration = 0;
-  total_refferals = 0;
-  total_ltfs = 0;
-  total_chw = 0;
+  total_services = 0;
+  total_fp_initiations = 0;
+  total_fp_discontinuations = 0;
 
   card1Data = null;
   card2Data = null;
@@ -73,10 +73,10 @@ export class DashboardComponent implements OnInit {
     this.getLocation(starting_location).then(locations => {
       const facilities = this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
       this.orgunitName = this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
-      this.getTotalRegistration(start_date, end_date, facilities);
-      this.getTotalRefferals(start_date, end_date, facilities);
-      this.getTotalLTFs(start_date, end_date, facilities);
-      this.getCHW(starting_location);
+      this.getTotalRegistration({from_date: start_date, to_date: end_date, facilities});
+      this.getTotalServices({from_date: start_date, to_date: end_date, facilities});
+      this.getTotalFamilyPlanningInitiations({from_date: start_date, to_date: end_date, facilities});
+      this.getTotalFamilyPlanningDiscontinuations({from_date: start_date, to_date: end_date, facilities});
       this.updateCard1({from_date: start_date, to_date: end_date, facilities});
       this.updateCard2({from_date: start_date, to_date: end_date, facilities});
       this.updateCard3({from_date: start_date, to_date: end_date, facilities});
@@ -90,24 +90,24 @@ export class DashboardComponent implements OnInit {
     this.updateCard2Chart(filter);
     this.updateCard3Chart(filter);
     this.updateCard4Chart(filter);
-    this.getTotalRegistration(filter.from_date, filter.to_date, filter.facilities);
-    this.getTotalRefferals(filter.from_date, filter.to_date, filter.facilities);
-    this.getTotalLTFs(filter.from_date, filter.to_date, filter.facilities);
-    this.getCHW(filter.ouId);
+    this.getTotalRegistration(filter);
+    this.getTotalServices(filter);
+    this.getTotalFamilyPlanningInitiations(filter);
+    this.getTotalFamilyPlanningDiscontinuations(filter.ouId);
   }
 
-  async getTotalRefferals(from_date, to_date, facilities) {
+  async getTotalServices(filter: { from_date, to_date, facilities }) {
     this.label1DataLoading = true;
     const reportUrl = 'events_summary/';
-    const data = await this.http.getDJANGOURL(reportUrl
+    const data = await this.http.postDJANGOURL(reportUrl, filter
     ).toPromise();
     if (data) {
-      this.total_refferals = data['total_events'];
+      this.total_services = data['total_events'];
       this.label1DataLoading = false;
     }
   }
 
-  async getTotalLTFs(from_date, to_date, facilities) {
+  async getTotalFamilyPlanningInitiations(filter: { from_date, to_date, facilities }) {
     // this.label2DataLoading = true;
     // const data = await this.http.postOpenSRP(
     //   'reports/summary_total_LTFS/json',
@@ -119,20 +119,20 @@ export class DashboardComponent implements OnInit {
     // }
 
     this.label2DataLoading = true;
-    const data = await this.http.getDJANGOURL(
-      'events_summary/'
+    const data = await this.http.postDJANGOURL(
+      'events_summary/', filter
     ).toPromise();
     if (data) {
-      this.total_ltfs = data['total_family_planning_initiations'];
+      this.total_fp_initiations = data['total_family_planning_initiations'];
       this.label2DataLoading = false;
     }
   }
 
-  async getTotalRegistration(from_date, to_date, facilities) {
+  async getTotalRegistration(filter: { from_date, to_date, facilities }) {
     this.label3DataLoading = true;
     
-    const data = await this.http.getDJANGOURL(
-      'family_planning_registration_summary/'
+    const data = await this.http.postDJANGOURL(
+      'events_summary/',filter
     ).toPromise();
     if (data) {
       this.total_registration = data['total_family_planning_registrations'];
@@ -140,7 +140,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  async getCHW(ouID) {
+  async getTotalFamilyPlanningDiscontinuations(filter: { from_date, to_date, facilities }) {
     // this.label4DataLoading = true;
     // const data = await this.http.getOpenSRP(`get-team-members-by-facility-hierarchy/${ouID}`).toPromise();
     // if (data) {
@@ -149,11 +149,11 @@ export class DashboardComponent implements OnInit {
     // }
 
     this.label4DataLoading = true;
-    const data = await this.http.getDJANGOURL(
-      'events_summary/'
+    const data = await this.http.postDJANGOURL(
+      'events_summary/', filter
     ).toPromise();
     if (data) {
-      this.total_chw = data['total_family_planning_discontinuations'];
+      this.total_fp_discontinuations = data['total_family_planning_discontinuations'];
       this.label4DataLoading = false;
     }
   }
@@ -172,27 +172,6 @@ export class DashboardComponent implements OnInit {
 
   updateCard1Chart(filter: { from_date, to_date, facilities }) {
     this.card1DataLoading = true;
-    // const reportUrl = 'reports/dashboard_total_referrals_issued/json';
-    // this.http.postOpenSRP(reportUrl,
-    //   filter)
-    //   .subscribe((data: any[]) => {
-    //     if (data) {
-    //       const series = [{
-    //           name: 'Referrals',
-    //           data: data.map(item => item.value)
-    //         }];
-    //       const categories = data.map(item => item.itemName);
-    //       const chartConfig: any = this.settingsService.drawChart(
-    //         categories,
-    //         series,
-    //         'Referrals',
-    //         'Total Referrals Issued' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
-    //       );
-    //       Highcharts.chart('card1Chart', chartConfig);
-    //     }
-    //     this.card1DataLoading = false;
-    //   }, error1 => this.card1DataLoading = false);
-
     const reportUrl = 'family_planning_registration_summary/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {

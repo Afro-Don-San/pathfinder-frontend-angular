@@ -11,11 +11,11 @@ export class ProvidersReportComponent implements OnInit {
   title = 'Family Planning Reports';
   navLinks = [
     {
-      label: 'Issued Referrals By Location',
+      label: 'Issued Services',
       link: ['', 'providers_report', 'issued-referrals-by-location-report'],
       index: 0
     }, {
-      label: 'Issued Method Referrals',
+      label: 'Family Planning Registrations',
       link: ['', 'providers_report', 'facility-report'],
       index: 1
     }, {

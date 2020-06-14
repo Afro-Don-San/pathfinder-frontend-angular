@@ -23,15 +23,15 @@
         [loading]="location_loading || label3DataLoading"
         [route]="['report']"
         [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
-        top_title="Clients"
-        low_title="Registered">
+        top_title="Family Planning"
+        low_title="Registrations">
       </app-summary-card>
 
       <app-summary-card
         image="icons8-send-job-list-80"
         [route]="['report']"
         [loading]="location_loading || label1DataLoading"
-        [value]="total_refferals || 0"
+        [value]="total_services || 0"
         [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
         top_title="Total"
         low_title="Services Issued">
@@ -40,7 +40,7 @@
       <app-summary-card
         image="ltf"
         [route]="['report']"
-        [value]="total_ltfs || 0"
+        [value]="total_fp_initiations || 0"
         [loading]="location_loading || label2DataLoading"
         [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
         top_title="Family Planning"
@@ -50,7 +50,7 @@
       <app-summary-card
         image="chw"
         [route]="['report']"
-        [value]="total_chw"
+        [value]="total_fp_discontinuations"
         [loading]="location_loading || label4DataLoading"
         [additional_information]="orgunitName"
         top_title="Family Planning"

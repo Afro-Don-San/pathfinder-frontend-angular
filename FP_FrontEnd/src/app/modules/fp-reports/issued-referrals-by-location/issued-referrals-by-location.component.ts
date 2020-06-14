@@ -55,13 +55,13 @@ export class IssuedReferralsByLocationComponent implements OnInit {
     this.loading_failed = false;
     this.done_loading = false;
     const facilities = this.orgunitService.getLevel4OrgunitsIds(this.orgunit.visit_locations, this.orgunit.value);
-    this.httpClient.getDJANGOURL('referral_summary')
+    this.httpClient.getDJANGOURL('events_summary')
       .subscribe(( data: any[]) => {
         if ( data && data.length !== 0) {
           console.log(data); 
-          this.providers = data["records"].map(d => {
+          this.providers = data["query_service_providers"].map(d => {
             return {
-              id: d.id,
+              // id: d.id,
               name: d.team
             };
           });
@@ -93,14 +93,14 @@ export class IssuedReferralsByLocationComponent implements OnInit {
     const chw_uuid = this.selected_providers.map(provider => provider.id);
     const start_date = new Date(this.start_date).toISOString().substr(0, 10);
     const end_date = new Date(this.end_date).toISOString().substr(0, 10);
-    this.httpClient.getDJANGOURL('referral_summary')
+    this.httpClient.getDJANGOURL('events_summary')
       .subscribe((data: any) => {
         this.done_loading = true;
         this.data_loading = false;
-        this.values = data["total_aggregate"];
+        this.values = data["total_services_aggregate"];
       });
 
-    this.httpClient.getDJANGOURL('referral_summary')
+    this.httpClient.getDJANGOURL('events_summary')
       .subscribe((data: any) => {
         this.detailed_loading = false;
         this.detailed_values = data["records"].map(item => {

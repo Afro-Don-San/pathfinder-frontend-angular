@@ -86,15 +86,15 @@
 
     <div class="row mt-5" *ngIf="done_loading">
       <div class="col" *ngIf="!show_detailed" @fadeIn>
-        <h4 class="text-center">Service Provided by {{ selected_provider_names }} for {{ orgunitnames }} from {{
+        <h4 class="text-center">Services Provided by {{ selected_provider_names }} for {{ orgunitnames }} from {{
           start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>
         <table class="table table-bordered">
           <tr>
-            <th>Referral Type</th>
-            <th>Number of Referals</th>
+            <th>Service Type</th>
+            <th>Number of Issued Service</th>
           </tr>
           <tr *ngFor="let data of values">
-            <td>{{ data.referral_type }}</td>
+            <td>{{ data.event_type }}</td>
             <td>{{ data.value }}</td>
           </tr>
         </table>
@@ -106,15 +106,15 @@
         <table class="table table-bordered">
           <tr>
             <th>Service Provider</th>
-            <th>Client</th>
-            <th>Facility</th>
-            <th>Refferal Status</th>
+            <th>Service Type</th>
+            <th>Event Date</th>
+            <th>Team</th>
           </tr>
           <tr *ngFor="let data of detailed_values">
-            <td>{{ data.service_provider_name }}</td>
-            <td>{{ data.client_name }}</td>
-            <td>{{ data.facility_name }}</td>
-            <td>{{ data.referral_status }}</td>
+            <td>{{ data.provider_id }}</td>
+            <td>{{ data.event_type }}</td>
+            <td>{{ data.event_date }}</td>
+            <td>{{ data.team }}</td>
           </tr>
         </table>
       </div>
