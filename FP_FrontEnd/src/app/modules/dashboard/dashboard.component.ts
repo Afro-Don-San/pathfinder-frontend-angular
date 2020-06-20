@@ -102,7 +102,7 @@ export class DashboardComponent implements OnInit {
     const data = await this.http.postDJANGOURL(reportUrl, filter
     ).toPromise();
     if (data) {
-      this.total_services = data['total_events'];
+      this.total_services = data['total_family_planning_refferals'];
       this.label1DataLoading = false;
     }
   }
@@ -172,12 +172,12 @@ export class DashboardComponent implements OnInit {
 
   updateCard1Chart(filter: { from_date, to_date, facilities }) {
     this.card1DataLoading = true;
-    const reportUrl = 'family_planning_registration_summary/';
+    const reportUrl = 'clients_summary/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-              name: 'Family Planning Registrations By Gender',
+              name: 'Total Clients By Gender',
               data: data['total_aggregate'].map(item => item.value)
             }];
           const categories = data['total_aggregate'].map(item => item.gender);
@@ -185,7 +185,7 @@ export class DashboardComponent implements OnInit {
             categories,
             series,
             'Registrations',
-            'Total Family Planning Registrations' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
+            'Total Clients' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
           );
           Highcharts.chart('card1Chart', chartConfig);
         }
@@ -282,15 +282,15 @@ export class DashboardComponent implements OnInit {
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Family Planning Registrations',
-            data: data['total_family_planning_registrations_by_team'].map(item => item.value)
+            name: 'Services',
+            data: data['total_services_by_month'].map(item => item.value)
           }];
-          const categories = data['total_family_planning_registrations_by_team'].map(item => item.team);
+          const categories = data['total_services_by_month'].map(item => item.month_name);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Family Planning Registrations',
-            'Total Family Planning Registrations By Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Total Services Issued by Months',
+            'Total Services Issued by Months' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             // '',
             // 'line'
           );

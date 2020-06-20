@@ -77,8 +77,38 @@
           <span style="font-weight: 500">{{linkItem.name}}</span>
         </a>
         <mat-divider></mat-divider>
+      </ng-container><br /><br />
+
+      <ng-container>
+      <p> &nbsp;&nbsp; Dashboard Summary</p>
+         <mat-divider></mat-divider>
+        <a mat-list-item> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Clients</span> &nbsp;&nbsp;
+               <span style="font-weight: 500">{{ total_clients }}</span>
+        </a>
+        
+         <a mat-list-item> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-thumbs-up"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Initiations</span> &nbsp;&nbsp;
+               <span style="font-weight: 500">{{ total_initiations }}</span>
+        </a>
+         <a mat-list-item> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-thumbs-down"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Discontinuations</span> &nbsp;&nbsp;
+          <span style="font-weight: 500">{{ total_discontinuations }}</span>
+        </a>
+            <a mat-list-item> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-scissors"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Services</span> &nbsp;&nbsp;
+          <span style="font-weight: 500">{{ total_services }}</span>
+        </a>
+        <mat-divider></mat-divider>
       </ng-container>
+
+
     </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content>
 
