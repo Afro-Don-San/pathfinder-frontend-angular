@@ -40,15 +40,13 @@ export class LoginComponent implements OnInit {
       try {
         const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
         const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
-
-        console.log(openSrpResult.team.team.location.uuid);
-        console.log(openMrsResult.results);
-
+        
         if (openSrpResult) {
           if (openSrpResult.team && openSrpResult.team.team) {
             if (openSrpResult.team.team.location) {
               const location = openSrpResult.team.team.location;
               const starting_location = location ? location.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
+              console.log("location from login", starting_location);
               localStorage.setItem('htmr-starting-location', starting_location);
             }
           }

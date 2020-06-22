@@ -124,7 +124,8 @@ export class OrgUnitFilterComponent implements OnInit {
       };
       this.customTemplateStringOrgunitOptions = {actionMapping};
     }
-    if (this.orgunitService.nodes === null) {
+
+    // if (this.orgunitService.nodes === null) {
       this.locationService.loadTreeLocations().subscribe(
         (locations => {
           console.log({locations});
@@ -132,6 +133,7 @@ export class OrgUnitFilterComponent implements OnInit {
           const top_locations = locations;
           // filter down to remain with only visit facilities
           const starting_location = localStorage.getItem('htmr-starting-location');
+          console.log("team location from org unit component is", starting_location);
           let visit_location: any = _.find(top_locations, {uuid: starting_location ? starting_location : 'ed787525-d770-11e8-ba9c-f23c917bb7ec'});
           this.visit_locations.push(
             {
@@ -207,11 +209,14 @@ export class OrgUnitFilterComponent implements OnInit {
           }
         })
       );
-    } else {
-      this.organisationunits = this.orgunitService.nodes;
-      this.orgunit_tree_config.loading = false;
-      this.visit_locations = this.orgunitService.visit_locations;
-    }
+    // } else {
+    //   this.organisationunits = this.orgunitService.nodes;
+    //   this.orgunit_tree_config.loading = false;
+    //   this.visit_locations = this.orgunitService.visit_locations;
+    // }
+
+
+
     // if (this.orgunitService.nodes === null) {
     //   this.orgunitService.getOrgunitLevelsInformation()
     //     .subscribe(

@@ -172,20 +172,23 @@ export class DashboardComponent implements OnInit {
 
   updateCard1Chart(filter: { from_date, to_date, facilities }) {
     this.card1DataLoading = true;
-    const reportUrl = 'clients_summary/';
+    
+    const reportUrl = 'events_summary/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-              name: 'Total Clients By Gender',
-              data: data['total_aggregate'].map(item => item.value)
-            }];
-          const categories = data['total_aggregate'].map(item => item.gender);
+            name: 'Months',
+            data: data['total_services_by_month'].map(item => item.value)
+          }];
+          const categories = data['total_services_by_month'].map(item => item.month_name);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Registrations',
-            'Total Clients' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
+            'Total Services Issued by Month',
+            'Total Services Issued by Months' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            // '',
+            // 'line'
           );
           Highcharts.chart('card1Chart', chartConfig);
         }
@@ -277,22 +280,20 @@ export class DashboardComponent implements OnInit {
 
   updateCard4Chart(filter: { from_date, to_date, facilities }) {
     this.card4DataLoading = true;
-    const reportUrl = 'events_summary/';
+    const reportUrl = 'clients_summary/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Services',
-            data: data['total_services_by_month'].map(item => item.value)
-          }];
-          const categories = data['total_services_by_month'].map(item => item.month_name);
+              name: 'Total Clients By Gender',
+              data: data['total_aggregate'].map(item => item.value)
+            }];
+          const categories = data['total_aggregate'].map(item => item.gender);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Total Services Issued by Months',
-            'Total Services Issued by Months' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
-            // '',
-            // 'line'
+            'Registrations',
+            'Total Clients' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
           );
           Highcharts.chart('card4Chart', chartConfig);
         }

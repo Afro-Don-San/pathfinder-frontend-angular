@@ -1,15 +1,17 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, NgModule} from '@angular/core';
 import {UserService} from '../services/user.service';
 import {Observable} from 'rxjs';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {HttpClientService} from '../services/http-client.service';
 import {LocationService} from '../services/location.service';
 import {OrgUnitService} from '../services/org-unit.service';
+import {SettingsService} from '../services/settings.service';
 import {filter, map, mergeMap} from 'rxjs/operators';
 import {routeAnimations} from '../shared/animations/router-animation';
 import {ActivatedRoute, NavigationCancel, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 import {load} from '@angular/core/src/render3';
+import {DashboardComponent} from '../modules/dashboard/dashboard.component'
 
 @Component({
   selector: 'app-home',
@@ -17,6 +19,7 @@ import {load} from '@angular/core/src/render3';
   styleUrls: ['./home.component.scss'],
   animations: [routeAnimations]
 })
+
 export class HomeComponent implements OnInit, AfterViewInit {
   locations: any[] = [];
   isHandset$: Observable<boolean> = this.breakpointObserver
@@ -26,6 +29,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   isOpen = true;
   loading$: Observable<boolean>;
 
+  location_loading = false;
+
   total_clients = 0;
   total_initiations = 0;
   total_discontinuations = 0;
@@ -33,6 +38,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   navigation = [];
   username = '';
+  location = [];
+
+  orgunitName: string;
 
   loading: boolean = false;
   constructor(
@@ -44,8 +52,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private titleService: Title,
     private locationService: LocationService,
     private orgunitService: OrgUnitService,
+    private settingsService: SettingsService
   ) {
     this.navigation = userService.getNavigation();
+ 
   }
 
   ngOnInit() {
@@ -56,11 +66,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.router.navigate( ['', 'login']);
     }
 
-    this.getTotalClients({location});
-    this.getTotalInitiations({location});
-    this.getTotalDiscontinuations({location});
-    this.getTotalServices({location});
+    let dashboard = new DashboardComponent(this.breakpointObserver, this.http, this.locationService, this.orgunitService, this.settingsService)
 
+    dashboard.getLocation(starting_location).then(locations => {
+      const facilities = this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
+      this.orgunitName = this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
+      this.getTotalClients({facilities});
+      this.getTotalServices({facilities});
+      this.getTotalInitiations({facilities});
+      this.getTotalDiscontinuations({ facilities});
+
+    });
 
     // this.getLocation(starting_location).then(locations => {
     //   const facilities = this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
@@ -68,7 +84,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     // });
   }
 
-  async getTotalClients(facilities) {
+
+  async getTotalClients(filter: {facilities}) {
     
     const data = await this.http.postDJANGOURL(
       'dashboard_summary/',filter
@@ -78,7 +95,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
-  async getTotalInitiations(facilities) {
+  async getTotalInitiations(filter: {facilities}) {
     
     const data = await this.http.postDJANGOURL(
       'dashboard_summary/',filter
@@ -89,7 +106,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 
-  async getTotalDiscontinuations(facilities) {
+  async getTotalDiscontinuations(filter: {facilities}) {
     
     const data = await this.http.postDJANGOURL(
       'dashboard_summary/',filter
@@ -101,7 +118,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 
-  async getTotalServices(facilities) {
+  async getTotalServices(filter: {facilities}) {
     
     const data = await this.http.postDJANGOURL(
       'dashboard_summary/',filter
