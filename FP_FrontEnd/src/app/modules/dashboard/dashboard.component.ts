@@ -248,15 +248,15 @@ export class DashboardComponent implements OnInit {
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-            name: 'Services',
-            data: data['total_issued_services_by_team'].map(item => item.value)
+            name: 'Referrals',
+            data: data['total_issued_referrals'].map(item => item.value)
           }];
-          const categories = data['total_issued_services_by_team'].map(item => item.team);
+          const categories = data['total_issued_referrals'].map(item => item.event_type);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
             'Services',
-            'Total Issued Services by Team' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+            'Total Issued Referrals' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
             '',
             'line'
           );
@@ -280,20 +280,20 @@ export class DashboardComponent implements OnInit {
 
   updateCard4Chart(filter: { from_date, to_date, facilities }) {
     this.card4DataLoading = true;
-    const reportUrl = 'clients_summary/';
+    const reportUrl = 'events_summary/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
         if (data) {
           const series = [{
-              name: 'Total Clients By Gender',
-              data: data['total_aggregate'].map(item => item.value)
+              name: 'Family Planning Methods',
+              data: data['total_family_planning_method_given'].map(item => item.value)
             }];
-          const categories = data['total_aggregate'].map(item => item.gender);
+          const categories = data['total_family_planning_method_given'].map(item => item.field_code_3);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
-            'Registrations',
-            'Total Clients' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
+            'Number of Clients',
+            'Total Family Planning Methods Given' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
           );
           Highcharts.chart('card4Chart', chartConfig);
         }

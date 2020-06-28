@@ -40,17 +40,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 /* harmony import */ var _modules_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/dashboard/dashboard.component */ "./src/app/modules/dashboard/dashboard.component.ts");
 /* harmony import */ var _modules_providers_report_providers_report_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/providers-report/providers-report.component */ "./src/app/modules/providers-report/providers-report.component.ts");
-/* harmony import */ var _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/reports/reports.component */ "./src/app/modules/reports/reports.component.ts");
-/* harmony import */ var _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/settings/settings.component */ "./src/app/modules/settings/settings.component.ts");
-/* harmony import */ var _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/settings/service/service.component */ "./src/app/modules/settings/service/service.component.ts");
-/* harmony import */ var _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/settings/indicators/indicators.component */ "./src/app/modules/settings/indicators/indicators.component.ts");
-/* harmony import */ var _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/settings/reffereal-feedback/reffereal-feedback.component */ "./src/app/modules/settings/reffereal-feedback/reffereal-feedback.component.ts");
-/* harmony import */ var _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/settings/reffereal-type/reffereal-type.component */ "./src/app/modules/settings/reffereal-type/reffereal-type.component.ts");
-/* harmony import */ var _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/settings/registration-reason/registration-reason.component */ "./src/app/modules/settings/registration-reason/registration-reason.component.ts");
-/* harmony import */ var _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/locations/locations.component */ "./src/app/modules/locations/locations.component.ts");
-/* harmony import */ var _modules_users_users_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/users/users.component */ "./src/app/modules/users/users.component.ts");
-/* harmony import */ var _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/superset/superset.component */ "./src/app/modules/superset/superset.component.ts");
-/* harmony import */ var _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component */ "./src/app/modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component.ts");
+/* harmony import */ var _modules_providers_report_inter_facility_refferal_report_inter_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/providers-report/inter-facility-refferal-report/inter-facility-refferal-report.component */ "./src/app/modules/providers-report/inter-facility-refferal-report/inter-facility-refferal-report.component.ts");
+/* harmony import */ var _modules_providers_report_facility_referral_report_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/providers-report/facility-referral-report/facility-refferal-report.component */ "./src/app/modules/providers-report/facility-referral-report/facility-refferal-report.component.ts");
+/* harmony import */ var _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/providers-report/providers-refferal-report/providers-refferal-report.component */ "./src/app/modules/providers-report/providers-refferal-report/providers-refferal-report.component.ts");
+/* harmony import */ var _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/reports/reports.component */ "./src/app/modules/reports/reports.component.ts");
+/* harmony import */ var _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/settings/settings.component */ "./src/app/modules/settings/settings.component.ts");
+/* harmony import */ var _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/settings/service/service.component */ "./src/app/modules/settings/service/service.component.ts");
+/* harmony import */ var _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/settings/indicators/indicators.component */ "./src/app/modules/settings/indicators/indicators.component.ts");
+/* harmony import */ var _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/settings/reffereal-feedback/reffereal-feedback.component */ "./src/app/modules/settings/reffereal-feedback/reffereal-feedback.component.ts");
+/* harmony import */ var _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/settings/reffereal-type/reffereal-type.component */ "./src/app/modules/settings/reffereal-type/reffereal-type.component.ts");
+/* harmony import */ var _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/settings/registration-reason/registration-reason.component */ "./src/app/modules/settings/registration-reason/registration-reason.component.ts");
+/* harmony import */ var _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/locations/locations.component */ "./src/app/modules/locations/locations.component.ts");
+/* harmony import */ var _modules_users_users_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/users/users.component */ "./src/app/modules/users/users.component.ts");
+/* harmony import */ var _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/superset/superset.component */ "./src/app/modules/superset/superset.component.ts");
+/* harmony import */ var _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component */ "./src/app/modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component.ts");
+
+
+
 
 
 
@@ -82,17 +88,17 @@ var routes = [
             },
             {
                 path: 'location',
-                component: _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_14__["LocationsComponent"],
+                component: _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_17__["LocationsComponent"],
                 data: { state: 'location' }
             },
             {
                 path: 'users',
-                component: _modules_users_users_component__WEBPACK_IMPORTED_MODULE_15__["UsersComponent"],
+                component: _modules_users_users_component__WEBPACK_IMPORTED_MODULE_18__["UsersComponent"],
                 data: { state: 'user_management' }
             },
             {
                 path: 'reports',
-                component: _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_7__["ReportsComponent"],
+                component: _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_10__["ReportsComponent"],
                 data: { state: 'reports' }
             },
             {
@@ -101,70 +107,63 @@ var routes = [
                     url: externalUrlProvider,
                 },
                 // We need a component here because we cannot define the route otherwise
-                component: _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_16__["SupersetComponent"],
+                component: _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_19__["SupersetComponent"],
             },
             {
-                path: 'fp_report',
+                path: 'providers_report',
                 component: _modules_providers_report_providers_report_component__WEBPACK_IMPORTED_MODULE_6__["ProvidersReportComponent"],
-                data: { state: 'fp-report' },
+                data: { state: 'providers-report' },
                 children: [
                     {
                         path: 'issued-referrals-by-location-report',
-                        component: _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_17__["IssuedReferralsByLocationComponent"],
-                        data: { state: 'issued-referrals-by-location-report' }
+                        component: _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_20__["IssuedReferralsByLocationComponent"],
+                        data: { state: 'providers-report' }
                     },
+                    {
+                        path: 'provide-report',
+                        component: _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_9__["ProvidersRefferalReportComponent"],
+                        data: { state: 'providers-report' }
+                    },
+                    {
+                        path: 'facility-report',
+                        component: _modules_providers_report_facility_referral_report_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__["FacilityRefferalReportComponent"],
+                        data: { state: 'providers-report' }
+                    },
+                    {
+                        path: 'inter-facility-report',
+                        component: _modules_providers_report_inter_facility_refferal_report_inter_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_7__["InterFacilityRefferalReportComponent"],
+                        data: { state: 'providers-report' }
+                    }
                 ]
             },
-            // {
-            //   path: 'providers_report',
-            //   component: ProvidersReportComponent,
-            //   data: {state: 'providers-report'},
-            //   children: [
-            //     {
-            //       path: 'provide-report',
-            //       component: ProvidersRefferalReportComponent,
-            //       data: {state: 'providers-report'}
-            //     },
-            //     {
-            //       path: 'facility-report',
-            //       component: FacilityRefferalReportComponent,
-            //       data: {state: 'providers-report'}
-            //     },
-            //     {
-            //       path: 'inter-facility-report',
-            //       component: InterFacilityRefferalReportComponent,
-            //       data: {state: 'providers-report'}
-            //     }
-            //   ]
-            // },
             {
                 path: 'settings',
-                component: _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_8__["SettingsComponent"],
+                component: _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_11__["SettingsComponent"],
                 data: { state: 'settings' },
                 children: [
                     {
                         path: 'services',
-                        component: _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_9__["ServiceComponent"],
+                        component: _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_12__["ServiceComponent"],
                         data: { state: 'services' }
                     },
                     {
                         path: 'indicators',
-                        component: _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_10__["IndicatorsComponent"],
+                        component: _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_13__["IndicatorsComponent"],
                         data: { state: 'indicators' }
                     },
                     {
                         path: 'reffereal-feedback',
-                        component: _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_11__["RefferealFeedbackComponent"],
+                        component: _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_14__["RefferealFeedbackComponent"],
                         data: { state: 'reffereal-feedback' }
                     },
                     {
                         path: 'reffereal-type',
-                        component: _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_12__["RefferealTypeComponent"],
+                        component: _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_15__["RefferealTypeComponent"],
                         data: { state: 'reffereal-type' }
                     },
                     {
                         path: 'registration-reason',
-                        component: _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_13__["RegistrationReasonComponent"],
+                        component: _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_16__["RegistrationReasonComponent"],
                         data: { state: 'registration-reason' }
                     },
                 ]
@@ -424,7 +423,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"main-nav mat-elevation-z6\">\n  <!--<mat-toolbar class=\"toolbar no-print\" style=\"background-color: #07587f\"> -->\n  <mat-toolbar class=\"toolbar no-print\" style=\"background-color: #3F997B\">\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"drawer.toggle()\"\n      *ngIf=\"isHandset$ | async\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"isOpen = !isOpen\"\n      title=\"Toggle Menu\"\n      *ngIf=\"!(isHandset$ | async)\">\n      <mat-icon class=\"secondary-color\" aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    <span class=\"secondary-color\">\n      <img src=\"assets/img/logo.png\"\n           style=\"height: 75px; width: 75px; margin-left: 10px; margin-right: 21px; border-radius: 50%;\">\n    </span>\n    <span style=\"display: inline-block; margin-top: 14px; margin-left: 7px; font-size: 33px; color: #ffffff\">\n      Family Planning\n      <span *ngIf=\"isHandset$ | async\">iLMS</span>\n    </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <!--    user dropdown menu-->\n    <mat-menu #appMenu=\"matMenu\">\n    <!--\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-user\"></i>\n        Profile\n      </a>\n      -->\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-key\"></i>\n        Change Password\n      </a>\n      <mat-divider></mat-divider>\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-sign-out\"></i>\n        Logout\n      </a>\n\n    </mat-menu>\n\n    <button mat-button [matMenuTriggerFor]=\"appMenu\">\n      <span class=\"secondary-color\">\n        <mat-icon fontSet=\"fa\" fontIcon=\"fa-user\" style=\"margin-top: 6px\"></mat-icon>\n        {{ username }}\n      </span>\n    </button>\n  </mat-toolbar>\n</nav>\n<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav no-print\" fixedInViewport=\"false\"\n               [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n               [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n               [opened]=\"!(isHandset$ | async) && isOpen\">\n    <mat-toolbar>TRCMIS</mat-toolbar>\n    <app-placeholder *ngIf=\"loading$ | async\" [numberOfLines]=\"30\"></app-placeholder>\n    <mat-nav-list>\n      <ng-container *ngFor=\"let linkItem of navigation\">\n        <!--        <div class=\"col-sm-12 item\" [routerLinkActive]=\"'active-item'\" [routerLink]=\"linkItem.links\" >-->\n        <!--          <div class=\"text-center\"><i class=\"{{linkItem.icon}}\"></i></div>-->\n        <!--          <h3>{{linkItem.name}}</h3>-->\n        <!--        </div>-->\n        <a mat-list-item [routerLink]=\"linkItem.links\" routerLinkActive=\"active-menu\">\n          <i style=\"color: #07587f\" class=\"{{linkItem.icon}}\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{linkItem.name}}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n\n    <!-- Add Content Here -->\n    <div class=\"content\" style=\"margin-top: 80px\"\n         [@routeAnimations]=\"o.isActivated ? o.activatedRoute : ''\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+module.exports = "<nav class=\"main-nav mat-elevation-z6\">\n  <!--<mat-toolbar class=\"toolbar no-print\" style=\"background-color: #07587f\"> -->\n  <mat-toolbar class=\"toolbar no-print\" style=\"background-color: #3F997B\">\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"drawer.toggle()\"\n      *ngIf=\"isHandset$ | async\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"isOpen = !isOpen\"\n      title=\"Toggle Menu\"\n      *ngIf=\"!(isHandset$ | async)\">\n      <mat-icon class=\"secondary-color\" aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    <span class=\"secondary-color\">\n      <img src=\"assets/img/logo.png\"\n           style=\"height: 75px; width: 75px; margin-left: 10px; margin-right: 21px; border-radius: 50%;\">\n    </span>\n    <span style=\"display: inline-block; margin-top: 14px; margin-left: 7px; font-size: 33px; color: #ffffff\">\n      Family Planning\n      <span *ngIf=\"isHandset$ | async\">iLMS</span>\n    </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <!--    user dropdown menu-->\n    <mat-menu #appMenu=\"matMenu\">\n    <!--\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-user\"></i>\n        Profile\n      </a>\n      -->\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-key\"></i>\n        Change Password\n      </a>\n      <mat-divider></mat-divider>\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-sign-out\"></i>\n        Logout\n      </a>\n\n    </mat-menu>\n\n    <button mat-button [matMenuTriggerFor]=\"appMenu\">\n      <span class=\"secondary-color\">\n        <mat-icon fontSet=\"fa\" fontIcon=\"fa-user\" style=\"margin-top: 6px\"></mat-icon>\n        {{ username }}\n      </span>\n    </button>\n  </mat-toolbar>\n</nav>\n<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav no-print\" fixedInViewport=\"false\"\n               [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n               [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n               [opened]=\"!(isHandset$ | async) && isOpen\">\n    <mat-toolbar>TRCMIS</mat-toolbar>\n    <app-placeholder *ngIf=\"loading$ | async\" [numberOfLines]=\"30\"></app-placeholder>\n    <mat-nav-list>\n      <ng-container *ngFor=\"let linkItem of navigation\">\n        <!--        <div class=\"col-sm-12 item\" [routerLinkActive]=\"'active-item'\" [routerLink]=\"linkItem.links\" >-->\n        <!--          <div class=\"text-center\"><i class=\"{{linkItem.icon}}\"></i></div>-->\n        <!--          <h3>{{linkItem.name}}</h3>-->\n        <!--        </div>-->\n        <a mat-list-item [routerLink]=\"linkItem.links\" routerLinkActive=\"active-menu\">\n          <i style=\"color: #07587f\" class=\"{{linkItem.icon}}\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{linkItem.name}}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container><br /><br />\n\n      <ng-container>\n      <p> &nbsp;&nbsp; Dashboard Summary</p>\n         <mat-divider></mat-divider>\n        <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-users\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Clients</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_clients }}</span>\n        </a>\n        \n         <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-thumbs-up\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Initiations</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_initiations }}</span>\n        </a>\n         <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-thumbs-down\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Discontinuations</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_discontinuations }}</span>\n        </a>\n            <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-scissors\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Services</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_services }}</span>\n        </a>\n                 <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-scissors\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Referrals</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_referrals }}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container>\n\n\n    </mat-nav-list>\n\n  </mat-sidenav>\n  <mat-sidenav-content>\n\n    <!-- Add Content Here -->\n    <div class=\"content\" style=\"margin-top: 80px\"\n         [@routeAnimations]=\"o.isActivated ? o.activatedRoute : ''\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -453,11 +452,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
 /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _shared_animations_router_animation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/animations/router-animation */ "./src/app/shared/animations/router-animation.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _services_location_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/location.service */ "./src/app/services/location.service.ts");
+/* harmony import */ var _services_http_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/http-client.service */ "./src/app/services/http-client.service.ts");
+/* harmony import */ var _services_location_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/location.service */ "./src/app/services/location.service.ts");
+/* harmony import */ var _services_org_unit_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/org-unit.service */ "./src/app/services/org-unit.service.ts");
+/* harmony import */ var _services_settings_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/settings.service */ "./src/app/services/settings.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _shared_animations_router_animation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/animations/router-animation */ "./src/app/shared/animations/router-animation.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _modules_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../modules/dashboard/dashboard.component */ "./src/app/modules/dashboard/dashboard.component.ts");
+
+
+
+
 
 
 
@@ -468,29 +475,135 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(breakpointObserver, router, activatedRoute, userService, titleService, locationService) {
+    function HomeComponent(breakpointObserver, router, http, activatedRoute, userService, titleService, locationService, orgunitService, settingsService) {
         this.breakpointObserver = breakpointObserver;
         this.router = router;
+        this.http = http;
         this.activatedRoute = activatedRoute;
         this.userService = userService;
         this.titleService = titleService;
         this.locationService = locationService;
+        this.orgunitService = orgunitService;
+        this.settingsService = settingsService;
+        this.locations = [];
         this.isHandset$ = this.breakpointObserver
             .observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["Breakpoints"].Handset)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (result) { return result.matches; }));
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (result) { return result.matches; }));
         this.isOpen = true;
+        this.location_loading = false;
+        this.total_clients = 0;
+        this.total_initiations = 0;
+        this.total_discontinuations = 0;
+        this.total_services = 0;
+        this.total_referrals = 0;
         this.navigation = [];
         this.username = '';
+        this.location = [];
         this.loading = false;
         this.navigation = userService.getNavigation();
     }
     HomeComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var token = localStorage.getItem('htmr-web-token');
-        var location = localStorage.getItem('htmr-starting-location');
+        var starting_location = localStorage.getItem('htmr-starting-location');
         this.username = localStorage.getItem('trcmis-user');
         if (!token || !location) {
             this.router.navigate(['', 'login']);
         }
+        var dashboard = new _modules_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__["DashboardComponent"](this.breakpointObserver, this.http, this.locationService, this.orgunitService, this.settingsService);
+        dashboard.getLocation(starting_location).then(function (locations) {
+            var facilities = _this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
+            _this.orgunitName = _this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
+            _this.getTotalClients({ facilities: facilities });
+            _this.getTotalServices({ facilities: facilities });
+            _this.getTotalInitiations({ facilities: facilities });
+            _this.getTotalDiscontinuations({ facilities: facilities });
+            _this.getTotalReferrals({ facilities: facilities });
+        });
+        // this.getLocation(starting_location).then(locations => {
+        //   const facilities = this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
+        //   this.getTotalClients({facilities});
+        // });
+    };
+    HomeComponent.prototype.getTotalClients = function (filter) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.http.postDJANGOURL('dashboard_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_clients = data['total_clients'];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomeComponent.prototype.getTotalInitiations = function (filter) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.http.postDJANGOURL('dashboard_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_initiations = data['total_family_planning_initiations'];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomeComponent.prototype.getTotalDiscontinuations = function (filter) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.http.postDJANGOURL('dashboard_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_discontinuations = data['total_family_planning_discontinuations'];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomeComponent.prototype.getTotalServices = function (filter) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.http.postDJANGOURL('dashboard_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_services = data['total_services'];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomeComponent.prototype.getTotalReferrals = function (filter) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.http.postDJANGOURL('dashboard_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_referrals = data['total_referrals'];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
     HomeComponent.prototype.goToChangePass = function () {
         this.router.navigate(['', 'change_password']);
@@ -508,34 +621,37 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
-            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_6__["NavigationStart"]) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_10__["NavigationStart"]) {
                 _this.loading = true;
             }
-            else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_6__["NavigationEnd"] ||
-                event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_6__["NavigationCancel"]) {
+            else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_10__["NavigationEnd"] ||
+                event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_10__["NavigationCancel"]) {
                 _this.loading = false;
             }
         });
-        this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (event) { return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_6__["NavigationEnd"]; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function () { return _this.activatedRoute; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (route) {
+        this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(function (event) { return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_10__["NavigationEnd"]; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function () { return _this.activatedRoute; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (route) {
             while (route.firstChild) {
                 route = route.firstChild;
             }
             return route;
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (route) { return route.outlet === 'primary'; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["mergeMap"])(function (route) { return route.data; })).subscribe(function (event) { return _this.titleService.setTitle(event.title); });
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(function (route) { return route.outlet === 'primary'; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["mergeMap"])(function (route) { return route.data; })).subscribe(function (event) { return _this.titleService.setTitle(event.title); });
     };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
-            animations: [_shared_animations_router_animation__WEBPACK_IMPORTED_MODULE_5__["routeAnimations"]],
+            animations: [_shared_animations_router_animation__WEBPACK_IMPORTED_MODULE_9__["routeAnimations"]],
             styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/home/home.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["BreakpointObserver"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_10__["Router"],
+            _services_http_client_service__WEBPACK_IMPORTED_MODULE_4__["HttpClientService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_10__["ActivatedRoute"],
             _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"],
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_7__["Title"],
-            _services_location_service__WEBPACK_IMPORTED_MODULE_8__["LocationService"]])
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__["Title"],
+            _services_location_service__WEBPACK_IMPORTED_MODULE_5__["LocationService"],
+            _services_org_unit_service__WEBPACK_IMPORTED_MODULE_6__["OrgUnitService"],
+            _services_settings_service__WEBPACK_IMPORTED_MODULE_7__["SettingsService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -625,13 +741,12 @@ var LoginComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.userService.login(loginCredentials).toPromise()];
                     case 3:
                         openMrsResult = _a.sent();
-                        console.log(openSrpResult.team.team.location.uuid);
-                        console.log(openMrsResult.results);
                         if (openSrpResult) {
                             if (openSrpResult.team && openSrpResult.team.team) {
                                 if (openSrpResult.team.team.location) {
                                     location_1 = openSrpResult.team.team.location;
                                     starting_location = location_1 ? location_1.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
+                                    console.log("location from login", starting_location);
                                     localStorage.setItem('htmr-starting-location', starting_location);
                                 }
                             }
@@ -950,7 +1065,7 @@ var CardFilterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-table-form\n  title=\"Dashboard\"\n  image=\"dashboard\"\n  [viewDetails]=\"false\"\n  [hideAdd]=\"true\"\n>\n  <ng-container ngProjectAs=\"table\">\n\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-12\">\n          <div *ngIf=\"!location_loading\">\n            <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCards($event)\"></app-card-filter>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"main-stats-container p-3\" style=\"margin-bottom: 25px\">\n      <app-summary-card\n        image=\"registration\"\n        [value]=\"total_registration || 0\"\n        [loading]=\"location_loading || label3DataLoading\"\n        [route]=\"['report']\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Clients\"\n        low_title=\"Registered\">\n      </app-summary-card>\n\n      <app-summary-card\n        image=\"icons8-send-job-list-80\"\n        [route]=\"['report']\"\n        [loading]=\"location_loading || label1DataLoading\"\n        [value]=\"total_refferals || 0\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Clients\"\n        low_title=\"Referred\">\n      </app-summary-card>\n\n      <app-summary-card\n        image=\"ltf\"\n        [route]=\"['report']\"\n        [value]=\"total_ltfs || 0\"\n        [loading]=\"location_loading || label2DataLoading\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Family Planning\"\n        low_title=\"Initiations\">\n      </app-summary-card>\n\n      <app-summary-card\n        image=\"chw\"\n        [route]=\"['report']\"\n        [value]=\"total_chw\"\n        [loading]=\"location_loading || label4DataLoading\"\n        [additional_information]=\"orgunitName\"\n        top_title=\"Family Planning\"\n        low_title=\"Discontinuations\">\n      </app-summary-card>\n\n    </div>\n    <div class=\"grid-container\">\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n            <mat-card-content class=\"dashboard-card-content\">\n<!--              <div *ngIf=\"!location_loading\">-->\n<!--                <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCard1($event)\"></app-card-filter>-->\n<!--              </div>-->\n              <app-placeholder *ngIf=\"location_loading || card1DataLoading\" [numberOfLines]=\"16\"></app-placeholder>\n<!--              <div-->\n<!--                #reportArea1-->\n<!--                [ngClass]=\"{'hidden': !card1Data || location_loading || card1DataLoading}\"-->\n<!--                [innerHtml]=\"card1Data | safeHtml\"-->\n<!--              ></div>-->\n              <div\n                [ngClass]=\"{'hidden': location_loading || card1DataLoading}\"\n                id=\"card1Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n            <mat-card-content class=\"dashboard-card-content\">\n<!--              <div *ngIf=\"!location_loading\">-->\n<!--                <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCard2($event)\"></app-card-filter>-->\n<!--              </div>-->\n              <app-placeholder *ngIf=\"location_loading || card2DataLoading\" [numberOfLines]=\"16\"></app-placeholder>\n              <div\n                [ngClass]=\"{'hidden': location_loading || card2DataLoading}\"\n                id=\"card2Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n<!--              <div-->\n<!--                #reportArea2-->\n<!--                [ngClass]=\"{'hidden': !card2Data || location_loading || card2DataLoading}\"-->\n<!--                [innerHtml]=\"card2Data | safeHtml\"-->\n<!--              ></div>-->\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n            <mat-card-content class=\"dashboard-card-content\">\n<!--              <div *ngIf=\"!location_loading\">-->\n<!--                <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCard3($event)\"></app-card-filter>-->\n<!--              </div>-->\n              <app-placeholder *ngIf=\"location_loading || card3DataLoading\" [numberOfLines]=\"10\"></app-placeholder>\n              <div\n                [ngClass]=\"{'hidden': location_loading || card3DataLoading}\"\n                id=\"card3Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n<!--              <div-->\n<!--                #reportArea3-->\n<!--                [ngClass]=\"{'hidden': !card3Data || location_loading || card3DataLoading}\"-->\n<!--                [innerHtml]=\"card3Data | safeHtml\"-->\n<!--              ></div>-->\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n\n            <mat-card-content class=\"dashboard-card-content\">\n\n              <app-placeholder *ngIf=\"location_loading || card4DataLoading\" [numberOfLines]=\"10\"></app-placeholder>\n              <div\n                [ngClass]=\"{'hidden': location_loading || card4DataLoading}\"\n                id=\"card4Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n<!--              <div-->\n<!--                #reportArea4-->\n<!--                [ngClass]=\"{'hidden': !card4Data || location_loading || card4DataLoading}\"-->\n<!--                [innerHtml]=\"card4Data | safeHtml\"-->\n<!--              ></div>-->\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n    </div>\n  </ng-container>\n</app-table-form>\n\n"
+module.exports = "<app-table-form\n  title=\"Dashboard\"\n  image=\"dashboard\"\n  [viewDetails]=\"false\"\n  [hideAdd]=\"true\"\n>\n  <ng-container ngProjectAs=\"table\">\n\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-12\">\n          <div *ngIf=\"!location_loading\">\n            <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCards($event)\"></app-card-filter>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"main-stats-container p-3\" style=\"margin-bottom: 25px\">\n      <app-summary-card\n        image=\"registration\"\n        [value]=\"total_registration || 0\"\n        [loading]=\"location_loading || label3DataLoading\"\n        [route]=\"['report']\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Family Planning\"\n        low_title=\"Registrations\">\n      </app-summary-card>\n\n      <app-summary-card\n        image=\"icons8-send-job-list-80\"\n        [route]=\"['report']\"\n        [loading]=\"location_loading || label1DataLoading\"\n        [value]=\"total_services || 0\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Family Planning\"\n        low_title=\"Referrals\">\n      </app-summary-card>\n\n      <app-summary-card\n        image=\"ltf\"\n        [route]=\"['report']\"\n        [value]=\"total_fp_initiations || 0\"\n        [loading]=\"location_loading || label2DataLoading\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Family Planning\"\n        low_title=\"Initiations\">\n      </app-summary-card>\n\n      <app-summary-card\n        image=\"chw\"\n        [route]=\"['report']\"\n        [value]=\"total_fp_discontinuations || 0\"\n        [loading]=\"location_loading || label2DataLoading\"\n        [additional_information]=\"start_date + ' to ' + end_date + ' ' + orgunitName\"\n        top_title=\"Family Planning\"\n        low_title=\"Discontinuations\">\n      </app-summary-card>\n\n    </div>\n    <div class=\"grid-container\">\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n            <mat-card-content class=\"dashboard-card-content\">\n<!--              <div *ngIf=\"!location_loading\">-->\n<!--                <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCard1($event)\"></app-card-filter>-->\n<!--              </div>-->\n              <app-placeholder *ngIf=\"location_loading || card1DataLoading\" [numberOfLines]=\"16\"></app-placeholder>\n<!--              <div-->\n<!--                #reportArea1-->\n<!--                [ngClass]=\"{'hidden': !card1Data || location_loading || card1DataLoading}\"-->\n<!--                [innerHtml]=\"card1Data | safeHtml\"-->\n<!--              ></div>-->\n              <div\n                [ngClass]=\"{'hidden': location_loading || card1DataLoading}\"\n                id=\"card1Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n            <mat-card-content class=\"dashboard-card-content\">\n<!--              <div *ngIf=\"!location_loading\">-->\n<!--                <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCard2($event)\"></app-card-filter>-->\n<!--              </div>-->\n              <app-placeholder *ngIf=\"location_loading || card2DataLoading\" [numberOfLines]=\"16\"></app-placeholder>\n              <div\n                [ngClass]=\"{'hidden': location_loading || card2DataLoading}\"\n                id=\"card2Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n<!--              <div-->\n<!--                #reportArea2-->\n<!--                [ngClass]=\"{'hidden': !card2Data || location_loading || card2DataLoading}\"-->\n<!--                [innerHtml]=\"card2Data | safeHtml\"-->\n<!--              ></div>-->\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n            <mat-card-content class=\"dashboard-card-content\">\n<!--              <div *ngIf=\"!location_loading\">-->\n<!--                <app-card-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateCard3($event)\"></app-card-filter>-->\n<!--              </div>-->\n              <app-placeholder *ngIf=\"location_loading || card3DataLoading\" [numberOfLines]=\"10\"></app-placeholder>\n              <div\n                [ngClass]=\"{'hidden': location_loading || card3DataLoading}\"\n                id=\"card3Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n<!--              <div-->\n<!--                #reportArea3-->\n<!--                [ngClass]=\"{'hidden': !card3Data || location_loading || card3DataLoading}\"-->\n<!--                [innerHtml]=\"card3Data | safeHtml\"-->\n<!--              ></div>-->\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n\n\n      <mat-grid-list cols=\"1\" rowHeight=\"470px\">\n        <mat-grid-tile [ngClass]=\"routeAnimationsElements\" [colspan]=\"1\" [rowspan]=\"1\">\n          <mat-card class=\"dashboard-card\">\n\n            <mat-card-content class=\"dashboard-card-content\">\n\n              <app-placeholder *ngIf=\"location_loading || card4DataLoading\" [numberOfLines]=\"10\"></app-placeholder>\n              <div\n                [ngClass]=\"{'hidden': location_loading || card4DataLoading}\"\n                id=\"card4Chart\"\n                class=\"chart-block\"\n                style=\"width: 100%; height: 400px\"></div>\n<!--              <div-->\n<!--                #reportArea4-->\n<!--                [ngClass]=\"{'hidden': !card4Data || location_loading || card4DataLoading}\"-->\n<!--                [innerHtml]=\"card4Data | safeHtml\"-->\n<!--              ></div>-->\n            </mat-card-content>\n          </mat-card>\n        </mat-grid-tile>\n      </mat-grid-list>\n    </div>\n  </ng-container>\n</app-table-form>\n\n"
 
 /***/ }),
 
@@ -1012,9 +1127,9 @@ var DashboardComponent = /** @class */ (function () {
         this.location_loading = false;
         this.locations = [];
         this.total_registration = 0;
-        this.total_refferals = 0;
-        this.total_ltfs = 0;
-        this.total_chw = 0;
+        this.total_services = 0;
+        this.total_fp_initiations = 0;
+        this.total_fp_discontinuations = 0;
         this.card1Data = null;
         this.card2Data = null;
         this.card3Data = null;
@@ -1040,10 +1155,10 @@ var DashboardComponent = /** @class */ (function () {
         this.getLocation(starting_location).then(function (locations) {
             var facilities = _this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
             _this.orgunitName = _this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
-            _this.getTotalRegistration(start_date, end_date, facilities);
-            _this.getTotalRefferals(start_date, end_date, facilities);
-            _this.getTotalLTFs(start_date, end_date, facilities);
-            _this.getCHW(starting_location);
+            _this.getTotalRegistration({ from_date: start_date, to_date: end_date, facilities: facilities });
+            _this.getTotalServices({ from_date: start_date, to_date: end_date, facilities: facilities });
+            _this.getTotalFamilyPlanningInitiations({ from_date: start_date, to_date: end_date, facilities: facilities });
+            _this.getTotalFamilyPlanningDiscontinuations({ from_date: start_date, to_date: end_date, facilities: facilities });
             _this.updateCard1({ from_date: start_date, to_date: end_date, facilities: facilities });
             _this.updateCard2({ from_date: start_date, to_date: end_date, facilities: facilities });
             _this.updateCard3({ from_date: start_date, to_date: end_date, facilities: facilities });
@@ -1056,23 +1171,24 @@ var DashboardComponent = /** @class */ (function () {
         this.updateCard2Chart(filter);
         this.updateCard3Chart(filter);
         this.updateCard4Chart(filter);
-        this.getTotalRegistration(filter.from_date, filter.to_date, filter.facilities);
-        this.getTotalRefferals(filter.from_date, filter.to_date, filter.facilities);
-        this.getTotalLTFs(filter.from_date, filter.to_date, filter.facilities);
-        this.getCHW(filter.ouId);
+        this.getTotalRegistration(filter);
+        this.getTotalServices(filter);
+        this.getTotalFamilyPlanningInitiations(filter);
+        this.getTotalFamilyPlanningDiscontinuations(filter.ouId);
     };
-    DashboardComponent.prototype.getTotalRefferals = function (from_date, to_date, facilities) {
+    DashboardComponent.prototype.getTotalServices = function (filter) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var data;
+            var reportUrl, data;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         this.label1DataLoading = true;
-                        return [4 /*yield*/, this.http.getDJANGOURL('referral_summary/').toPromise()];
+                        reportUrl = 'events_summary/';
+                        return [4 /*yield*/, this.http.postDJANGOURL(reportUrl, filter).toPromise()];
                     case 1:
                         data = _a.sent();
                         if (data) {
-                            this.total_refferals = data['total_referrals'];
+                            this.total_services = data['total_family_planning_refferals'];
                             this.label1DataLoading = false;
                         }
                         return [2 /*return*/];
@@ -1080,33 +1196,42 @@ var DashboardComponent = /** @class */ (function () {
             });
         });
     };
-    DashboardComponent.prototype.getTotalLTFs = function (from_date, to_date, facilities) {
+    DashboardComponent.prototype.getTotalFamilyPlanningInitiations = function (filter) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                // this.label2DataLoading = true;
-                // const data = await this.http.postOpenSRP(
-                //   'reports/summary_total_LTFS/json',
-                //   {from_date, to_date, facilities}
-                // ).toPromise();
-                // if (data) {
-                //   this.total_ltfs = data['Total LTFs'];
-                //   this.label2DataLoading = false;
-                // }
-                this.label2DataLoading = true;
-                this.total_ltfs = 4;
-                this.label2DataLoading = false;
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        // this.label2DataLoading = true;
+                        // const data = await this.http.postOpenSRP(
+                        //   'reports/summary_total_LTFS/json',
+                        //   {from_date, to_date, facilities}
+                        // ).toPromise();
+                        // if (data) {
+                        //   this.total_ltfs = data['Total LTFs'];
+                        //   this.label2DataLoading = false;
+                        // }
+                        this.label2DataLoading = true;
+                        return [4 /*yield*/, this.http.postDJANGOURL('events_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_fp_initiations = data['total_family_planning_initiations'];
+                            this.label2DataLoading = false;
+                        }
+                        return [2 /*return*/];
+                }
             });
         });
     };
-    DashboardComponent.prototype.getTotalRegistration = function (from_date, to_date, facilities) {
+    DashboardComponent.prototype.getTotalRegistration = function (filter) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             var data;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         this.label3DataLoading = true;
-                        return [4 /*yield*/, this.http.getDJANGOURL('family_planning_registration_summary/').toPromise()];
+                        return [4 /*yield*/, this.http.postDJANGOURL('events_summary/', filter).toPromise()];
                     case 1:
                         data = _a.sent();
                         if (data) {
@@ -1118,19 +1243,28 @@ var DashboardComponent = /** @class */ (function () {
             });
         });
     };
-    DashboardComponent.prototype.getCHW = function (ouID) {
+    DashboardComponent.prototype.getTotalFamilyPlanningDiscontinuations = function (filter) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                // this.label4DataLoading = true;
-                // const data = await this.http.getOpenSRP(`get-team-members-by-facility-hierarchy/${ouID}`).toPromise();
-                // if (data) {
-                //   this.total_chw = data;
-                //   this.label4DataLoading = false;
-                // }
-                this.label4DataLoading = true;
-                this.total_chw = 280;
-                this.label4DataLoading = false;
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        // this.label4DataLoading = true;
+                        // const data = await this.http.getOpenSRP(`get-team-members-by-facility-hierarchy/${ouID}`).toPromise();
+                        // if (data) {
+                        //   this.total_chw = data;
+                        //   this.label4DataLoading = false;
+                        // }
+                        this.label4DataLoading = true;
+                        return [4 /*yield*/, this.http.postDJANGOURL('events_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_fp_discontinuations = data['total_family_planning_discontinuations'];
+                            this.label4DataLoading = false;
+                        }
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -1148,36 +1282,16 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard1Chart = function (filter) {
         var _this = this;
         this.card1DataLoading = true;
-        // const reportUrl = 'reports/dashboard_total_referrals_issued/json';
-        // this.http.postOpenSRP(reportUrl,
-        //   filter)
-        //   .subscribe((data: any[]) => {
-        //     if (data) {
-        //       const series = [{
-        //           name: 'Referrals',
-        //           data: data.map(item => item.value)
-        //         }];
-        //       const categories = data.map(item => item.itemName);
-        //       const chartConfig: any = this.settingsService.drawChart(
-        //         categories,
-        //         series,
-        //         'Referrals',
-        //         'Total Referrals Issued' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
-        //       );
-        //       Highcharts.chart('card1Chart', chartConfig);
-        //     }
-        //     this.card1DataLoading = false;
-        //   }, error1 => this.card1DataLoading = false);
-        var reportUrl = 'family_planning_registration_summary/';
-        this.http.getDJANGOURL(reportUrl)
+        var reportUrl = 'events_summary/';
+        this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
             if (data) {
                 var series = [{
-                        name: 'Family Planning Registrations By Gender',
-                        data: data['total_aggregate'].map(function (item) { return item.value; })
+                        name: 'Months',
+                        data: data['total_services_by_month'].map(function (item) { return item.value; })
                     }];
-                var categories = data['total_aggregate'].map(function (item) { return item.gender; });
-                var chartConfig = _this.settingsService.drawChart(categories, series, 'Registrations', 'Total Family Planning Registrations' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
+                var categories = data['total_services_by_month'].map(function (item) { return item.month_name; });
+                var chartConfig = _this.settingsService.drawChart(categories, series, 'Total Services Issued by Month', 'Total Services Issued by Months' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card1Chart', chartConfig);
             }
             _this.card1DataLoading = false;
@@ -1197,15 +1311,15 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard2Chart = function (filter) {
         var _this = this;
         this.card2DataLoading = true;
-        var reportUrl = 'referral_summary';
-        this.http.getDJANGOURL(reportUrl)
+        var reportUrl = 'events_summary/';
+        this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
             if (data) {
-                var series = data['total_aggregate'].map(function (item) { return ({
+                var series = data['total_services_aggregate'].map(function (item) { return ({
                     name: item.event_type,
                     y: item.value
                 }); });
-                var chartConfig = _this.settingsService.drawPieChart(series, 'Total Issued Methods' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), 'Services');
+                var chartConfig = _this.settingsService.drawPieChart(series, 'Total Issued Services' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), 'Services');
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card2Chart', chartConfig);
             }
             _this.card2DataLoading = false;
@@ -1225,16 +1339,16 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard3Chart = function (filter) {
         var _this = this;
         this.card3DataLoading = true;
-        var reportUrl = 'referral_summary';
-        this.http.getDJANGOURL(reportUrl)
+        var reportUrl = 'events_summary/';
+        this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
             if (data) {
                 var series = [{
-                        name: 'Referrals',
-                        data: data['total_issued_referrals_by_team'].map(function (item) { return item.value; })
+                        name: 'Services',
+                        data: data['total_issued_services_by_team'].map(function (item) { return item.value; })
                     }];
-                var categories = data['total_issued_referrals_by_team'].map(function (item) { return item.team; });
-                var chartConfig = _this.settingsService.drawChart(categories, series, 'Referrals', 'Total Issued Method Referrals by Team' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), '', 'line');
+                var categories = data['total_issued_services_by_team'].map(function (item) { return item.team; });
+                var chartConfig = _this.settingsService.drawChart(categories, series, 'Services', 'Total Issued Services by Team' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), '', 'line');
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card3Chart', chartConfig);
             }
             _this.card3DataLoading = false;
@@ -1254,16 +1368,16 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard4Chart = function (filter) {
         var _this = this;
         this.card4DataLoading = true;
-        var reportUrl = 'referral_summary';
-        this.http.getDJANGOURL(reportUrl)
+        var reportUrl = 'clients_summary/';
+        this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
             if (data) {
                 var series = [{
-                        name: 'Referrals',
-                        data: data['total_family_planning_referral_by_team'].map(function (item) { return item.value; })
+                        name: 'Total Clients By Gender',
+                        data: data['total_aggregate'].map(function (item) { return item.value; })
                     }];
-                var categories = data['total_family_planning_referral_by_team'].map(function (item) { return item.team; });
-                var chartConfig = _this.settingsService.drawChart(categories, series, 'Referrals', 'Total Family Planning Referrals By Team' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), '', 'line');
+                var categories = data['total_aggregate'].map(function (item) { return item.gender; });
+                var chartConfig = _this.settingsService.drawChart(categories, series, 'Registrations', 'Total Clients' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card4Chart', chartConfig);
             }
             _this.card4DataLoading = false;
@@ -1477,7 +1591,7 @@ var SummaryCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\" style=\"margin-top: 15px\">\n  <!--Loading message-->\n\n  <!--Error message in case something doesnt load-->\n  <div class=\"row no-print\" *ngIf=\"loading_failed\">\n    <div class=\"col-sm-12 text-center text-danger\">\n      Loading Failed\n    </div>\n  </div>\n  <!--data selections-->\n  <div>\n    <!--data entry-->\n    <div class=\"row\">\n      <div class=\"col-3\">\n\n        <mat-form-field appearance=\"outline\">\n          <mat-label>Start Date</mat-label>\n          <input\n            [(ngModel)]=\"start_date\"\n            [matDatepicker]=\"dw\"\n            matInput\n            placeholder=\"From\"\n            [max]=\"end_date\"\n            required/>\n          <mat-datepicker-toggle matSuffix [for]=\"dw\"></mat-datepicker-toggle>\n          <mat-datepicker #dw></mat-datepicker>\n        </mat-form-field>\n      </div>\n      <div class=\"col-3\">\n\n        <mat-form-field appearance=\"outline\">\n          <mat-label>End Date</mat-label>\n          <input\n            [(ngModel)]=\"end_date\"\n            [matDatepicker]=\"dw1\"\n            matInput\n            placeholder=\"To\"\n            [min]=\"start_date\"\n            required/>\n          <mat-datepicker-toggle matSuffix [for]=\"dw1\"></mat-datepicker-toggle>\n          <mat-datepicker #dw1></mat-datepicker>\n        </mat-form-field>\n      </div>\n      <div class=\"col-4 pt-1\">\n        <app-org-unit-filter\n          (onOrgUnitChange)=\"changeOrgUnit($event)\"\n          [orgunit_tree_config]=\"orgunit_tree_config\">\n        </app-org-unit-filter>\n      </div>\n      <div class=\"col-2\">\n        <button\n          style=\"margin-top: 5px; height: 46px;\"\n          [disabled]=\"start_date == '' || end_date == '' || orgunit == null\"\n          class=\"btn btn-block btn-outline-primary\"\n          (click)=\"getProviders()\"\n        >Get Providers List</button>\n      </div>\n    </div>\n    <div class=\"row no-print mt-4\" *ngIf=\"loading\">\n      <div class=\"col-sm-12\" style=\"padding: 0px\">\n        <app-loader [message]=\"'Getting a list of providers...'\"></app-loader>\n      </div>\n    </div>\n\n    <div class=\"row\">\n      <div class=\"col-5\">\n        <app-multiselect\n          *ngIf=\"providers.length != 0\"\n          [items]=\"providers\"\n          [placeholder]=\"'Select data items to see in the report'\"\n          (onSelected)=\"setSelectedData($event)\"\n        ></app-multiselect>\n      </div>\n      <div class=\"col-7\" *ngIf=\"selected_providers.length != 0\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"getData()\">Get Report</button> &nbsp;\n        <button *ngIf=\"done_loading && !show_detailed\" class=\"btn btn-outline-secondary\" (click)=\"show_detailed = true\">Get Detailed</button>\n        <button *ngIf=\"done_loading && show_detailed\" class=\"btn btn-outline-secondary\" (click)=\"show_detailed = false\">Get Summary</button>\n      </div>\n    </div>\n\n    <div class=\"row no-print mt-4\" *ngIf=\"data_loading\">\n      <div class=\"col-sm-12\" style=\"padding: 0px\">\n        <app-loader [message]=\"'Getting a Data for providers...'\"></app-loader>\n      </div>\n    </div>\n\n    <div class=\"row mt-5\" *ngIf=\"done_loading\">\n      <div class=\"col\" *ngIf=\"!show_detailed\" @fadeIn>\n        <h4 class=\"text-center\">Service Provided by {{ selected_providers_names }} for {{ orgunitnames }} from {{\n          start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>\n        <table class=\"table table-bordered\">\n          <tr>\n            <th>Referral Type</th>\n            <th>Number of Referals</th>\n          </tr>\n          <tr *ngFor=\"let data of values\">\n            <td>{{ data.serviceName }}</td>\n            <td>{{ data.count }}</td>\n          </tr>\n        </table>\n      </div>\n\n      <div class=\"col\" *ngIf=\"show_detailed\" @fadeIn>\n        <h4 class=\"text-center\">Detailed Service Provided by {{ selected_providers_names }} for {{ orgunitnames }} from {{\n          start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>\n        <table class=\"table table-bordered\">\n          <tr>\n            <th>Service Provider</th>\n            <th>Client</th>\n            <th>Facility</th>\n            <th>Refferal Status</th>\n          </tr>\n          <tr *ngFor=\"let data of detailed_values\">\n            <td>{{ data.service_provider_name }}</td>\n            <td>{{ data.client_name }}</td>\n            <td>{{ data.facility_name }}</td>\n            <td>{{ data.referral_status }}</td>\n          </tr>\n        </table>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container-fluid\" style=\"margin-top: 15px\">\n  <!--Loading message-->\n\n  <!--Error message in case something doesnt load-->\n  <div class=\"row no-print\" *ngIf=\"loading_failed\">\n    <div class=\"col-sm-12 text-center text-danger\">\n      Loading Failed\n    </div>\n  </div>\n  <!--data selections-->\n  <div>\n    <!--data entry-->\n    <div class=\"row\">\n      <div class=\"col-3\">\n\n        <mat-form-field appearance=\"outline\">\n          <mat-label>Start Date</mat-label>\n          <input\n            [(ngModel)]=\"start_date\"\n            [matDatepicker]=\"dw\"\n            matInput\n            placeholder=\"From\"\n            [max]=\"end_date\"\n            required/>\n          <mat-datepicker-toggle matSuffix [for]=\"dw\"></mat-datepicker-toggle>\n          <mat-datepicker #dw></mat-datepicker>\n        </mat-form-field>\n      </div>\n      <div class=\"col-3\">\n\n        <mat-form-field appearance=\"outline\">\n          <mat-label>End Date</mat-label>\n          <input\n            [(ngModel)]=\"end_date\"\n            [matDatepicker]=\"dw1\"\n            matInput\n            placeholder=\"To\"\n            [min]=\"start_date\"\n            required/>\n          <mat-datepicker-toggle matSuffix [for]=\"dw1\"></mat-datepicker-toggle>\n          <mat-datepicker #dw1></mat-datepicker>\n        </mat-form-field>\n      </div>\n      <div class=\"col-4 pt-1\">\n        <app-org-unit-filter\n          (onOrgUnitChange)=\"changeOrgUnit($event)\"\n          [orgunit_tree_config]=\"orgunit_tree_config\">\n        </app-org-unit-filter>\n      </div>\n      <div class=\"col-2\">\n        <button\n          style=\"margin-top: 5px; height: 46px;\"\n          [disabled]=\"start_date == '' || end_date == '' || orgunit == null\"\n          class=\"btn btn-block btn-outline-primary\"\n          (click)=\"getProviders()\"\n        >Get Providers List</button>\n      </div>\n    </div>\n    <div class=\"row no-print mt-4\" *ngIf=\"loading\">\n      <div class=\"col-sm-12\" style=\"padding: 0px\">\n        <app-loader [message]=\"'Getting a list of providers...'\"></app-loader>\n      </div>\n    </div>\n\n    <div class=\"row\">\n      <div class=\"col-5\">\n        <app-multiselect\n          *ngIf=\"providers.length != 0\"\n          [items]=\"providers\"\n          [placeholder]=\"'Select data items to see in the report'\"\n          (onSelected)=\"setSelectedData($event)\"\n        ></app-multiselect>\n      </div>\n      <div class=\"col-7\" *ngIf=\"selected_providers.length != 0\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"getData()\">Get Report</button> &nbsp;\n        <button *ngIf=\"done_loading && !show_detailed\" class=\"btn btn-outline-secondary\" (click)=\"show_detailed = true\">Get Detailed</button>\n        <button *ngIf=\"done_loading && show_detailed\" class=\"btn btn-outline-secondary\" (click)=\"show_detailed = false\">Get Summary</button>\n      </div>\n    </div>\n\n    <div class=\"row no-print mt-4\" *ngIf=\"data_loading\">\n      <div class=\"col-sm-12\" style=\"padding: 0px\">\n        <app-loader [message]=\"'Getting Data for providers...'\"></app-loader>\n      </div>\n    </div>\n\n    <div class=\"row mt-5\" *ngIf=\"done_loading\">\n      <div class=\"col\" *ngIf=\"!show_detailed\" @fadeIn>\n        <h4 class=\"text-center\">Services Provided by {{ selected_provider_names }} for {{ orgunitnames }} from {{\n          start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>\n        <table class=\"table table-bordered\">\n          <tr>\n            <th>Service Type</th>\n            <th>Number of Issued Service</th>\n          </tr>\n          <tr *ngFor=\"let data of values\">\n            <td>{{ data.event_type }}</td>\n            <td>{{ data.value }}</td>\n          </tr>\n        </table>\n      </div>\n\n      <div class=\"col\" *ngIf=\"show_detailed\" @fadeIn>\n        <h4 class=\"text-center\">Detailed Service Provided by {{ selected_providers_names }} for {{ orgunitnames }} from {{\n          start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>\n        <table class=\"table table-bordered\">\n          <tr>\n            <th>Service Provider</th>\n            <th>Service Type</th>\n            <th>Event Date</th>\n            <th>Team</th>\n          </tr>\n          <tr *ngFor=\"let data of detailed_values\">\n            <td>{{ data.provider_id }}</td>\n            <td>{{ data.event_type }}</td>\n            <td>{{ data.event_date }}</td>\n            <td>{{ data.team }}</td>\n          </tr>\n        </table>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1555,14 +1669,14 @@ var IssuedReferralsByLocationComponent = /** @class */ (function () {
         this.loading_failed = false;
         this.done_loading = false;
         var facilities = this.orgunitService.getLevel4OrgunitsIds(this.orgunit.visit_locations, this.orgunit.value);
-        this.httpClient.getDJANGOURL('referral_summary')
+        this.httpClient.getDJANGOURL('events_summary')
             .subscribe(function (data) {
             if (data && data.length !== 0) {
-                console.log(data["records"]);
-                _this.providers = data["records"].map(function (d) {
+                console.log(data);
+                _this.providers = data["query_service_providers"].map(function (d) {
                     return {
-                        name: d.firstName,
-                        id: d.lastName
+                        // id: d.id,
+                        name: d.team
                     };
                 });
                 console.log('prodviders', _this.providers);
@@ -1575,12 +1689,13 @@ var IssuedReferralsByLocationComponent = /** @class */ (function () {
         });
     };
     IssuedReferralsByLocationComponent.prototype.setSelectedData = function (data) {
-        console.log(data);
+        console.log("team data: ", data);
         this.selected_providers = data;
-        var providers_names = this.selected_providers.map(function (d) { return d.name; });
-        if (providers_names.length > 3) {
-            var extra_length = providers_names.length - 3;
-            this.selected_providers_names = providers_names.slice(0, 3).join(', ') + ' and ' + extra_length + ' more ';
+        var team_name = this.selected_providers.map(function (d) { return d.name; });
+        console.log("team name is:", team_name);
+        if (team_name.length > 3) {
+            var extra_length = team_name.length - 3;
+            this.selected_providers_names = team_name.slice(0, 3).join(', ') + ' and ' + extra_length + ' more ';
         }
     };
     IssuedReferralsByLocationComponent.prototype.getData = function () {
@@ -1590,17 +1705,17 @@ var IssuedReferralsByLocationComponent = /** @class */ (function () {
         var chw_uuid = this.selected_providers.map(function (provider) { return provider.id; });
         var start_date = new Date(this.start_date).toISOString().substr(0, 10);
         var end_date = new Date(this.end_date).toISOString().substr(0, 10);
-        this.httpClient.getDJANGOURL('referral_summary')
+        this.httpClient.getDJANGOURL('events_summary')
             .subscribe(function (data) {
             _this.done_loading = true;
             _this.data_loading = false;
-            _this.values = data;
+            _this.values = data["total_services_aggregate"];
         });
-        this.httpClient.getDJANGOURL('referral_summary')
+        this.httpClient.getDJANGOURL('events_summary')
             .subscribe(function (data) {
             _this.detailed_loading = false;
-            _this.detailed_values = data.map(function (item) {
-                var chw = _this.selected_providers.find(function (i) { return i.id === item.service_provider_uuid; });
+            _this.detailed_values = data["records"].map(function (item) {
+                var chw = _this.selected_providers.find(function (i) { return i.id === item.team; });
                 return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, item, { service_provider_name: chw ? chw.name : '' });
             });
         });
@@ -2469,15 +2584,20 @@ var ProvidersReportComponent = /** @class */ (function () {
         this.title = 'Family Planning Reports';
         this.navLinks = [
             {
-                label: 'Issued Referrals By Location',
-                link: ['', 'issued_referrals_by_location_report', 'issued-referrals-by-location-report'],
+                label: 'Issued Services By Teams',
+                link: ['', 'providers_report', 'issued-referrals-by-location-report'],
                 index: 0
             }, {
-                label: 'Issued Method Referrals',
+                label: 'Total Clients Enrolled to Loan units',
                 link: ['', 'providers_report', 'facility-report'],
                 index: 1
             }, {
-                label: 'Total Issued Referrals',
+                label: 'Total Clients Enrolled to Beach Management Units',
+                link: ['', 'providers_report', 'inter-facility-report'],
+                index: 2
+            },
+            {
+                label: 'Total Clients Enrolled to Bee Keeping',
                 link: ['', 'providers_report', 'inter-facility-report'],
                 index: 2
             },
@@ -5814,9 +5934,13 @@ var HttpClientService = /** @class */ (function () {
         this.snackBar = snackBar;
         this.DHISAPIURL = '../../../dhis/api/';
         // Dev Environment conf
-        this.OPENSRPAPIURL = '../opensrp/';
-        this.OPENMRSURL = '../openmrs/ws/rest/v1/';
-        this.DJANGOURL = '/api_';
+        // public OPENSRPAPIURL = '../opensrp/';
+        // public OPENMRSURL = '../openmrs/ws/rest/v1/';
+        // public DJANGOURL = '/api_'
+        //Production
+        this.OPENSRPAPIURL = 'http://172.105.87.198:8082/opensrp/';
+        this.OPENMRSURL = 'http://172.105.87.198:8081/openmrs/ws/rest/v1/';
+        this.DJANGOURL = 'http://172.105.87.198:8000/api_';
     }
     HttpClientService.prototype.prepareToken = function (credentials) {
         var username = credentials.username;
@@ -5937,7 +6061,19 @@ var HttpClientService = /** @class */ (function () {
                 .set('Authorization', headers)
         });
     };
+    HttpClientService.prototype.postDJANGOURL = function (url, data, options) {
+        return this.http.post(this.DJANGOURL + url, data, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
+                .set('Content-Type', 'application/json')
+        });
+    };
     HttpClientService.prototype.getDJANGOURL = function (url) {
+        return this.http.get(this.DJANGOURL + url, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
+                .set('Content-Type', 'application/json')
+        });
+    };
+    HttpClientService.prototype.getDJANGOURL1 = function (url, data, options) {
         return this.http.get(this.DJANGOURL + url, {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
                 .set('Content-Type', 'application/json')
@@ -6441,7 +6577,8 @@ var SettingsService = /** @class */ (function () {
                 text: title
             },
             tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                pointFormat: '{series.name}: <b>{point.y}</b>'
+                // pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
             },
             plotOptions: {
                 pie: {
@@ -6685,18 +6822,11 @@ var UserService = /** @class */ (function () {
             // },
             {
                 name: 'Reports',
-                links: ['', 'fp_report', 'fp-report'],
+                links: ['', 'providers_report', 'provide-report'],
                 icon: 'fa fa-pie-chart',
                 roles: ['System Developer'],
                 accessibility: false
             },
-            // {
-            //   name: 'Reports',
-            //   links: ['', 'providers_report', 'provide-report'],
-            //   icon: 'fa fa-pie-chart',
-            //   roles: ['System Developer'],
-            //   accessibility: false
-            // },
             // {
             //   name: 'Other Reports',
             //   links: ['', 'reports'],
@@ -8826,84 +8956,84 @@ var OrgUnitFilterComponent = /** @class */ (function () {
             };
             this.customTemplateStringOrgunitOptions = { actionMapping: actionMapping };
         }
-        if (this.orgunitService.nodes === null) {
-            this.locationService.loadTreeLocations().subscribe((function (locations) {
-                console.log({ locations: locations });
-                // get top level locations
-                var top_locations = locations;
-                // filter down to remain with only visit facilities
-                var starting_location = localStorage.getItem('htmr-starting-location');
-                var visit_location = lodash__WEBPACK_IMPORTED_MODULE_5__["find"](top_locations, { uuid: starting_location ? starting_location : 'ed787525-d770-11e8-ba9c-f23c917bb7ec' });
-                _this.visit_locations.push({
-                    name: visit_location.name,
-                    id: visit_location.uuid,
-                    level: 1,
-                    parents: ""
-                });
-                visit_location = {
-                    name: visit_location.name,
-                    id: visit_location.uuid,
-                    level: 1,
-                    children: visit_location.childLocations.map(function (location) {
-                        var child_loc = _this.getChildOrgunits(locations, location.uuid);
-                        _this.visit_locations.push({
-                            name: child_loc.name,
-                            id: child_loc.uuid,
-                            level: 2,
-                            parents: "" + visit_location.uuid
-                        });
-                        return {
-                            name: child_loc.name,
-                            id: child_loc.uuid,
-                            level: 2,
-                            children: child_loc.childLocations.map(function (child) {
-                                var last_child = _this.getChildOrgunits(locations, child.uuid);
-                                _this.visit_locations.push({
-                                    name: last_child.name,
-                                    id: last_child.uuid,
-                                    level: 3,
-                                    parents: visit_location.uuid + ";" + child_loc.uuid
-                                });
-                                return {
-                                    name: last_child.name,
-                                    id: last_child.uuid,
-                                    level: 3,
-                                    children: last_child.childLocations.map(function (level3child) {
-                                        var facility = _this.getChildOrgunits(locations, level3child.uuid);
-                                        _this.visit_locations.push({
-                                            name: facility.name,
-                                            id: facility.uuid,
-                                            level: 4,
-                                            parents: visit_location.uuid + ";" + child_loc.uuid + ";" + last_child.uuid
-                                        });
-                                        return {
-                                            name: facility.name,
-                                            id: facility.uuid,
-                                            level: 4,
-                                            children: facility.childLocations
-                                        };
-                                    })
-                                };
-                            })
-                        };
-                    })
-                };
-                _this.organisationunits = [visit_location];
-                _this.orgunitService.nodes = [visit_location];
-                _this.nodes = [visit_location];
-                _this.orgunit_tree_config.loading = false;
-                _this.orgunitService.visit_locations = _this.visit_locations;
-                for (var _i = 0, _a = _this.current_orgunits; _i < _a.length; _i++) {
-                    var active_orgunit = _a[_i];
-                    _this.activateNode(active_orgunit, _this.orgtree, true);
-                }
-            }));
-        }
-        else {
-            this.organisationunits = this.orgunitService.nodes;
-            this.orgunit_tree_config.loading = false;
-            this.visit_locations = this.orgunitService.visit_locations;
-        }
+        // if (this.orgunitService.nodes === null) {
+        this.locationService.loadTreeLocations().subscribe((function (locations) {
+            console.log({ locations: locations });
+            // get top level locations
+            var top_locations = locations;
+            // filter down to remain with only visit facilities
+            var starting_location = localStorage.getItem('htmr-starting-location');
+            console.log("team location from org unit component is", starting_location);
+            var visit_location = lodash__WEBPACK_IMPORTED_MODULE_5__["find"](top_locations, { uuid: starting_location ? starting_location : 'ed787525-d770-11e8-ba9c-f23c917bb7ec' });
+            _this.visit_locations.push({
+                name: visit_location.name,
+                id: visit_location.uuid,
+                level: 1,
+                parents: ""
+            });
+            visit_location = {
+                name: visit_location.name,
+                id: visit_location.uuid,
+                level: 1,
+                children: visit_location.childLocations.map(function (location) {
+                    var child_loc = _this.getChildOrgunits(locations, location.uuid);
+                    _this.visit_locations.push({
+                        name: child_loc.name,
+                        id: child_loc.uuid,
+                        level: 2,
+                        parents: "" + visit_location.uuid
+                    });
+                    return {
+                        name: child_loc.name,
+                        id: child_loc.uuid,
+                        level: 2,
+                        children: child_loc.childLocations.map(function (child) {
+                            var last_child = _this.getChildOrgunits(locations, child.uuid);
+                            _this.visit_locations.push({
+                                name: last_child.name,
+                                id: last_child.uuid,
+                                level: 3,
+                                parents: visit_location.uuid + ";" + child_loc.uuid
+                            });
+                            return {
+                                name: last_child.name,
+                                id: last_child.uuid,
+                                level: 3,
+                                children: last_child.childLocations.map(function (level3child) {
+                                    var facility = _this.getChildOrgunits(locations, level3child.uuid);
+                                    _this.visit_locations.push({
+                                        name: facility.name,
+                                        id: facility.uuid,
+                                        level: 4,
+                                        parents: visit_location.uuid + ";" + child_loc.uuid + ";" + last_child.uuid
+                                    });
+                                    return {
+                                        name: facility.name,
+                                        id: facility.uuid,
+                                        level: 4,
+                                        children: facility.childLocations
+                                    };
+                                })
+                            };
+                        })
+                    };
+                })
+            };
+            _this.organisationunits = [visit_location];
+            _this.orgunitService.nodes = [visit_location];
+            _this.nodes = [visit_location];
+            _this.orgunit_tree_config.loading = false;
+            _this.orgunitService.visit_locations = _this.visit_locations;
+            for (var _i = 0, _a = _this.current_orgunits; _i < _a.length; _i++) {
+                var active_orgunit = _a[_i];
+                _this.activateNode(active_orgunit, _this.orgtree, true);
+            }
+        }));
+        // } else {
+        //   this.organisationunits = this.orgunitService.nodes;
+        //   this.orgunit_tree_config.loading = false;
+        //   this.visit_locations = this.orgunitService.visit_locations;
+        // }
         // if (this.orgunitService.nodes === null) {
         //   this.orgunitService.getOrgunitLevelsInformation()
         //     .subscribe(

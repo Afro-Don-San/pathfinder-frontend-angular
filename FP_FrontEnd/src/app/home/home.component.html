@@ -83,9 +83,15 @@
       <p> &nbsp;&nbsp; Dashboard Summary</p>
          <mat-divider></mat-divider>
         <a mat-list-item> &nbsp;&nbsp;
-          <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-user"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Clients</span> &nbsp;&nbsp;
                <span style="font-weight: 500">{{ total_clients }}</span>
+        </a>
+
+        <a mat-list-item> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Families</span> &nbsp;&nbsp;
+               <span style="font-weight: 500">{{ total_families }}</span>
         </a>
         
          <a mat-list-item> &nbsp;&nbsp;
@@ -102,6 +108,11 @@
           <i style="color: #0DA98F" class="fa fa-scissors"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Services</span> &nbsp;&nbsp;
           <span style="font-weight: 500">{{ total_services }}</span>
+        </a>
+                 <a mat-list-item> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="	fa fa-arrows-alt"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Referrals</span> &nbsp;&nbsp;
+          <span style="font-weight: 500">{{ total_referrals }}</span>
         </a>
         <mat-divider></mat-divider>
       </ng-container>
