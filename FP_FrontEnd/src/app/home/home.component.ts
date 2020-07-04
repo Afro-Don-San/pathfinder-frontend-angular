@@ -157,7 +157,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   goToChangePass() {
-    this.router.navigate( ['', 'change_password']);
+    this.userService.removeLocalStorageNavigation();
+    // this.userService.deleteToken();
+    this.userService.loggedIn = false;
+    this.locationService.locations = [];
+    
+    this.router.navigate( ['', 'change-password']);
   }
 
   goTo(path) {

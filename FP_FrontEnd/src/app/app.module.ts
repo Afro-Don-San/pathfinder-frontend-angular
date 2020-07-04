@@ -40,6 +40,8 @@ import { UpdateMemberComponent } from './modules/users/update-member/update-memb
 import { SupersetComponent } from './modules/superset/superset.component';
 import { IssuedReferralsByLocationComponent } from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component';
 import { IssuedReferralsComponent } from './modules/fp-reports/issued-referrals/issued-referrals.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { TotalFamilyPlanningMethodsIssuedComponent } from './modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,8 @@ import { IssuedReferralsComponent } from './modules/fp-reports/issued-referrals/
     SupersetComponent,
     IssuedReferralsByLocationComponent,
     IssuedReferralsComponent,
+    ChangePasswordComponent,
+    TotalFamilyPlanningMethodsIssuedComponent,
   ],
   imports: [
     BrowserModule,

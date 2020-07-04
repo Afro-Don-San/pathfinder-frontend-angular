@@ -17,6 +17,7 @@ import {RegistrationReasonComponent} from './modules/settings/registration-reaso
 import {LocationsComponent} from './modules/locations/locations.component';
 import {UsersComponent} from './modules/users/users.component';
 import {SupersetComponent} from './modules/superset/superset.component';
+import {ChangePasswordComponent} from './change-password/change-password.component'
 import {IssuedReferralsByLocationComponent} from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component'
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
@@ -42,19 +43,6 @@ const routes: Routes = [
         data: {state: 'user_management'}
       },
       {
-        path: 'reports',
-        component: ReportsComponent,
-        data: {state: 'reports'}
-      },
-      {
-        path: 'superset',
-        resolve: {
-          url: externalUrlProvider,
-      },
-      // We need a component here because we cannot define the route otherwise
-      component: SupersetComponent,
-      },
-      {
         path: 'providers_report',
         component: ProvidersReportComponent,
         data: {state: 'providers-report'},
@@ -65,23 +53,77 @@ const routes: Routes = [
           data: {state: 'providers-report'}
           },
           {
-            path: 'provide-report',
+            path: 'total-family-planning-methods-report',
             component: ProvidersRefferalReportComponent,
             data: {state: 'providers-report'}
           },
           {
-            path: 'facility-report',
+            path: 'citizens-report',
             component: FacilityRefferalReportComponent,
-            data: {state: 'providers-report'}
-          },
-          {
-            path: 'inter-facility-report',
-            component: InterFacilityRefferalReportComponent,
             data: {state: 'providers-report'}
           }
         ]
       },
+      {
+        path: 'superset',
+        resolve: {
+          url: externalUrlProvider,
+      },
+      // We need a component here because we cannot define the route otherwise
+      component: SupersetComponent,
+      },
+      // {
+      //   path: 'providers_report',
+      //   component: ProvidersReportComponent,
+      //   data: {state: 'providers-report'},
+      //   children: [
+      //     {
+      //     path: 'issued-referrals-by-location-report',
+      //     component: IssuedReferralsByLocationComponent,
+      //     data: {state: 'providers-report'}
+      //     },
+      //     {
+      //       path: 'provide-report',
+      //       component: ProvidersRefferalReportComponent,
+      //       data: {state: 'providers-report'}
+      //     },
+      //     {
+      //       path: 'facility-report',
+      //       component: FacilityRefferalReportComponent,
+      //       data: {state: 'providers-report'}
+      //     },
+      //     {
+      //       path: 'inter-facility-report',
+      //       component: InterFacilityRefferalReportComponent,
+      //       data: {state: 'providers-report'}
+      //     }
+      //   ]
+      // },
+      {
 
+        path: 'more_reports',
+        component: ReportsComponent,
+        data: {state: 'more-reports'},
+        children: [
+
+          {
+            path: 'total-clients-enrolled-to-beach-management-report',
+            component: ProvidersRefferalReportComponent,
+            data: {state: 'more-reports'}
+          },
+          {
+            path: 'total-clients-enrolled-to-bee-keeping-report',
+            component: ProvidersRefferalReportComponent,
+            data: {state: 'more-reports'}
+          },
+          {
+            path: 'total-clients-enrolled-to-loan-units-report',
+            component: ProvidersRefferalReportComponent,
+            data: {state: 'more-reports'}
+          },
+
+        ]
+      },
       {
         path: 'settings',
         component: SettingsComponent,
@@ -120,6 +162,11 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     data: {state: 'login'}
+  },
+  {
+    path: 'change-password',
+    component: ChangePasswordComponent,
+    data: {state: 'change-password'}
   }
 ];
 

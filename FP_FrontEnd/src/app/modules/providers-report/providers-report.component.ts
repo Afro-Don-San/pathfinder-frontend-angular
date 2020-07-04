@@ -14,25 +14,17 @@ export class ProvidersReportComponent implements OnInit {
       label: 'Issued Services By Teams',
       link: ['', 'providers_report', 'issued-referrals-by-location-report'],
       index: 0
-    }, {
+    } ,
+    {
       label: 'Total Family Planning Methods Issued',
-      link: ['', 'providers_report', 'facility-report'],
+      link: ['', 'providers_report', 'total-family-planning-methods-report'],
       index: 1
-    }, {
-      label: 'Total Clients Enrolled to Beach Management Units',
-      link: ['', 'providers_report', 'inter-facility-report'],
-      index: 2
     },
     {
-      label: 'Total Clients Enrolled to Bee Keeping',
-      link: ['', 'providers_report', 'inter-facility-report'],
-      index: 3
-    },
-    {
-      label: 'Total Clients Enrolled to Loan units',
-      link: ['', 'providers_report', 'inter-facility-report'],
-      index: 4
-    },
+      label: 'Citizens Report',
+      link: ['', 'providers_report', 'citizens-report'],
+      index: 1
+    }
   ];
   constructor(private router: Router) { }
 

@@ -39,18 +39,18 @@ export class UserService {
     // },
     {
       name: 'Reports',
-      links: ['', 'providers_report', 'provide-report'],
+      links: ['', 'providers_report'],
       icon: 'fa fa-pie-chart',
       roles: ['System Developer'],
       accessibility: false
     },
-    // {
-    //   name: 'Other Reports',
-    //   links: ['', 'reports'],
-    //   icon: 'fa fa-bar-chart',
-    //   roles: ['System Developer'],
-    //   accessibility: false
-    // },
+    {
+      name: 'More Reports',
+      links: ['', 'more_reports'],
+      icon: 'fa fa-bar-chart',
+      roles: ['System Developer'],
+      accessibility: false
+    },
     // {
     //   name: 'Settings',
     //   links: ['', 'settings', 'services'],
@@ -169,6 +169,30 @@ export class UserService {
     this.http.prepareToken(loginCredentials);
     return this.http.getOpenSRP('security/authenticate');
   }
+
+  changePassword(loginCredentials) {
+    return Observable.create(observer => {
+
+      loginCredentials = {
+        "oldPassword" : loginCredentials.oldpassword,
+        "newPassword" : loginCredentials.newpassword
+      };
+
+      console.log(loginCredentials);
+      
+      this.http.postOpenMRS(`password`, loginCredentials)
+        .subscribe((personResponse: any) => {
+            this.loadingMessage = 'password changed successfully';
+            observer.next(personResponse);
+            observer.complete();
+          },
+          error => {
+            this.loadingMessage = 'password change  failed';
+            observer.error('some error occur');
+          });
+    });
+  }
+
 
   sessionCheck() {
 
