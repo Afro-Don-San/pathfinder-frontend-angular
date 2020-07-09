@@ -11,11 +11,6 @@ export class HttpClientService {
   public OPENMRSURL = '../openmrs/ws/rest/v1/';
   public DJANGOURL = '/api_'
 
-  //Production
-  // public OPENSRPAPIURL = 'http://172.105.87.198:8082/opensrp/';
-  // public OPENMRSURL = 'http://172.105.87.198:8081/openmrs/ws/rest/v1/';
-  // public DJANGOURL = 'http://172.105.87.198:8000/api_'
-
   constructor(private http: HttpClient, public snackBar: MatSnackBar) {
   }
 

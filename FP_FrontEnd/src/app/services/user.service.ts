@@ -173,14 +173,12 @@ export class UserService {
   changePassword(loginCredentials) {
     return Observable.create(observer => {
 
-      loginCredentials = {
-        "oldPassword" : loginCredentials.oldpassword,
-        "newPassword" : loginCredentials.newpassword
+      var payload = {
+        "oldPassword" : ""+loginCredentials.oldpassword+"",
+        "newPassword" : ""+loginCredentials.newpassword+"",
       };
 
-      console.log(loginCredentials);
-      
-      this.http.postOpenMRS(`password`, loginCredentials)
+      this.http.postOpenMRS(`password`, payload)
         .subscribe((personResponse: any) => {
             this.loadingMessage = 'password changed successfully';
             observer.next(personResponse);

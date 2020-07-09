@@ -158,7 +158,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   goToChangePass() {
     this.userService.removeLocalStorageNavigation();
-    // this.userService.deleteToken();
+    this.userService.deleteToken();
     this.userService.loggedIn = false;
     this.locationService.locations = [];
     

@@ -40,19 +40,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 /* harmony import */ var _modules_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/dashboard/dashboard.component */ "./src/app/modules/dashboard/dashboard.component.ts");
 /* harmony import */ var _modules_providers_report_providers_report_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/providers-report/providers-report.component */ "./src/app/modules/providers-report/providers-report.component.ts");
-/* harmony import */ var _modules_providers_report_inter_facility_refferal_report_inter_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/providers-report/inter-facility-refferal-report/inter-facility-refferal-report.component */ "./src/app/modules/providers-report/inter-facility-refferal-report/inter-facility-refferal-report.component.ts");
-/* harmony import */ var _modules_providers_report_facility_referral_report_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/providers-report/facility-referral-report/facility-refferal-report.component */ "./src/app/modules/providers-report/facility-referral-report/facility-refferal-report.component.ts");
-/* harmony import */ var _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/providers-report/providers-refferal-report/providers-refferal-report.component */ "./src/app/modules/providers-report/providers-refferal-report/providers-refferal-report.component.ts");
-/* harmony import */ var _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/reports/reports.component */ "./src/app/modules/reports/reports.component.ts");
-/* harmony import */ var _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/settings/settings.component */ "./src/app/modules/settings/settings.component.ts");
-/* harmony import */ var _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/settings/service/service.component */ "./src/app/modules/settings/service/service.component.ts");
-/* harmony import */ var _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/settings/indicators/indicators.component */ "./src/app/modules/settings/indicators/indicators.component.ts");
-/* harmony import */ var _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/settings/reffereal-feedback/reffereal-feedback.component */ "./src/app/modules/settings/reffereal-feedback/reffereal-feedback.component.ts");
-/* harmony import */ var _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/settings/reffereal-type/reffereal-type.component */ "./src/app/modules/settings/reffereal-type/reffereal-type.component.ts");
-/* harmony import */ var _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/settings/registration-reason/registration-reason.component */ "./src/app/modules/settings/registration-reason/registration-reason.component.ts");
-/* harmony import */ var _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/locations/locations.component */ "./src/app/modules/locations/locations.component.ts");
-/* harmony import */ var _modules_users_users_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/users/users.component */ "./src/app/modules/users/users.component.ts");
-/* harmony import */ var _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/superset/superset.component */ "./src/app/modules/superset/superset.component.ts");
+/* harmony import */ var _modules_providers_report_facility_referral_report_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/providers-report/facility-referral-report/facility-refferal-report.component */ "./src/app/modules/providers-report/facility-referral-report/facility-refferal-report.component.ts");
+/* harmony import */ var _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/providers-report/providers-refferal-report/providers-refferal-report.component */ "./src/app/modules/providers-report/providers-refferal-report/providers-refferal-report.component.ts");
+/* harmony import */ var _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/reports/reports.component */ "./src/app/modules/reports/reports.component.ts");
+/* harmony import */ var _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/settings/settings.component */ "./src/app/modules/settings/settings.component.ts");
+/* harmony import */ var _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/settings/service/service.component */ "./src/app/modules/settings/service/service.component.ts");
+/* harmony import */ var _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/settings/indicators/indicators.component */ "./src/app/modules/settings/indicators/indicators.component.ts");
+/* harmony import */ var _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/settings/reffereal-feedback/reffereal-feedback.component */ "./src/app/modules/settings/reffereal-feedback/reffereal-feedback.component.ts");
+/* harmony import */ var _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/settings/reffereal-type/reffereal-type.component */ "./src/app/modules/settings/reffereal-type/reffereal-type.component.ts");
+/* harmony import */ var _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/settings/registration-reason/registration-reason.component */ "./src/app/modules/settings/registration-reason/registration-reason.component.ts");
+/* harmony import */ var _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/locations/locations.component */ "./src/app/modules/locations/locations.component.ts");
+/* harmony import */ var _modules_users_users_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/users/users.component */ "./src/app/modules/users/users.component.ts");
+/* harmony import */ var _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/superset/superset.component */ "./src/app/modules/superset/superset.component.ts");
+/* harmony import */ var _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./change-password/change-password.component */ "./src/app/change-password/change-password.component.ts");
 /* harmony import */ var _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component */ "./src/app/modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component.ts");
 
 
@@ -88,26 +88,13 @@ var routes = [
             },
             {
                 path: 'location',
-                component: _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_17__["LocationsComponent"],
+                component: _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_16__["LocationsComponent"],
                 data: { state: 'location' }
             },
             {
                 path: 'users',
-                component: _modules_users_users_component__WEBPACK_IMPORTED_MODULE_18__["UsersComponent"],
+                component: _modules_users_users_component__WEBPACK_IMPORTED_MODULE_17__["UsersComponent"],
                 data: { state: 'user_management' }
-            },
-            {
-                path: 'reports',
-                component: _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_10__["ReportsComponent"],
-                data: { state: 'reports' }
-            },
-            {
-                path: 'superset',
-                resolve: {
-                    url: externalUrlProvider,
-                },
-                // We need a component here because we cannot define the route otherwise
-                component: _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_19__["SupersetComponent"],
             },
             {
                 path: 'providers_report',
@@ -120,50 +107,102 @@ var routes = [
                         data: { state: 'providers-report' }
                     },
                     {
-                        path: 'provide-report',
-                        component: _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_9__["ProvidersRefferalReportComponent"],
+                        path: 'total-family-planning-methods-report',
+                        component: _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__["ProvidersRefferalReportComponent"],
                         data: { state: 'providers-report' }
                     },
                     {
-                        path: 'facility-report',
-                        component: _modules_providers_report_facility_referral_report_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__["FacilityRefferalReportComponent"],
-                        data: { state: 'providers-report' }
-                    },
-                    {
-                        path: 'inter-facility-report',
-                        component: _modules_providers_report_inter_facility_refferal_report_inter_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_7__["InterFacilityRefferalReportComponent"],
+                        path: 'citizens-report',
+                        component: _modules_providers_report_facility_referral_report_facility_refferal_report_component__WEBPACK_IMPORTED_MODULE_7__["FacilityRefferalReportComponent"],
                         data: { state: 'providers-report' }
                     }
                 ]
             },
             {
+                path: 'superset',
+                resolve: {
+                    url: externalUrlProvider,
+                },
+                // We need a component here because we cannot define the route otherwise
+                component: _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_18__["SupersetComponent"],
+            },
+            // {
+            //   path: 'providers_report',
+            //   component: ProvidersReportComponent,
+            //   data: {state: 'providers-report'},
+            //   children: [
+            //     {
+            //     path: 'issued-referrals-by-location-report',
+            //     component: IssuedReferralsByLocationComponent,
+            //     data: {state: 'providers-report'}
+            //     },
+            //     {
+            //       path: 'provide-report',
+            //       component: ProvidersRefferalReportComponent,
+            //       data: {state: 'providers-report'}
+            //     },
+            //     {
+            //       path: 'facility-report',
+            //       component: FacilityRefferalReportComponent,
+            //       data: {state: 'providers-report'}
+            //     },
+            //     {
+            //       path: 'inter-facility-report',
+            //       component: InterFacilityRefferalReportComponent,
+            //       data: {state: 'providers-report'}
+            //     }
+            //   ]
+            // },
+            {
+                path: 'more_reports',
+                component: _modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_9__["ReportsComponent"],
+                data: { state: 'more-reports' },
+                children: [
+                    {
+                        path: 'total-clients-enrolled-to-beach-management-report',
+                        component: _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__["ProvidersRefferalReportComponent"],
+                        data: { state: 'more-reports' }
+                    },
+                    {
+                        path: 'total-clients-enrolled-to-bee-keeping-report',
+                        component: _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__["ProvidersRefferalReportComponent"],
+                        data: { state: 'more-reports' }
+                    },
+                    {
+                        path: 'total-clients-enrolled-to-loan-units-report',
+                        component: _modules_providers_report_providers_refferal_report_providers_refferal_report_component__WEBPACK_IMPORTED_MODULE_8__["ProvidersRefferalReportComponent"],
+                        data: { state: 'more-reports' }
+                    },
+                ]
+            },
+            {
                 path: 'settings',
-                component: _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_11__["SettingsComponent"],
+                component: _modules_settings_settings_component__WEBPACK_IMPORTED_MODULE_10__["SettingsComponent"],
                 data: { state: 'settings' },
                 children: [
                     {
                         path: 'services',
-                        component: _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_12__["ServiceComponent"],
+                        component: _modules_settings_service_service_component__WEBPACK_IMPORTED_MODULE_11__["ServiceComponent"],
                         data: { state: 'services' }
                     },
                     {
                         path: 'indicators',
-                        component: _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_13__["IndicatorsComponent"],
+                        component: _modules_settings_indicators_indicators_component__WEBPACK_IMPORTED_MODULE_12__["IndicatorsComponent"],
                         data: { state: 'indicators' }
                     },
                     {
                         path: 'reffereal-feedback',
-                        component: _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_14__["RefferealFeedbackComponent"],
+                        component: _modules_settings_reffereal_feedback_reffereal_feedback_component__WEBPACK_IMPORTED_MODULE_13__["RefferealFeedbackComponent"],
                         data: { state: 'reffereal-feedback' }
                     },
                     {
                         path: 'reffereal-type',
-                        component: _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_15__["RefferealTypeComponent"],
+                        component: _modules_settings_reffereal_type_reffereal_type_component__WEBPACK_IMPORTED_MODULE_14__["RefferealTypeComponent"],
                         data: { state: 'reffereal-type' }
                     },
                     {
                         path: 'registration-reason',
-                        component: _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_16__["RegistrationReasonComponent"],
+                        component: _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_15__["RegistrationReasonComponent"],
                         data: { state: 'registration-reason' }
                     },
                 ]
@@ -174,6 +213,11 @@ var routes = [
         path: 'login',
         component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"],
         data: { state: 'login' }
+    },
+    {
+        path: 'change-password',
+        component: _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_19__["ChangePasswordComponent"],
+        data: { state: 'change-password' }
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -312,6 +356,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./modules/superset/superset.component */ "./src/app/modules/superset/superset.component.ts");
 /* harmony import */ var _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component */ "./src/app/modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component.ts");
 /* harmony import */ var _modules_fp_reports_issued_referrals_issued_referrals_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals/issued-referrals.component */ "./src/app/modules/fp-reports/issued-referrals/issued-referrals.component.ts");
+/* harmony import */ var _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./change-password/change-password.component */ "./src/app/change-password/change-password.component.ts");
+/* harmony import */ var _modules_fp_reports_total_family_planning_methods_issued_total_family_planning_methods_issued_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component */ "./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.ts");
+
+
 
 
 
@@ -395,6 +443,8 @@ var AppModule = /** @class */ (function () {
                 _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_39__["SupersetComponent"],
                 _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_40__["IssuedReferralsByLocationComponent"],
                 _modules_fp_reports_issued_referrals_issued_referrals_component__WEBPACK_IMPORTED_MODULE_41__["IssuedReferralsComponent"],
+                _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_42__["ChangePasswordComponent"],
+                _modules_fp_reports_total_family_planning_methods_issued_total_family_planning_methods_issued_component__WEBPACK_IMPORTED_MODULE_43__["TotalFamilyPlanningMethodsIssuedComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -416,6 +466,136 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/change-password/change-password.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/change-password/change-password.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"outer bgimage\">\n  <div class=\"outer bgcolor\">\n\n  </div>\n</div>\n<div class=\"logos\">\n <img src=\"assets/partners/rsz_tanzania_logo.jpg\"> \n <img src=\"assets/partners/rsz_usaid_logo.png\"> \n</div>\n\n<div class=\"title\">\n  <table>\n    <tr>\n      <td style=\"vertical-align: top\">\n    <!--  <img src=\"assets/img/logo.png\" style=\"height: 70px\"> -->\n        &nbsp;&nbsp;&nbsp;\n      </td>\n      <td style=\"color: white\">\n        <h1 style=\"font-weight: bolder;\">Family Planning</h1>\n        <h5>Provision Of Quality Reproductive Health</h5>\n      </td>\n    </tr>\n  </table>\n</div>\n\n<div class=\"login\">\n  <div class=\"logintop\">\n    <img src=\"assets/img/lock.png\" style=\"height: 50px; padding-top: 10px;margin-left: 20px;\">\n  </div>\n  <div class=\"loginbottom\" style=\"padding: 20px;\">\n    <h2 style=\"font-weight: bold;margin-bottom: 0px; color: #2D69A5\">Change Password</h2>\n\n    <div class=\"loginform\">\n      <form [formGroup]=\"loginForm\" (ngSubmit)=\"changePassword(loginForm.value)\" validate>\n\n         <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"oldpassword\" matInput placeholder=\"Old Password\" [type]=\"hide ? 'password' : 'text'\" autocomplete=\"off\">\n            <mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('oldpassword').valid && loginForm.get('oldpassword').touched\">Please Enter New Password\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n        <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"newpassword\" matInput placeholder=\"New Password\" [type]=\"hide ? 'password' : 'text'\" autocomplete=\"off\">\n            <mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('newpassword').valid && loginForm.get('newpassword').touched\">Please Enter New Password\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n        <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"confirmpassword\" matInput placeholder=\"Confirm Password\" [type]=\"hide ? 'password' : 'text'\" autocomplete=\"off\">\n            <mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('confirmpassword').valid && loginForm.get('confirmpassword').touched\">Please Confirm New Password\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n\n       <div class=\"col-md-12 mb-5\">\n          <button style=\"border-radius: 5px\" mat-raised-button color=\"primary\" type=\"submit\" class=\"cursor btn-block\" >Login</button>\n          <div *ngIf=\"!loginNotification.isError&&loginNotification.attempted\"  style=\"padding:.35rem 0.25rem!important;color: forestgreen!important;font-weight: bolder;font-size: 14px\" class=\"\" role=\"alert\">\n            {{loginNotification.message}}\n            <button type=\"button\" class=\"close\" style=\"padding-top: 0px!important;margin-top: 0px!important;\" data-dismiss=\"alert\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n          <div>\n            <img *ngIf=\"loginNotification.loading\" src=\"assets/img/loading.gif\">\n          </div>\n          <div class=\"\" style=\"padding:.35rem 0.25rem!important;color: orangered!important;font-weight: bolder;font-size: 14px\" *ngIf=\"loginNotification.isError&&loginNotification.attempted\" role=\"alert\">\n            {{loginNotification.message}}\n            <button type=\"button\" class=\"close\" (click)=\"closeNotification()\"  style=\"padding-top: 0px!important;margin-top: 0px!important;\"  data-dismiss=\"alert\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n        </div> \n      </form>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/change-password/change-password.component.scss":
+/*!****************************************************************!*\
+  !*** ./src/app/change-password/change-password.component.scss ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".outer {\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px; }\n\n.title {\n  position: absolute;\n  top: 5px;\n  left: 5px; }\n\n.login {\n  position: absolute;\n  top: 12%;\n  right: 6%;\n  background-color: transparent;\n  height: 450px;\n  width: 400px;\n  z-index: 100;\n  border-top-left-radius: 10px; }\n\n.logintop {\n  height: 50px;\n  background-color: yellow;\n  width: 100%;\n  border-top-left-radius: 15px !important; }\n\n.loginbottom {\n  height: 500px;\n  background-color: white;\n  width: 100%;\n  border-bottom-left-radius: 15px;\n  border-bottom-right-radius: 15px; }\n\n.logos {\n  position: absolute;\n  bottom: 5px;\n  left: 5px; }\n\n.logos img {\n  padding: 10px;\n  height: 50px;\n  opacity: 0.5; }\n\n.bgimage {\n  background: url('bg-fp.jpg') no-repeat center center fixed;\n  background-size: cover; }\n\n.bgcolor {\n  background-color: rgba(70, 107, 73, 0.8); }\n\n.logintop:before {\n  height: 50px;\n  width: 10px;\n  display: block;\n  content: \" \";\n  background-color: #FFF;\n  position: absolute;\n  right: -0px;\n  top: -0px;\n  border-top: 0px solid blue;\n  border-bottom: 0px solid blue; }\n\n.logintop {\n  height: 50px;\n  width: 350px;\n  border-radius: 0px 0px 0px 0px;\n  background-color: #FFF;\n  position: relative;\n  border: 0px solid blue; }\n\n.logintop:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 50px;\n  top: -0px;\n  background-color: #FFF;\n  position: absolute;\n  right: -25.6px;\n  transform: skewX(45deg);\n  -ms-transform: skewX(45deg);\n  -webkit-transform: skewX(45deg);\n  border: 0px solid blue;\n  z-index: -1; }\n\n.loginform {\n  margin-top: 30px; }\n\n.loginform button {\n  margin-top: 30px;\n  border-radius: 0px;\n  padding-top: 8px;\n  padding-bottom: 8px; }\n\n.loginform form {\n  border-top: 1px solid rgba(0, 0, 0, 0.2);\n  padding-top: 20px; }\n\n.loginform input {\n  border-top: 0px;\n  border-left: 0px;\n  border-radius: 0px;\n  border-right: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hL0RvY3VtZW50cy9Qcm9qZWN0cy9GYW1pbHkgUGxhbm5pbmcvRlBfRnJvbnRFbmQvc3JjL2FwcC9jaGFuZ2UtcGFzc3dvcmQvY2hhbmdlLXBhc3N3b3JkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixXQUFXO0VBQ1gsU0FBUztFQUNULFVBQVUsRUFBQTs7QUFHWjtFQUNFLGtCQUFrQjtFQUNsQixRQUFRO0VBQ1IsU0FBUyxFQUFBOztBQUdYO0VBQ0Usa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixTQUFTO0VBQ1QsNkJBQTZCO0VBQzdCLGFBQWE7RUFDYixZQUFZO0VBQ1osWUFBWTtFQUNaLDRCQUE0QixFQUFBOztBQUc5QjtFQUNFLFlBQVk7RUFDWix3QkFBd0I7RUFDeEIsV0FBVztFQUNYLHVDQUFzQyxFQUFBOztBQUd4QztFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsV0FBVztFQUNYLCtCQUErQjtFQUMvQixnQ0FBZ0MsRUFBQTs7QUFHbEM7RUFDRSxrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFNBQVMsRUFBQTs7QUFHWDtFQUNFLGFBQWE7RUFDYixZQUFZO0VBQ1osWUFBWSxFQUFBOztBQUdkO0VBQ0UsMERBQXlFO0VBSXpFLHNCQUFzQixFQUFBOztBQUV4QjtFQUNFLHdDQUF3QyxFQUFBOztBQUkxQztFQUVFLFlBQVk7RUFDWixXQUFXO0VBQ1gsY0FBYztFQUNkLFlBQVc7RUFDWCxzQkFBc0I7RUFDdEIsa0JBQWtCO0VBQ2xCLFdBQVc7RUFDWCxTQUFTO0VBQ1QsMEJBQTBCO0VBQzFCLDZCQUE2QixFQUFBOztBQUUvQjtFQUNFLFlBQVk7RUFDWixZQUFZO0VBQ1osOEJBQThCO0VBQzlCLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsc0JBQXNCLEVBQUE7O0FBRXhCO0VBQ0UsY0FBYztFQUNkLFlBQVc7RUFDWCxZQUFZO0VBQ1osWUFBWTtFQUNaLFNBQVM7RUFDVCxzQkFBc0I7RUFDdEIsa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCx1QkFBc0I7RUFDdEIsMkJBQTBCO0VBQzFCLCtCQUE4QjtFQUM5QixzQkFBc0I7RUFDdEIsV0FBVyxFQUFBOztBQUdiO0VBQ0UsZ0JBQWdCLEVBQUE7O0FBR2xCO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsbUJBQW1CLEVBQUE7O0FBRXJCO0VBQ0Usd0NBQXFDO0VBQ3JDLGlCQUFpQixFQUFBOztBQUVuQjtFQUNFLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGlCQUFpQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvY2hhbmdlLXBhc3N3b3JkL2NoYW5nZS1wYXNzd29yZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5vdXRlcntcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwcHg7XG4gICAgYm90dG9tOiAwcHg7XG4gICAgbGVmdDogMHB4O1xuICAgIHJpZ2h0OiAwcHg7XG4gIH1cbiAgXG4gIC50aXRsZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogNXB4O1xuICAgIGxlZnQ6IDVweDtcbiAgfVxuICBcbiAgLmxvZ2luIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAxMiU7XG4gICAgcmlnaHQ6IDYlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIGhlaWdodDogNDUwcHg7XG4gICAgd2lkdGg6IDQwMHB4O1xuICAgIHotaW5kZXg6IDEwMDtcbiAgICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiAxMHB4O1xuICB9XG4gIFxuICAubG9naW50b3Age1xuICAgIGhlaWdodDogNTBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogMTVweCFpbXBvcnRhbnQ7XG4gIH1cbiAgXG4gIC5sb2dpbmJvdHRvbSB7XG4gICAgaGVpZ2h0OiA1MDBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXItYm90dG9tLWxlZnQtcmFkaXVzOiAxNXB4O1xuICAgIGJvcmRlci1ib3R0b20tcmlnaHQtcmFkaXVzOiAxNXB4O1xuICB9XG4gIFxuICAubG9nb3N7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogNXB4O1xuICAgIGxlZnQ6IDVweDtcbiAgfVxuICBcbiAgLmxvZ29zIGltZ3tcbiAgICBwYWRkaW5nOiAxMHB4O1xuICAgIGhlaWdodDogNTBweDtcbiAgICBvcGFjaXR5OiAwLjU7XG4gIH1cbiAgXG4gIC5iZ2ltYWdlIHtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoLi4vLi4vYXNzZXRzL2ltZy9iZy1mcC5qcGcpIG5vLXJlcGVhdCBjZW50ZXIgY2VudGVyIGZpeGVkO1xuICAgIC13ZWJraXQtYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAtbW96LWJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgLW8tYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB9XG4gIC5iZ2NvbG9yIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDcwLCAxMDcsIDczLCAwLjgpO1xuICB9XG4gIFxuICBcbiAgLmxvZ2ludG9wOmJlZm9yZSB7XG4gIFxuICAgIGhlaWdodDogNTBweDtcbiAgICB3aWR0aDogMTBweDtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBjb250ZW50OlwiIFwiO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHJpZ2h0OiAtMHB4O1xuICAgIHRvcDogLTBweDtcbiAgICBib3JkZXItdG9wOiAwcHggc29saWQgYmx1ZTtcbiAgICBib3JkZXItYm90dG9tOiAwcHggc29saWQgYmx1ZTtcbiAgfVxuICAubG9naW50b3Age1xuICAgIGhlaWdodDogNTBweDtcbiAgICB3aWR0aDogMzUwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogMHB4IDBweCAwcHggMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGJvcmRlcjogMHB4IHNvbGlkIGJsdWU7XG4gIH1cbiAgLmxvZ2ludG9wOmFmdGVyIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBjb250ZW50OlwiIFwiO1xuICAgIHdpZHRoOiAxMDBweDtcbiAgICBoZWlnaHQ6IDUwcHg7XG4gICAgdG9wOiAtMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHJpZ2h0OiAtMjUuNnB4O1xuICAgIHRyYW5zZm9ybTpza2V3WCg0NWRlZyk7XG4gICAgLW1zLXRyYW5zZm9ybTpza2V3WCg0NWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06c2tld1goNDVkZWcpO1xuICAgIGJvcmRlcjogMHB4IHNvbGlkIGJsdWU7XG4gICAgei1pbmRleDogLTE7XG4gIH1cbiAgXG4gIC5sb2dpbmZvcm0ge1xuICAgIG1hcmdpbi10b3A6IDMwcHg7XG4gIH1cbiAgXG4gIC5sb2dpbmZvcm0gYnV0dG9ue1xuICAgIG1hcmdpbi10b3A6IDMwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogMHB4O1xuICAgIHBhZGRpbmctdG9wOiA4cHg7XG4gICAgcGFkZGluZy1ib3R0b206IDhweDtcbiAgfVxuICAubG9naW5mb3JtIGZvcm17XG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHJnYmEoMCwwLDAsMC4yKTtcbiAgICBwYWRkaW5nLXRvcDogMjBweDtcbiAgfVxuICAubG9naW5mb3JtIGlucHV0e1xuICAgIGJvcmRlci10b3A6IDBweDtcbiAgICBib3JkZXItbGVmdDogMHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDBweDtcbiAgICBib3JkZXItcmlnaHQ6IDBweDtcbiAgfVxuICAiXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/change-password/change-password.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/change-password/change-password.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ChangePasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangePasswordComponent", function() { return ChangePasswordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+
+var ChangePasswordComponent = /** @class */ (function () {
+    function ChangePasswordComponent(userService, formBuilder, router) {
+        this.userService = userService;
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.loginNotification = { isError: false, message: '', attempted: false, loading: false };
+        this.customeUsernameNotifier = false;
+        this.customePasswordNotifier = false;
+        this.hide = true;
+        this.loginForm = this.formBuilder.group({
+            oldpassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            newpassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            confirmpassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    }
+    ChangePasswordComponent.prototype.ngOnInit = function () {
+        var token = localStorage.getItem('htmr-web-token');
+        var location = localStorage.getItem('htmr-starting-location');
+    };
+    ChangePasswordComponent.prototype.changePassword = function (loginCredentials) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var openMrsResult, e_1;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.loginForm.valid) return [3 /*break*/, 6];
+                        this.loginNotification.loading = true;
+                        if (!(this.loginForm.value.newpassword == this.loginForm.value.confirmpassword)) return [3 /*break*/, 5];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.userService.changePassword(loginCredentials).toPromise()];
+                    case 2:
+                        openMrsResult = _a.sent();
+                        console.log(openMrsResult);
+                        if (openMrsResult) {
+                            this.loginNotification.isError = false;
+                            this.loginNotification.attempted = true;
+                            this.loginNotification.loading = false;
+                        }
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_1 = _a.sent();
+                        console.log(e_1);
+                        this.loginNotification.isError = true;
+                        this.loginNotification.message = "Password changing failed.";
+                        this.loginNotification.attempted = true;
+                        this.loginNotification.loading = false;
+                        this.userService.loggedIn = false;
+                        localStorage.removeItem('htmr-web-token');
+                        setTimeout(function () {
+                            _this.closeNotification();
+                        }, 6000);
+                        return [3 /*break*/, 4];
+                    case 4: return [3 /*break*/, 6];
+                    case 5:
+                        this.loginNotification.isError = true;
+                        this.loginNotification.attempted = true;
+                        this.loginNotification.loading = false;
+                        this.loginNotification.message = "Passwords do not match.";
+                        _a.label = 6;
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ChangePasswordComponent.prototype.closeNotification = function () {
+        this.loginNotification.isError = false;
+        this.loginNotification.attempted = false;
+    };
+    ChangePasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-change-password',
+            template: __webpack_require__(/*! ./change-password.component.html */ "./src/app/change-password/change-password.component.html"),
+            styles: [__webpack_require__(/*! ./change-password.component.scss */ "./src/app/change-password/change-password.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], ChangePasswordComponent);
+    return ChangePasswordComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/home/home.component.html":
 /*!******************************************!*\
   !*** ./src/app/home/home.component.html ***!
@@ -423,7 +603,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"main-nav mat-elevation-z6\">\n  <!--<mat-toolbar class=\"toolbar no-print\" style=\"background-color: #07587f\"> -->\n  <mat-toolbar class=\"toolbar no-print\" style=\"background-color: #3F997B\">\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"drawer.toggle()\"\n      *ngIf=\"isHandset$ | async\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"isOpen = !isOpen\"\n      title=\"Toggle Menu\"\n      *ngIf=\"!(isHandset$ | async)\">\n      <mat-icon class=\"secondary-color\" aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    <span class=\"secondary-color\">\n      <img src=\"assets/img/logo.png\"\n           style=\"height: 75px; width: 75px; margin-left: 10px; margin-right: 21px; border-radius: 50%;\">\n    </span>\n    <span style=\"display: inline-block; margin-top: 14px; margin-left: 7px; font-size: 33px; color: #ffffff\">\n      Family Planning\n      <span *ngIf=\"isHandset$ | async\">iLMS</span>\n    </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <!--    user dropdown menu-->\n    <mat-menu #appMenu=\"matMenu\">\n    <!--\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-user\"></i>\n        Profile\n      </a>\n      -->\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-key\"></i>\n        Change Password\n      </a>\n      <mat-divider></mat-divider>\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-sign-out\"></i>\n        Logout\n      </a>\n\n    </mat-menu>\n\n    <button mat-button [matMenuTriggerFor]=\"appMenu\">\n      <span class=\"secondary-color\">\n        <mat-icon fontSet=\"fa\" fontIcon=\"fa-user\" style=\"margin-top: 6px\"></mat-icon>\n        {{ username }}\n      </span>\n    </button>\n  </mat-toolbar>\n</nav>\n<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav no-print\" fixedInViewport=\"false\"\n               [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n               [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n               [opened]=\"!(isHandset$ | async) && isOpen\">\n    <mat-toolbar>TRCMIS</mat-toolbar>\n    <app-placeholder *ngIf=\"loading$ | async\" [numberOfLines]=\"30\"></app-placeholder>\n    <mat-nav-list>\n      <ng-container *ngFor=\"let linkItem of navigation\">\n        <!--        <div class=\"col-sm-12 item\" [routerLinkActive]=\"'active-item'\" [routerLink]=\"linkItem.links\" >-->\n        <!--          <div class=\"text-center\"><i class=\"{{linkItem.icon}}\"></i></div>-->\n        <!--          <h3>{{linkItem.name}}</h3>-->\n        <!--        </div>-->\n        <a mat-list-item [routerLink]=\"linkItem.links\" routerLinkActive=\"active-menu\">\n          <i style=\"color: #07587f\" class=\"{{linkItem.icon}}\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{linkItem.name}}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container><br /><br />\n\n      <ng-container>\n      <p> &nbsp;&nbsp; Dashboard Summary</p>\n         <mat-divider></mat-divider>\n        <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-users\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Clients</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_clients }}</span>\n        </a>\n        \n         <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-thumbs-up\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Initiations</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_initiations }}</span>\n        </a>\n         <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-thumbs-down\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Discontinuations</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_discontinuations }}</span>\n        </a>\n            <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-scissors\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Services</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_services }}</span>\n        </a>\n                 <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-scissors\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Referrals</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_referrals }}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container>\n\n\n    </mat-nav-list>\n\n  </mat-sidenav>\n  <mat-sidenav-content>\n\n    <!-- Add Content Here -->\n    <div class=\"content\" style=\"margin-top: 80px\"\n         [@routeAnimations]=\"o.isActivated ? o.activatedRoute : ''\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+module.exports = "<nav class=\"main-nav mat-elevation-z6\">\n  <!--<mat-toolbar class=\"toolbar no-print\" style=\"background-color: #07587f\"> -->\n  <mat-toolbar class=\"toolbar no-print\" style=\"background-color: #3F997B\">\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"drawer.toggle()\"\n      *ngIf=\"isHandset$ | async\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n\n    <button\n      type=\"button\"\n      aria-label=\"Toggle sidenav\"\n      mat-icon-button\n      (click)=\"isOpen = !isOpen\"\n      title=\"Toggle Menu\"\n      *ngIf=\"!(isHandset$ | async)\">\n      <mat-icon class=\"secondary-color\" aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    <span class=\"secondary-color\">\n      <img src=\"assets/img/logo.png\"\n           style=\"height: 75px; width: 75px; margin-left: 10px; margin-right: 21px; border-radius: 50%;\">\n    </span>\n    <span style=\"display: inline-block; margin-top: 14px; margin-left: 7px; font-size: 33px; color: #ffffff\">\n      Family Planning\n      <span *ngIf=\"isHandset$ | async\">iLMS</span>\n    </span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n\n    <!--    user dropdown menu-->\n    <mat-menu #appMenu=\"matMenu\">\n    <!--\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-user\"></i>\n        Profile\n      </a>\n      -->\n      <a (click)=\"goToChangePass()\" mat-menu-item>\n        <i class=\"fa fa-key\"></i>\n        Change Password\n      </a>\n      <mat-divider></mat-divider>\n      <a (click)=\"logout()\" mat-menu-item>\n        <i class=\"fa fa-sign-out\"></i>\n        Logout\n      </a>\n\n    </mat-menu>\n\n    <button mat-button [matMenuTriggerFor]=\"appMenu\">\n      <span class=\"secondary-color\">\n        <mat-icon fontSet=\"fa\" fontIcon=\"fa-user\" style=\"margin-top: 6px\"></mat-icon>\n        {{ username }}\n      </span>\n    </button>\n  </mat-toolbar>\n</nav>\n<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav no-print\" fixedInViewport=\"false\"\n               [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n               [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n               [opened]=\"!(isHandset$ | async) && isOpen\">\n    <mat-toolbar>TRCMIS</mat-toolbar>\n    <app-placeholder *ngIf=\"loading$ | async\" [numberOfLines]=\"30\"></app-placeholder>\n    <mat-nav-list>\n      <ng-container *ngFor=\"let linkItem of navigation\">\n        <!--        <div class=\"col-sm-12 item\" [routerLinkActive]=\"'active-item'\" [routerLink]=\"linkItem.links\" >-->\n        <!--          <div class=\"text-center\"><i class=\"{{linkItem.icon}}\"></i></div>-->\n        <!--          <h3>{{linkItem.name}}</h3>-->\n        <!--        </div>-->\n        <a mat-list-item [routerLink]=\"linkItem.links\" routerLinkActive=\"active-menu\">\n          <i style=\"color: #07587f\" class=\"{{linkItem.icon}}\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{linkItem.name}}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container><br /><br />\n\n      <ng-container>\n      <p> &nbsp;&nbsp; Dashboard Summary</p>\n         <mat-divider></mat-divider>\n        <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-user\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Clients</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_clients }}</span>\n        </a>\n\n        <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-users\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Families</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_families }}</span>\n        </a>\n        \n         <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-thumbs-up\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Initiations</span> &nbsp;&nbsp;\n               <span style=\"font-weight: 500\">{{ total_initiations }}</span>\n        </a>\n         <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-thumbs-down\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Discontinuations</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_discontinuations }}</span>\n        </a>\n            <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"fa fa-scissors\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Services</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_services }}</span>\n        </a>\n                 <a mat-list-item> &nbsp;&nbsp;\n          <i style=\"color: #0DA98F\" class=\"\tfa fa-arrows-alt\"></i> &nbsp;&nbsp;\n          <span style=\"font-weight: 250\">Referrals</span> &nbsp;&nbsp;\n          <span style=\"font-weight: 500\">{{ total_referrals }}</span>\n        </a>\n        <mat-divider></mat-divider>\n      </ng-container>\n\n\n    </mat-nav-list>\n\n  </mat-sidenav>\n  <mat-sidenav-content>\n\n    <!-- Add Content Here -->\n    <div class=\"content\" style=\"margin-top: 80px\"\n         [@routeAnimations]=\"o.isActivated ? o.activatedRoute : ''\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -492,6 +672,7 @@ var HomeComponent = /** @class */ (function () {
         this.isOpen = true;
         this.location_loading = false;
         this.total_clients = 0;
+        this.total_families = 0;
         this.total_initiations = 0;
         this.total_discontinuations = 0;
         this.total_services = 0;
@@ -515,6 +696,7 @@ var HomeComponent = /** @class */ (function () {
             var facilities = _this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
             _this.orgunitName = _this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
             _this.getTotalClients({ facilities: facilities });
+            _this.getTotalClientFamilies({ facilities: facilities });
             _this.getTotalServices({ facilities: facilities });
             _this.getTotalInitiations({ facilities: facilities });
             _this.getTotalDiscontinuations({ facilities: facilities });
@@ -535,6 +717,22 @@ var HomeComponent = /** @class */ (function () {
                         data = _a.sent();
                         if (data) {
                             this.total_clients = data['total_clients'];
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomeComponent.prototype.getTotalClientFamilies = function (filter) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.http.postDJANGOURL('dashboard_summary/', filter).toPromise()];
+                    case 1:
+                        data = _a.sent();
+                        if (data) {
+                            this.total_families = data['total_clients_families'];
                         }
                         return [2 /*return*/];
                 }
@@ -606,7 +804,11 @@ var HomeComponent = /** @class */ (function () {
         });
     };
     HomeComponent.prototype.goToChangePass = function () {
-        this.router.navigate(['', 'change_password']);
+        this.userService.removeLocalStorageNavigation();
+        this.userService.deleteToken();
+        this.userService.loggedIn = false;
+        this.locationService.locations = [];
+        this.router.navigate(['', 'change-password']);
     };
     HomeComponent.prototype.goTo = function (path) {
         this.router.navigate(path);
@@ -1344,11 +1546,11 @@ var DashboardComponent = /** @class */ (function () {
             .subscribe(function (data) {
             if (data) {
                 var series = [{
-                        name: 'Services',
-                        data: data['total_issued_services_by_team'].map(function (item) { return item.value; })
+                        name: 'Referrals',
+                        data: data['total_issued_referrals'].map(function (item) { return item.value; })
                     }];
-                var categories = data['total_issued_services_by_team'].map(function (item) { return item.team; });
-                var chartConfig = _this.settingsService.drawChart(categories, series, 'Services', 'Total Issued Services by Team' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), '', 'line');
+                var categories = data['total_issued_referrals'].map(function (item) { return item.event_type; });
+                var chartConfig = _this.settingsService.drawChart(categories, series, 'Services', 'Total Issued Referrals' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName), '', 'line');
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card3Chart', chartConfig);
             }
             _this.card3DataLoading = false;
@@ -1368,16 +1570,16 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard4Chart = function (filter) {
         var _this = this;
         this.card4DataLoading = true;
-        var reportUrl = 'clients_summary/';
+        var reportUrl = 'events_summary/';
         this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
             if (data) {
                 var series = [{
-                        name: 'Total Clients By Gender',
-                        data: data['total_aggregate'].map(function (item) { return item.value; })
+                        name: 'Family Planning Methods',
+                        data: data['total_family_planning_method_given'].map(function (item) { return item.value; })
                     }];
-                var categories = data['total_aggregate'].map(function (item) { return item.gender; });
-                var chartConfig = _this.settingsService.drawChart(categories, series, 'Registrations', 'Total Clients' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
+                var categories = data['total_family_planning_method_given'].map(function (item) { return item.field_code_3; });
+                var chartConfig = _this.settingsService.drawChart(categories, series, 'Number of Clients', 'Total Family Planning Methods Given' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card4Chart', chartConfig);
             }
             _this.card4DataLoading = false;
@@ -1791,6 +1993,62 @@ var IssuedReferralsComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], IssuedReferralsComponent);
     return IssuedReferralsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.html":
+/*!*****************************************************************************************************************************!*\
+  !*** ./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.html ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  total-family-planning-methods-issued works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.scss":
+/*!*****************************************************************************************************************************!*\
+  !*** ./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.scss ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZnAtcmVwb3J0cy90b3RhbC1mYW1pbHktcGxhbm5pbmctbWV0aG9kcy1pc3N1ZWQvdG90YWwtZmFtaWx5LXBsYW5uaW5nLW1ldGhvZHMtaXNzdWVkLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.ts":
+/*!***************************************************************************************************************************!*\
+  !*** ./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.ts ***!
+  \***************************************************************************************************************************/
+/*! exports provided: TotalFamilyPlanningMethodsIssuedComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotalFamilyPlanningMethodsIssuedComponent", function() { return TotalFamilyPlanningMethodsIssuedComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var TotalFamilyPlanningMethodsIssuedComponent = /** @class */ (function () {
+    function TotalFamilyPlanningMethodsIssuedComponent() {
+    }
+    TotalFamilyPlanningMethodsIssuedComponent.prototype.ngOnInit = function () {
+    };
+    TotalFamilyPlanningMethodsIssuedComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-total-family-planning-methods-issued',
+            template: __webpack_require__(/*! ./total-family-planning-methods-issued.component.html */ "./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.html"),
+            styles: [__webpack_require__(/*! ./total-family-planning-methods-issued.component.scss */ "./src/app/modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], TotalFamilyPlanningMethodsIssuedComponent);
+    return TotalFamilyPlanningMethodsIssuedComponent;
 }());
 
 
@@ -2587,20 +2845,17 @@ var ProvidersReportComponent = /** @class */ (function () {
                 label: 'Issued Services By Teams',
                 link: ['', 'providers_report', 'issued-referrals-by-location-report'],
                 index: 0
-            }, {
-                label: 'Total Clients Enrolled to Loan units',
-                link: ['', 'providers_report', 'facility-report'],
-                index: 1
-            }, {
-                label: 'Total Clients Enrolled to Beach Management Units',
-                link: ['', 'providers_report', 'inter-facility-report'],
-                index: 2
             },
             {
-                label: 'Total Clients Enrolled to Bee Keeping',
-                link: ['', 'providers_report', 'inter-facility-report'],
-                index: 2
+                label: 'Total Family Planning Methods Issued',
+                link: ['', 'providers_report', 'total-family-planning-methods-report'],
+                index: 1
             },
+            {
+                label: 'Citizens Report',
+                link: ['', 'providers_report', 'citizens-report'],
+                index: 1
+            }
         ];
     }
     ProvidersReportComponent.prototype.ngOnInit = function () {
@@ -2643,7 +2898,7 @@ module.exports = ".list-group-item {\n  transition: all 0.3s cubic-bezier(.25, .
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-table-form\n  image=\"pie-chart\"\n  title=\"Summary Reports\"\n  [hideAdd]=\"true\"\n>\n\n  <ng-container ngProjectAs=\"table\">\n\n    <div class=\"container-fluid mt-3 no-print\" *ngIf=\"!showReport\" @fadeIn>\n      <h4>Report List</h4>\n      <small @fadeIn *ngIf=\"!report_loading\">Select any report to view data.</small>\n      <app-loader @fadeIn *ngIf=\"report_loading\" message=\"Getting List of Available Reports\"></app-loader>\n      <ul class=\"list-group\">\n        <li\n          @fadeIn\n          [ngClass]=\"routeAnimationsElements\"\n          class=\"list-group-item\"\n          (click)=\"changeReport(report)\"\n          *ngFor=\"let report of reports\">\n          {{ report.name }}\n          <i class=\"fa fa-arrow-right pull-right\"></i>\n        </li>\n      </ul>\n    </div>\n\n    <div class=\"container-fluid mt-3\" *ngIf=\"showReport\" @fadeIn>\n      <div class=\"row no-print\">\n        <div class=\"col-sm-12\">\n          <h4>\n            {{ reportTitle }}\n            <button\n              class=\"btn btn-primary pull-right\"\n              (click)=\"backToReports()\"\n            >\n              <i class=\"fa fa-arrow-back\"></i>\n              Back to Reports\n            </button>\n          </h4>\n        </div>\n      </div>\n\n      <div class=\"row no-print\">\n        <!--      Start Date-->\n        <div class=\"col-sm-3\">\n          <mat-form-field appearance=\"outline\">\n            <mat-label>Start Date</mat-label>\n            <input\n              [(ngModel)]=\"start_date\"\n              [matDatepicker]=\"dw\"\n              matInput\n              placeholder=\"From\"\n              [max]=\"end_date\"\n              required/>\n            <mat-datepicker-toggle matSuffix [for]=\"dw\"></mat-datepicker-toggle>\n            <mat-datepicker #dw></mat-datepicker>\n          </mat-form-field>\n        </div>\n\n        <!--      End Date-->\n        <div class=\"col-sm-3\">\n          <mat-form-field appearance=\"outline\">\n            <mat-label>End Date</mat-label>\n            <input\n              [(ngModel)]=\"end_date\"\n              [matDatepicker]=\"dw1\"\n              matInput\n              placeholder=\"To\"\n              [min]=\"start_date\"\n              required/>\n            <mat-datepicker-toggle matSuffix [for]=\"dw1\"></mat-datepicker-toggle>\n            <mat-datepicker #dw1></mat-datepicker>\n          </mat-form-field>\n        </div>\n        <div class=\"col-sm-4 mt-1\">\n          <app-org-unit-filter\n            (onOrgUnitChange)=\"changeOrgUnit($event)\"\n            [orgunit_tree_config]=\"orgunit_tree_config\">\n          </app-org-unit-filter>\n        </div>\n        <div class=\"col-sm-2\">\n          <button\n            style=\"margin-top: 5px; height: 46px;\"\n            [disabled]=\"start_date == '' || end_date == '' || orgunit == null\"\n            class=\"btn btn-block btn-outline-primary\"\n            (click)=\"getReport()\"\n          >Get Report</button>\n        </div>\n      </div>\n      <div class=\"row no-print mt-4\" *ngIf=\"loading\">\n        <div class=\"col-sm-12\">\n          <app-loader [message]=\"'Getting a Report Data...'\"></app-loader>\n        </div>\n      </div>\n\n      <div class=\"row no-print mt-4\" *ngIf=\"loading_failed\">\n        <div class=\"col-sm-12\">\n          <p class=\"lead text-danger\">\n            Something went wrong and we are not able to get the report, Please try again.\n          </p>\n        </div>\n      </div>\n\n      <app-total-registered-clients\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"CBHS - SABABU ZA USAJILI\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/total_registered_clients'\"\n      ></app-total-registered-clients>\n      <app-total-registered-clients\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"HUDUMA ZA RUFAA MBALI MBALI\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/total_referrals_issued'\"\n      ></app-total-registered-clients>\n      <app-total-registered-clients\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"HUDUMA ZA RUFAA MBALI MBALI\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/total_successful_referrals'\"\n      ></app-total-registered-clients>\n      <app-total-issued-lost-followup\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"MREJESHO WA RUFAA KUTOKA NGAZI YA JAMII\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/total_issued_ltfs'\"\n      ></app-total-issued-lost-followup>\n      <app-total-issued-lost-followup\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"MREJESHO WA RUFAA KUTOKA NGAZI YA JAMII\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/ltfs_feedback'\"\n      ></app-total-issued-lost-followup>\n      <app-successful-maralia-referals\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"AINA YA RUFAA\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/successful_malaria_referrals'\"\n      ></app-successful-maralia-referals>\n      <app-total-registered-clients\n        [orgUnitName]=\"orgunitnames\"\n        [startDate]=\"start_date\"\n        [endDate]=\"end_date\"\n        [jsonData]=\"jsonData\"\n        [report]=\"current_report\"\n        main_title=\"HUDUMA ZA RUFAA ZILIZOFELI\"\n        *ngIf=\"!loading && jsonData && reportId == '/opensrp/reports/total_failed_referrals'\"\n      ></app-total-registered-clients>\n\n      <div\n        appTableStyle\n        #reportArea\n        class=\"container-fluid emailClass\"\n        [ngClass]=\"{'hidden': !html_data || jsonData}\"\n        [innerHtml]=\"html_data | safeHtml\">\n      </div>\n    </div>\n\n  </ng-container>\n</app-table-form>\n\n"
+module.exports = "<app-table-form\n image=\"pie-chart\"\n [title]=\"title\"\n [hideAdd]=\"true\"\n>\n\n  <ng-container ngProjectAs=\"table\">\n    <nav mat-tab-nav-bar>\n      <a mat-tab-link\n         *ngFor=\"let link of navLinks\"\n         [routerLink]=\"link.link\"\n         (click)=\"title = link.label\"\n         routerLinkActive #rla=\"routerLinkActive\"\n         [active]=\"rla.isActive\">\n        {{link.label}}\n      </a>\n    </nav>\n    <router-outlet></router-outlet>\n  </ng-container>\n</app-table-form>\n"
 
 /***/ }),
 
@@ -2660,140 +2915,99 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_animations_router_animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/animations/router-animation */ "./src/app/shared/animations/router-animation.ts");
-/* harmony import */ var _services_http_client_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/http-client.service */ "./src/app/services/http-client.service.ts");
-/* harmony import */ var _services_org_unit_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/org-unit.service */ "./src/app/services/org-unit.service.ts");
-
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
 
 var ReportsComponent = /** @class */ (function () {
-    function ReportsComponent(httpClient, orgunitService) {
-        this.httpClient = httpClient;
-        this.orgunitService = orgunitService;
-        this.report_loading = false;
-        this.loading = false;
-        this.orgunit = null;
-        this.orgunitnames = '';
-        this.reportTitle = '';
-        this.showReport = false;
-        this.start_date = '';
-        this.end_date = '';
-        this.done_loading = false;
-        this.loading_failed = false;
-        this.orgunit_tree_config = {
-            show_search: true,
-            search_text: 'Search',
-            level: null,
-            loading: true,
-            loading_message: 'Loading Organisation units...',
-            multiple: true,
-            multiple_key: 'control',
-            placeholder: 'Select Location'
-        };
-        this.reports = [];
-        this.current_report = null;
-        this.html_data = null;
-        this.reportId = null;
-        this.routeAnimationsElements = _shared_animations_router_animation__WEBPACK_IMPORTED_MODULE_2__["ROUTE_ANIMATIONS_ELEMENTS"];
-        this.preparedReports = [
-            '/opensrp/reports/total_registered_clients',
-            '/opensrp/reports/total_referrals_issued',
-            '/opensrp/reports/total_successful_referrals',
-            '/opensrp/reports/total_issued_ltfs',
-            '/opensrp/reports/ltfs_feedback',
-            '/opensrp/reports/successful_malaria_referrals',
-            '/opensrp/reports/total_failed_referrals'
+    function ReportsComponent(router) {
+        this.router = router;
+        this.activeLinkIndex = -1;
+        this.title = 'Client Enrollment Reports';
+        this.navLinks = [
+            {
+                label: 'Total Clients Enrolled to Beach Management Units',
+                link: ['', 'more_reports', 'total-clients-enrolled-to-beach-management-report'],
+                index: 2
+            },
+            {
+                label: 'Total Clients Enrolled to Bee Keeping',
+                link: ['', 'more_reports', 'total-clients-enrolled-to-bee-keeping-report'],
+                index: 3
+            },
+            {
+                label: 'Total Clients Enrolled to Loan units',
+                link: ['', 'more_reports', 'total-clients-enrolled-to-loan-units-report'],
+                index: 4
+            },
         ];
     }
     ReportsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.report_loading = true;
-        this.httpClient.getOpenSRP('available_reports')
-            .subscribe(function (data) {
-            _this.reports = data;
-            _this.report_loading = false;
+        this.router.events.subscribe(function (res) {
+            _this.activeLinkIndex = _this.navLinks.indexOf(_this.navLinks
+                .find(function (tab) { return tab.link[1] === '.' + _this.router.url; }));
         });
     };
-    ReportsComponent.prototype.changeOrgUnit = function (orgunit) {
-        this.orgunit = orgunit;
-        this.orgunitnames = orgunit.items.map(function (d) { return d.name; }).join(', ');
-        this.html_data = null;
-    };
-    ReportsComponent.prototype.changeReport = function (report) {
-        this.reportTitle = report.name;
-        this.showReport = true;
-        this.reportId = report.url;
-        this.current_report = report;
-        this.html_data = null;
-        this.loading_failed = false;
-        this.loading = false;
-        this.jsonData = null;
-    };
+    // report_loading: boolean = false;
+    // loading: boolean = false;
+    // orgunit: any = null;
+    // orgunitnames: string = '';
+    // reportTitle: string = '';
+    // showReport: boolean = false;
+    // start_date: any = '';
+    // end_date: any = '';
+    // done_loading: boolean = false;
+    // loading_failed: boolean = false;
+    // @ViewChild('reportArea') el: ElementRef;
+    // @Input() orgunit_tree_config: any = {
+    //   show_search : true,
+    //   search_text : 'Search',
+    //   level: null,
+    //   loading: true,
+    //   loading_message: 'Loading Organisation units...',
+    //   multiple: true,
+    //   multiple_key: 'control', // can be control or shift
+    //   placeholder: 'Select Location'
+    // };
+    // reports: {
+    //   id: string;
+    //   name: string;
+    //   notes: string;
+    //   url: string;
+    //   createdAt: string;
+    //   updatedAt: string;
+    //   active: boolean
+    // }[] = [];
+    // current_report = null;
+    // html_data = null;
+    // reportId = null;
+    // jsonData: any;
+    // routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
+    // preparedReports = [
+    //   '/opensrp/reports/total_registered_clients',
+    //   '/opensrp/reports/total_referrals_issued',
+    //   '/opensrp/reports/total_successful_referrals',
+    //   '/opensrp/reports/total_issued_ltfs',
+    //   '/opensrp/reports/ltfs_feedback',
+    //   '/opensrp/reports/successful_malaria_referrals',
+    //   '/opensrp/reports/total_failed_referrals'
+    // ];
+    // constructor(
+    //   private httpClient: HttpClientService,
+    //   private orgunitService: OrgUnitService
+    //   ) {
+    // }
+    // ngOnInit() {
+    // this.report_loading = true;
+    // this.httpClient.getOpenSRP('available_reports')
+    // .subscribe((data: any) => {
+    //   this.reports = data;
+    //   this.report_loading = false;
+    // });
+    // }
     ReportsComponent.prototype.ngOnDestroy = function () { };
-    ReportsComponent.prototype.viewSavedChange = function (view_saved) {
-    };
-    ReportsComponent.prototype.checkDate = function () { };
-    ReportsComponent.prototype.backToReports = function () {
-        this.reportTitle = '';
-        this.showReport = false;
-        this.html_data = null;
-        this.jsonData = null;
-    };
-    ReportsComponent.prototype.getReport = function () {
-        var _this = this;
-        if (this.preparedReports.includes(this.current_report.url)) {
-            this.getJsonReport();
-        }
-        var start_date = new Date(this.start_date).toISOString().substr(0, 10);
-        var end_date = new Date(this.end_date).toISOString().substr(0, 10);
-        this.html_data = null;
-        this.loading = true;
-        this.loading_failed = false;
-        var facilities = this.orgunitService.getLevel4OrgunitsIds(this.orgunit.visit_locations, this.orgunit.value);
-        var reportUrl = this.current_report.url.replace('/opensrp/', '') + '/html';
-        var from_date = start_date.replace('-', '/').replace('-', '/');
-        var to_date = end_date.replace('-', '/').replace('-', '/');
-        this.httpClient.postOpenSRP1(reportUrl, { from_date: from_date, to_date: to_date, facilities: facilities })
-            .subscribe(function (data) {
-            _this.html_data = data;
-            _this.loading = false;
-            _this.loading_failed = false;
-        }, function (error) {
-            console.log(error);
-            _this.loading = false;
-            _this.loading_failed = true;
-        });
-    };
-    ReportsComponent.prototype.getJsonReport = function () {
-        var _this = this;
-        var start_date = new Date(this.start_date).toISOString().substr(0, 10);
-        var end_date = new Date(this.end_date).toISOString().substr(0, 10);
-        this.html_data = null;
-        this.loading = true;
-        this.loading_failed = false;
-        var facilities = this.orgunitService.getLevel4OrgunitsIds(this.orgunit.visit_locations, this.orgunit.value);
-        var reportUrl = this.current_report.url.replace('/opensrp/', '') + '/json';
-        var from_date = start_date.replace('-', '/').replace('-', '/');
-        var to_date = end_date.replace('-', '/').replace('-', '/');
-        this.httpClient.postOpenSRP(reportUrl, { from_date: from_date, to_date: to_date, facilities: facilities })
-            .subscribe(function (data) {
-            console.log(JSON.stringify(data));
-            _this.jsonData = data;
-        }, function (error) {
-            console.log(error);
-            _this.loading = false;
-            _this.loading_failed = true;
-        });
-    };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('reportArea'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
-    ], ReportsComponent.prototype, "el", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
-    ], ReportsComponent.prototype, "orgunit_tree_config", void 0);
     ReportsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-reports',
@@ -2802,8 +3016,7 @@ var ReportsComponent = /** @class */ (function () {
             encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
             styles: [__webpack_require__(/*! ./reports.component.css */ "./src/app/modules/reports/reports.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_http_client_service__WEBPACK_IMPORTED_MODULE_3__["HttpClientService"],
-            _services_org_unit_service__WEBPACK_IMPORTED_MODULE_4__["OrgUnitService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], ReportsComponent);
     return ReportsComponent;
 }());
@@ -5929,18 +6142,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HttpClientService = /** @class */ (function () {
+    //Production
+    // public OPENSRPAPIURL = 'http://172.105.87.198:8082/opensrp/';
+    // public OPENMRSURL = 'http://172.105.87.198:8081/openmrs/ws/rest/v1/';
+    // public DJANGOURL = 'http://172.105.87.198:8000/api_'
     function HttpClientService(http, snackBar) {
         this.http = http;
         this.snackBar = snackBar;
         this.DHISAPIURL = '../../../dhis/api/';
         // Dev Environment conf
-        // public OPENSRPAPIURL = '../opensrp/';
-        // public OPENMRSURL = '../openmrs/ws/rest/v1/';
-        // public DJANGOURL = '/api_'
-        //Production
-        this.OPENSRPAPIURL = 'http://172.105.87.198:8082/opensrp/';
-        this.OPENMRSURL = 'http://172.105.87.198:8081/openmrs/ws/rest/v1/';
-        this.DJANGOURL = 'http://172.105.87.198:8000/api_';
+        this.OPENSRPAPIURL = '../opensrp/';
+        this.OPENMRSURL = '../openmrs/ws/rest/v1/';
+        this.DJANGOURL = '/api_';
     }
     HttpClientService.prototype.prepareToken = function (credentials) {
         var username = credentials.username;
@@ -6822,18 +7035,18 @@ var UserService = /** @class */ (function () {
             // },
             {
                 name: 'Reports',
-                links: ['', 'providers_report', 'provide-report'],
+                links: ['', 'providers_report'],
                 icon: 'fa fa-pie-chart',
                 roles: ['System Developer'],
                 accessibility: false
             },
-            // {
-            //   name: 'Other Reports',
-            //   links: ['', 'reports'],
-            //   icon: 'fa fa-bar-chart',
-            //   roles: ['System Developer'],
-            //   accessibility: false
-            // },
+            {
+                name: 'More Reports',
+                links: ['', 'more_reports'],
+                icon: 'fa fa-bar-chart',
+                roles: ['System Developer'],
+                accessibility: false
+            },
             // {
             //   name: 'Settings',
             //   links: ['', 'settings', 'services'],
@@ -6935,6 +7148,24 @@ var UserService = /** @class */ (function () {
     UserService.prototype.login1 = function (loginCredentials) {
         this.http.prepareToken(loginCredentials);
         return this.http.getOpenSRP('security/authenticate');
+    };
+    UserService.prototype.changePassword = function (loginCredentials) {
+        var _this = this;
+        return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create(function (observer) {
+            var payload = {
+                "oldPassword": "" + loginCredentials.oldpassword + "",
+                "newPassword": "" + loginCredentials.newpassword + "",
+            };
+            _this.http.postOpenMRS("password", payload)
+                .subscribe(function (personResponse) {
+                _this.loadingMessage = 'password changed successfully';
+                observer.next(personResponse);
+                observer.complete();
+            }, function (error) {
+                _this.loadingMessage = 'password change  failed';
+                observer.error('some error occur');
+            });
+        });
     };
     UserService.prototype.sessionCheck = function () {
     };

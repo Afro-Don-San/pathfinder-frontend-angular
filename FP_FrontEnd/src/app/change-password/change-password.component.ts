@@ -42,13 +42,14 @@ export class ChangePasswordComponent implements OnInit {
         try {
         
           const openMrsResult: any = await this.userService.changePassword(loginCredentials).toPromise();
+
+          console.log(openMrsResult);
   
           if (openMrsResult)
           {
             this.loginNotification.isError = false;
             this.loginNotification.attempted = true;
             this.loginNotification.loading = false;
-            this.loginNotification.message = 'Password changed successfully';
   
           }
   
