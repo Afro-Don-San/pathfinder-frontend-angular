@@ -154,6 +154,28 @@
           </mat-card>
         </mat-grid-tile>
       </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="470px">
+        <mat-grid-tile [ngClass]="routeAnimationsElements" [colspan]="1" [rowspan]="1">
+          <mat-card class="dashboard-card">
+
+            <mat-card-content class="dashboard-card-content">
+
+              <app-placeholder *ngIf="location_loading || card5DataLoading" [numberOfLines]="10"></app-placeholder>
+              <div
+                [ngClass]="{'hidden': location_loading || card5DataLoading}"
+                id="card5Chart"
+                class="chart-block"
+                style="width: 100%; height: 400px"></div>
+<!--              <div-->
+<!--                #reportArea4-->
+<!--                [ngClass]="{'hidden': !card4Data || location_loading || card4DataLoading}"-->
+<!--                [innerHtml]="card4Data | safeHtml"-->
+<!--              ></div>-->
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
     </div>
   </ng-container>
 </app-table-form>

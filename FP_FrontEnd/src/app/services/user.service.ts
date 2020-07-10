@@ -44,13 +44,13 @@ export class UserService {
       roles: ['System Developer'],
       accessibility: false
     },
-    {
-      name: 'More Reports',
-      links: ['', 'more_reports'],
-      icon: 'fa fa-bar-chart',
-      roles: ['System Developer'],
-      accessibility: false
-    },
+    // {
+    //   name: 'More Reports',
+    //   links: ['', 'more_reports'],
+    //   icon: 'fa fa-bar-chart',
+    //   roles: ['System Developer'],
+    //   accessibility: false
+    // },
     // {
     //   name: 'Settings',
     //   links: ['', 'settings', 'services'],
