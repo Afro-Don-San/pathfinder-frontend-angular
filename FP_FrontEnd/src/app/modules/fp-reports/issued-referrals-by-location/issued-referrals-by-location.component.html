@@ -53,12 +53,12 @@
           [disabled]="start_date == '' || end_date == '' || orgunit == null"
           class="btn btn-block btn-outline-primary"
           (click)="getProviders()"
-        >Get Providers List</button>
+        >Get Team List</button>
       </div>
     </div>
     <div class="row no-print mt-4" *ngIf="loading">
       <div class="col-sm-12" style="padding: 0px">
-        <app-loader [message]="'Getting a list of providers...'"></app-loader>
+        <app-loader [message]="'Getting list of teams...'"></app-loader>
       </div>
     </div>
 
@@ -71,6 +71,7 @@
           (onSelected)="setSelectedData($event)"
         ></app-multiselect>
       </div>
+
       <div class="col-7" *ngIf="selected_providers.length != 0">
         <button class="btn btn-outline-secondary" (click)="getData()">Get Report</button> &nbsp;
         <button *ngIf="done_loading && !show_detailed" class="btn btn-outline-secondary" (click)="show_detailed = true">Get Detailed</button>
@@ -88,7 +89,16 @@
       <div class="col" *ngIf="!show_detailed" @fadeIn>
         <h4 class="text-center">Services Provided by {{ selected_provider_names }} for {{ orgunitnames }} from {{
           start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>
-        <table class="table table-bordered">
+
+
+        <button (click)="exportexcel('summary-table', 'Summary Issued Services By Teams.xlsx')" mat-raised-button class="pull-right no-print">
+          <img src="assets/img/csv.png" style="height: 26px">
+        </button>
+        <button (click)="print()" mat-raised-button class="pull-right no-print" style="margin-right: 5px">
+          <img src="assets/img/print.png" style="height: 26px">
+        </button>
+
+        <table class="table table-bordered" id='summary-table'>
           <tr>
             <th>Service Type</th>
             <th>Number of Issued Service</th>
@@ -103,7 +113,16 @@
       <div class="col" *ngIf="show_detailed" @fadeIn>
         <h4 class="text-center">Detailed Service Provided by {{ selected_providers_names }} for {{ orgunitnames }} from {{
           start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>
-        <table class="table table-bordered">
+
+
+        <button (click)="exportexcel('detailled-table','Detailled Services Issued By Teams.xlsx')" mat-raised-button class="pull-right no-print">
+          <img src="assets/img/csv.png" style="height: 26px">
+        </button>
+        <button (click)="print()" mat-raised-button class="pull-right no-print" style="margin-right: 5px">
+          <img src="assets/img/print.png" style="height: 26px">
+        </button>
+
+        <table class="table table-bordered" id="detailled-table">
           <tr>
             <th>Service Provider</th>
             <th>Service Type</th>

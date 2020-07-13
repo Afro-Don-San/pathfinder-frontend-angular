@@ -16,7 +16,7 @@ export class ProvidersReportComponent implements OnInit {
       index: 0
     }, 
     {
-      label: 'Citizens Report',
+      label: 'Citizens Card Report',
       link: ['', 'providers_report', 'citizens-report'],
       index: 1
     },

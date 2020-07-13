@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ROUTE_ANIMATIONS_ELEMENTS} from '../../shared/animations/router-animation';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {HttpClientService} from '../../services/http-client.service';
 import {LocationService} from '../../services/location.service';

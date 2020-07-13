@@ -42,6 +42,7 @@ import { IssuedReferralsByLocationComponent } from './modules/fp-reports/issued-
 import { IssuedReferralsComponent } from './modules/fp-reports/issued-referrals/issued-referrals.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { TotalFamilyPlanningMethodsIssuedComponent } from './modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component';
+import { CitizenCardReportComponent } from './modules/fp-reports/citizen-card-report/citizen-card-report.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { TotalFamilyPlanningMethodsIssuedComponent } from './modules/fp-reports/
     IssuedReferralsComponent,
     ChangePasswordComponent,
     TotalFamilyPlanningMethodsIssuedComponent,
+    CitizenCardReportComponent,
   ],
   imports: [
     BrowserModule,

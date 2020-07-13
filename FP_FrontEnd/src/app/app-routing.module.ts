@@ -8,6 +8,7 @@ import {InterFacilityRefferalReportComponent} from './modules/providers-report/i
 import {FacilityRefferalReportComponent} from './modules/providers-report/facility-referral-report/facility-refferal-report.component';
 import {ProvidersRefferalReportComponent} from './modules/providers-report/providers-refferal-report/providers-refferal-report.component';
 import {ReportsComponent} from './modules/reports/reports.component';
+import {TotalIssuedLostFollowupComponent} from './modules/reports/total-issued-lost-followup/total-issued-lost-followup.component';
 import {SettingsComponent} from './modules/settings/settings.component';
 import {ServiceComponent} from './modules/settings/service/service.component';
 import {IndicatorsComponent} from './modules/settings/indicators/indicators.component';
@@ -19,6 +20,7 @@ import {UsersComponent} from './modules/users/users.component';
 import {SupersetComponent} from './modules/superset/superset.component';
 import {ChangePasswordComponent} from './change-password/change-password.component'
 import {IssuedReferralsByLocationComponent} from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component'
+import {CitizenCardReportComponent} from './modules/fp-reports/citizen-card-report/citizen-card-report.component'
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -53,15 +55,26 @@ const routes: Routes = [
           data: {state: 'providers-report'}
           },
           {
-            path: 'total-family-planning-methods-report',
-            component: ProvidersRefferalReportComponent,
+            path: 'citizens-report',
+            component: CitizenCardReportComponent,
             data: {state: 'providers-report'}
           },
           {
-            path: 'citizens-report',
-            component: FacilityRefferalReportComponent,
-            data: {state: 'providers-report'}
-          }
+            path: 'total-clients-enrolled-to-beach-management-report',
+            component: ProvidersRefferalReportComponent,
+            data: {state: 'more-reports'}
+          },
+          {
+            path: 'total-clients-enrolled-to-bee-keeping-report',
+            component: ProvidersRefferalReportComponent,
+            data: {state: 'more-reports'}
+          },
+          {
+            path: 'total-clients-enrolled-to-loan-units-report',
+            component: ProvidersRefferalReportComponent,
+            data: {state: 'more-reports'}
+          },
+
         ]
       },
       {
@@ -99,31 +112,6 @@ const routes: Routes = [
       //     }
       //   ]
       // },
-      {
-
-        path: 'more_reports',
-        component: ReportsComponent,
-        data: {state: 'more-reports'},
-        children: [
-
-          {
-            path: 'total-clients-enrolled-to-beach-management-report',
-            component: ProvidersRefferalReportComponent,
-            data: {state: 'more-reports'}
-          },
-          {
-            path: 'total-clients-enrolled-to-bee-keeping-report',
-            component: ProvidersRefferalReportComponent,
-            data: {state: 'more-reports'}
-          },
-          {
-            path: 'total-clients-enrolled-to-loan-units-report',
-            component: ProvidersRefferalReportComponent,
-            data: {state: 'more-reports'}
-          },
-
-        ]
-      },
       {
         path: 'settings',
         component: SettingsComponent,

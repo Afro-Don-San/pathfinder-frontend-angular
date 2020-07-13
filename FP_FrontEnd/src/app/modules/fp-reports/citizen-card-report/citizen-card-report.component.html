@@ -1,0 +1,281 @@
+<div class="container-fluid" style="margin-top: 15px">
+  <!--Loading message-->
+
+  <!--Error message in case something doesnt load-->
+  <div class="row no-print" *ngIf="loading_failed">
+    <div class="col-sm-12 text-center text-danger">
+      Loading Failed
+    </div>
+  </div>
+  <!--data selections-->
+  <div>
+    <!--data entry-->
+    <div class="row">
+      <div class="col-3">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Start Date</mat-label>
+          <input
+            [(ngModel)]="start_date"
+            [matDatepicker]="dw"
+            matInput
+            placeholder="From"
+            [max]="end_date"
+            required/>
+          <mat-datepicker-toggle matSuffix [for]="dw"></mat-datepicker-toggle>
+          <mat-datepicker #dw></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+
+        <mat-form-field appearance="outline">
+          <mat-label>End Date</mat-label>
+          <input
+            [(ngModel)]="end_date"
+            [matDatepicker]="dw1"
+            matInput
+            placeholder="To"
+            [min]="start_date"
+            required/>
+          <mat-datepicker-toggle matSuffix [for]="dw1"></mat-datepicker-toggle>
+          <mat-datepicker #dw1></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4 pt-1">
+        <app-org-unit-filter
+          (onOrgUnitChange)="changeOrgUnit($event)"
+          [orgunit_tree_config]="orgunit_tree_config">
+        </app-org-unit-filter>
+      </div>
+   
+      <div class="col-2">
+        <button
+          style="margin-top: 5px; height: 46px;"
+          [disabled]="start_date == '' || end_date == '' || orgunit == null"
+          class="btn btn-block btn-outline-primary"
+          (click)="getData()"
+        >View Report</button>
+      </div>
+    </div>
+  <!--  <div class="row no-print mt-4" *ngIf="loading">
+      <div class="col-sm-12" style="padding: 0px">
+        <app-loader [message]="'Getting a list of providers...'"></app-loader>
+      </div>
+    </div>
+    -->
+
+
+    <div class="row">
+      
+      <!--<div class="col-5">
+        <app-multiselect
+          *ngIf="providers.length != 0"
+          [items]="providers"
+          [placeholder]="'Select data items to see in the report'"
+          (onSelected)="setSelectedData($event)"
+        ></app-multiselect>
+      </div>
+      -->
+      <div class="col-7">
+       <!-- <button class="btn btn-outline-secondary" (click)="getData()">Get Report</button> &nbsp;-->
+        <button *ngIf="done_loading && !show_detailed" class="btn btn-outline-secondary" (click)="show_detailed = true">Get Detailed</button>
+        <button *ngIf="done_loading && show_detailed" class="btn btn-outline-secondary" (click)="show_detailed = false">Get Summary</button>
+      </div>
+    </div>
+
+    <div class="row no-print mt-4" *ngIf="data_loading">
+      <div class="col-sm-12" style="padding: 0px">
+        <app-loader [message]="'Getting Citizen Card Report'"></app-loader>
+      </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="done_loading">
+      <div class="col" *ngIf="!show_detailed" @fadeIn>
+        <h4 class="text-center">Citizen Card Report for {{ orgunitnames }} from {{
+          start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>
+
+        <button (click)="exportexcel('summary-citizen-card', 'Summarized Citizen Card Report.xlsx')" mat-raised-button class="pull-right no-print">
+          <img src="assets/img/csv.png" style="height: 26px">
+        </button>
+        <button (click)="print()" mat-raised-button class="pull-right no-print" style="margin-right: 5px">
+          <img src="assets/img/print.png" style="height: 26px">
+        </button>
+
+        <table class="table table-bordered" id="summary-citizen-card">
+      
+          <h1><u>Survey Information</u></h1>
+        <tr><h4>Willingness To Participate in the Survey</h4></tr>
+          <tr *ngFor="let data of willing_to_participate_in_survey">
+            <td>{{ data.values_1 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+          <td bgcolor="#FFFFFF" style="line-height:10px;" colspan=3>&nbsp;</td>
+
+          <tr><h1><u>Demographics</u></h1></tr>
+
+          <tr><h4>Residence</h4></tr>
+          <tr *ngFor="let data of residence">
+            <td>{{ data.values_3 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+           <tr><h4>Education</h4></tr>
+          <tr *ngFor="let data of education">
+            <td>{{ data.values_4 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+            <tr><h4>Occupation</h4></tr>
+          <tr *ngFor="let data of occupation">
+            <td>{{ data.values_5 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+              <tr><h4>Marital Status</h4></tr>
+          <tr *ngFor="let data of marital_status">
+            <td>{{ data.values_6 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                <tr><h4>Religion Summary</h4></tr>
+          <tr *ngFor="let data of religion">
+            <td>{{ data.values_7 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+       <td bgcolor="#FFFFFF" style="line-height:10px;" colspan=3>&nbsp;</td>
+
+         <tr> <h1><u>Visit Information</u></h1> </tr>
+                <tr><h4>Reasons for people not going to Health FAcilities</h4></tr>
+          <tr *ngFor="let data of reasons_for_people_not_going_to_health_facilities">
+            <td>{{ data.values_8 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                    <tr><h4>Means of Transport to the Facility</h4></tr>
+          <tr *ngFor="let data of means_of_transport_to_facility">
+            <td>{{ data.values_9 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+            <tr><h4>Time to reach closest facility</h4></tr>
+          <tr *ngFor="let data of time_to_reach_closest_facility">
+            <td>{{ data.values_10 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+    
+               <tr><h4>Is this the nearest facility from home?</h4></tr>
+          <tr *ngFor="let data of is_this_the_nearest_facility_from_home">
+            <td>{{ data.values_11 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                   <tr><h4>Was the facility open when you arrived</h4></tr>
+          <tr *ngFor="let data of was_the_facility_open_when_you_arrived">
+            <td>{{ data.values_12 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                   <tr><h4>Did you get Family Planning Information at the Reception?</h4></tr>
+          <tr *ngFor="let data of did_you_get_family_planning_information_at_the_reception">
+            <td>{{ data.values_13 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                   <tr><h4>How long did it take to be attended by the Service Provider?</h4></tr>
+          <tr *ngFor="let data of how_long_it_took_to_be_attended_by_service_provider">
+            <td>{{ data.values_14 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                   <tr><h4>Did the Service Provider make you feel welcome?</h4></tr>
+          <tr *ngFor="let data of did_the_service_provider_make_you_feel_welcome">
+            <td>{{ data.values_15 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Did the Service Provider assure confidentiality?</h4></tr>
+          <tr *ngFor="let data of did_the_service_provider_assure_confidentiality">
+            <td>{{ data.values_16 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Did you meet the Service Provider in a private room?</h4></tr>
+          <tr *ngFor="let data of did_you_meet_the_service_providers_in_a_private_room">
+            <td>{{ data.values_17 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Did the Service Providers provide clear information about varous fp services and methods?</h4></tr>
+          <tr *ngFor="let data of did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods">
+            <td>{{ data.values_18 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Did the Service Providers use visual aids to demo fp methods?</h4></tr>
+          <tr *ngFor="let data of did_the_service_providers_use_visual_aids_to_demo_fp_methods">
+            <td>{{ data.values_19 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Did the Service Providers ask if you had any concerns about previous used methods?</h4></tr>
+          <tr *ngFor="let data of did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods">
+            <td>{{ data.values_20 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Were you given info on Dual Protection?</h4></tr>
+          <tr *ngFor="let data of were_you_given_info_on_dual_protection">
+            <td>{{ data.values_21 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+                         <tr><h4>Methods not wanted.</h4></tr>
+          <tr *ngFor="let data of methods_not_wanted">
+            <td>{{ data.values_22 }}</td>
+            <td>{{ data.value }}</td>
+          </tr>
+
+        </table>
+      </div>
+
+
+      <div class="col" *ngIf="show_detailed" @fadeIn>
+        <h4 class="text-center">Detailed Citizen Card Report for {{ orgunitnames }} from {{
+          start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }}</h4>
+
+        <button (click)="exportexcel('detailled-summary-card-report', 'Detailled Citizen Card Report.xlsx')" mat-raised-button class="pull-right no-print">
+          <img src="assets/img/csv.png" style="height: 26px">
+        </button>
+        <button (click)="print()" mat-raised-button class="pull-right no-print" style="margin-right: 5px">
+          <img src="assets/img/print.png" style="height: 26px">
+        </button>
+
+        <table class="table table-bordered" id="detailled-summary-card-report">
+          <tr>
+            <th>Willingness to Participate</th>
+            <th>Residencee</th>
+            <th>Education</th>
+            <th>Occupation</th>
+            <th>Marital Status</th>
+            <th>Religion</th>
+            <th>Means of Transport to Facility</th>
+            <th>Time to reach closest Facility</th>
+          </tr>
+          <tr *ngFor="let data of detailed_values">
+            <td>{{ data.willing_to_participate_in_survey }}</td>
+            <td>{{ data.residence }}</td>
+            <td>{{ data.education }}</td>
+            <td>{{ data.occupation }}</td>
+            <td>{{ data.marital_status }}</td>
+            <td>{{ data.religion }}</td>
+            <td>{{ data.means_of_transport_to_facility }}</td>
+            <td>{{ data.time_to_reach_closest_facility }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
