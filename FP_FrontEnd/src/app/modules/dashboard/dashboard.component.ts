@@ -375,37 +375,54 @@ export class DashboardComponent implements OnInit {
             level: 2,
             children: child_loc.childLocations.map(
               (child: any) => {
-                const last_child = this.getChildOrgunits(top_locations, child.uuid);
+                const before_last_child = this.getChildOrgunits(top_locations, child.uuid);
                 visit_locations.push(
                   {
-                    name: last_child.name,
-                    id: last_child.uuid,
+                    name: before_last_child.name,
+                    id: before_last_child.uuid,
                     level: 3,
                     parents: `${visit_location.uuid};${child_loc.uuid}`
                   });
                 return {
-                  name: last_child.name,
-                  id: last_child.uuid,
+                  name: before_last_child.name,
+                  id: before_last_child.uuid,
                   level: 3,
-                  children: last_child.childLocations.map(
+                  children: before_last_child.childLocations.map(
                     (level3child: any) => {
-                      const facility = this.getChildOrgunits(top_locations, level3child.uuid);
+                      const last_child = this.getChildOrgunits(top_locations, level3child.uuid);
                       visit_locations.push(
                         {
-                          name: facility.name,
-                          id: facility.uuid,
+                          name: last_child.name,
+                          id: last_child.uuid,
                           level: 4,
-                          parents: `${visit_location.uuid};${child_loc.uuid};${last_child.uuid}`
+                          parents: `${visit_location.uuid};${child_loc.uuid};${before_last_child.uuid}`
                         });
                       return {
-                        name: facility.name,
-                        id: facility.uuid,
+                        name: last_child.name,
+                        id: last_child.uuid,
                         level: 4,
-                        children: facility.childLocations
+                        // children: facility.childLocations
+                        children: last_child.childLocations.map(
+                          (level4child: any) => {
+                            const facility = this.getChildOrgunits(top_locations, level4child.uuid);
+                            visit_locations.push({
+                                name: facility.name,
+                                id: facility.uuid,
+                                level: 5,
+                                parents: `${visit_location.uuid};${child_loc.uuid};${before_last_child.uuid};${last_child.uuid}`
+                              });
+                            return{
+                              name: facility.name,
+                              id: facility.uuid,
+                              level: 5,
+                              // children: lastest.childLocations
+                            }
+                          })
                       };
                     }
                   )
                 };
+
               }
             )
           };
@@ -413,6 +430,7 @@ export class DashboardComponent implements OnInit {
       )
     };
     this.location_loading = false;
+    console.log(visit_locations);
     return visit_locations;
   }
 

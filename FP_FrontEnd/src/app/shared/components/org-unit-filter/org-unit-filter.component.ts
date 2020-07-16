@@ -128,12 +128,10 @@ export class OrgUnitFilterComponent implements OnInit {
     // if (this.orgunitService.nodes === null) {
       this.locationService.loadTreeLocations().subscribe(
         (locations => {
-          console.log({locations});
           // get top level locations
           const top_locations = locations;
           // filter down to remain with only visit facilities
           const starting_location = localStorage.getItem('htmr-starting-location');
-          console.log("team location from org unit component is", starting_location);
           let visit_location: any = _.find(top_locations, {uuid: starting_location ? starting_location : 'ed787525-d770-11e8-ba9c-f23c917bb7ec'});
           this.visit_locations.push(
             {
@@ -162,33 +160,49 @@ export class OrgUnitFilterComponent implements OnInit {
                   level: 2,
                   children: child_loc.childLocations.map(
                     (child: any) => {
-                      const last_child = this.getChildOrgunits(locations, child.uuid);
+                      const before_last_child = this.getChildOrgunits(locations, child.uuid);
                       this.visit_locations.push(
                         {
-                          name: last_child.name,
-                          id: last_child.uuid,
+                          name: before_last_child.name,
+                          id: before_last_child.uuid,
                           level: 3,
                           parents: `${visit_location.uuid};${child_loc.uuid}`
                         });
                       return {
-                        name: last_child.name,
-                        id: last_child.uuid,
+                        name: before_last_child.name,
+                        id: before_last_child.uuid,
                         level: 3,
-                        children: last_child.childLocations.map(
+                        children: before_last_child.childLocations.map(
                           (level3child: any) => {
-                            const facility = this.getChildOrgunits(locations, level3child.uuid);
+                            const last_child = this.getChildOrgunits(locations, level3child.uuid);
                             this.visit_locations.push(
                               {
-                                name: facility.name,
-                                id: facility.uuid,
+                                name: last_child.name,
+                                id: last_child.uuid,
                                 level: 4,
-                                parents: `${visit_location.uuid};${child_loc.uuid};${last_child.uuid}`
+                                parents: `${visit_location.uuid};${child_loc.uuid};${before_last_child.uuid}`
                               });
                             return {
-                              name: facility.name,
-                              id: facility.uuid,
+                              name: last_child.name,
+                              id: last_child.uuid,
                               level: 4,
-                              children: facility.childLocations
+                              // children: facility.childLocations
+                              children: last_child.childLocations.map(
+                                (level4child: any) => {
+                                  const facility = this.getChildOrgunits(top_locations, level4child.uuid);
+                                  this.visit_locations.push({
+                                      name: facility.name,
+                                      id: facility.uuid,
+                                      level: 5,
+                                      parents: `${visit_location.uuid};${child_loc.uuid};${before_last_child.uuid};${last_child.uuid}`
+                                    });
+                                  return{
+                                    name: facility.name,
+                                    id: facility.uuid,
+                                    level: 5,
+                                    // children: lastest.childLocations
+                                  }
+                                })
                             };
                           }
                         )
@@ -379,7 +393,6 @@ export class OrgUnitFilterComponent implements OnInit {
 
   // add item to array of selected items when item is selected
   activateOrg($event) {
-    console.log('nafika');
     if (this.orgunit_model.selection_mode === 'Usr_orgUnit') {
       this.orgunit_model.selection_mode = 'orgUnit';
       // this.period_selector.reset();

@@ -16,6 +16,13 @@ export class UserService {
       roles: ['all'],
       accessibility: false
     },
+    {
+      name: 'GeoMaps',
+      links: ['', 'geomaps'],
+      icon: 'fa fa-map',
+      roles: ['all'],
+      accessibility: false
+    },
     // {
     //   name: 'Data Entry',
     //   links: ['/home', 'data_entry'],
