@@ -10,6 +10,12 @@
       </div>
     </div>
 
+     <div class="row no-print mt-4" *ngIf="data_loading">
+      <div class="col-sm-12" style="padding-left: 50px">
+        <app-loader [message]="'Loading map...'"></app-loader>
+      </div>
+    </div>
+
 <div class="map-container">
   <div class="map-frame">
     <div id="map"></div>

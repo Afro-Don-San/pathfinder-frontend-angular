@@ -12,7 +12,6 @@ import * as _ from 'lodash';
 import * as Highcharts from 'highcharts';
 import {SettingsService} from '../../services/settings.service';
 import exporting from 'highcharts/modules/exporting';
-import * as Coordinates from '../../../assets/coordinates.json';
 exporting(Highcharts);
 
 @Component({
@@ -23,6 +22,7 @@ exporting(Highcharts);
 export class GeomapsComponent implements AfterViewInit {
   private map;
   card1DataLoading = false;
+  data_loading = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -54,11 +54,15 @@ export class GeomapsComponent implements AfterViewInit {
 
   async updateMap(filter: { from_date, to_date, facilities, ouName?, ouId? }) {
 
+    this.data_loading = true;
+
     const reportUrl = 'map_summary/';
 
     this.http.postDJANGOURL(reportUrl, filter)
     .subscribe((data: any[]) => {
       if (data) {
+
+        this.data_loading = false
 
         var icon = new L.icon();
 
@@ -84,18 +88,36 @@ export class GeomapsComponent implements AfterViewInit {
         
         const coordinates = {
           Latitude: {
-            'Ugalla Ward': -6.3690,
-            'Bitale Ward': -6.3690,
-            'Kagunga Ward': -6.3690,
-            'Nyarubanda Ward': -6.3690,
-            'Tangi Bovu': -6.5690,
+            'Ugalla Ward': -5.4707,
+            'Tongwe Ward': -5.1331,
+            'Bitale Ward': -4.7667,
+            'Kagunga Ward': -4.4907,
+            'Kalinzi Ward': -4.6058,
+            'Mkigo Ward': -4.4941,
+            'Mkongoro Ward': -1.3308,
+            'Mwamgongo Ward': -4.6243,
+            'Mwandiga Ward': -4.8254,
+            'Nyarubanda Ward': -4.5677,
+            'Simbo Ward': -4.8944,
+            'Ziwani Ward': -3.3799,
+            'Ilagala Ward': -5.1925,
+            'Sunuka Ward': -5.3489,
           },
           Longitude: {
-            'Ugalla Ward': 35.2892612,
-            'Bitale Ward': 35.4689988,
-            'Kagunga Ward': 36.5009093,
-            'Nyarubanda Ward': 35.5516144,
-            'Tangi Bovu': 35.6516144,
+            'Ugalla Ward': 31.0954,
+            'Tongwe Ward': 38.7029,
+            'Bitale Ward': 29.6833,
+            'Kagunga Ward': 29.6833,
+            'Kalinzi Ward': 29.7292,
+            'Mkigo Ward': 29.7562,
+            'Mkongoro Ward': 33.8760,
+            'Mwamgongo Ward': 29.6398,
+            'Mwandiga Ward': 29.6586,
+            'Nyarubanda Ward': 29.7485,
+            'Simbo Ward': 29.7455,
+            'Ziwani Ward': 37.7886,
+            'Ilagala Ward': 29.8381,
+            'Sunuka Ward': 29.7878,
           },
         };
 
