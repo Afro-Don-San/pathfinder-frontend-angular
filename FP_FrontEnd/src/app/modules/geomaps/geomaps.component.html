@@ -1,0 +1,18 @@
+
+ <ng-container ngProjectAs="table">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div *ngIf="!location_loading">
+            <app-map-filter [start_date]="startDate" [end_date]="endDate" (reportFilter)="updateMap($event)"></app-map-filter>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="map-container">
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+</div>
+  </ng-container>

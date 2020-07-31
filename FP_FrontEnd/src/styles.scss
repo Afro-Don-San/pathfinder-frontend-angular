@@ -13,6 +13,8 @@
 
 // styles for the tree component
 @import '~angular-tree-component/dist/angular-tree-component.css';
+/* You can add global styles to this file, and also import other style files */
+@import "~leaflet/dist/leaflet.css";
 @include mat-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss

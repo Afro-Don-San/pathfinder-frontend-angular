@@ -43,6 +43,8 @@ import { IssuedReferralsComponent } from './modules/fp-reports/issued-referrals/
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { TotalFamilyPlanningMethodsIssuedComponent } from './modules/fp-reports/total-family-planning-methods-issued/total-family-planning-methods-issued.component';
 import { CitizenCardReportComponent } from './modules/fp-reports/citizen-card-report/citizen-card-report.component';
+import { GeomapsComponent } from './modules/geomaps/geomaps.component';
+import { MapFilterComponent } from './modules/geomaps/map-filter/map-filter.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +86,8 @@ import { CitizenCardReportComponent } from './modules/fp-reports/citizen-card-re
     ChangePasswordComponent,
     TotalFamilyPlanningMethodsIssuedComponent,
     CitizenCardReportComponent,
+    GeomapsComponent,
+    MapFilterComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@ import {SupersetComponent} from './modules/superset/superset.component';
 import {ChangePasswordComponent} from './change-password/change-password.component'
 import {IssuedReferralsByLocationComponent} from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component'
 import {CitizenCardReportComponent} from './modules/fp-reports/citizen-card-report/citizen-card-report.component'
+import {GeomapsComponent} from './modules/geomaps/geomaps.component'
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -33,6 +34,11 @@ const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
         data: {state: 'dashboard'}
+      },
+      {
+        path: 'geomaps',
+        component: GeomapsComponent,
+        data: {state: 'geomaps'}
       },
       {
         path: 'location',
