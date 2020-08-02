@@ -2416,7 +2416,7 @@ var TotalFamilyPlanningMethodsIssuedComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n <ng-container ngProjectAs=\"table\">\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-12\">\n          <div *ngIf=\"!location_loading\">\n            <app-map-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateMap($event)\"></app-map-filter>\n          </div>\n        </div>\n      </div>\n    </div>\n\n<div class=\"map-container\">\n  <div class=\"map-frame\">\n    <div id=\"map\"></div>\n  </div>\n</div>\n  </ng-container>\n"
+module.exports = "\n <ng-container ngProjectAs=\"table\">\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-12\">\n          <div *ngIf=\"!location_loading\">\n            <app-map-filter [start_date]=\"startDate\" [end_date]=\"endDate\" (reportFilter)=\"updateMap($event)\"></app-map-filter>\n          </div>\n        </div>\n      </div>\n    </div>\n\n     <div class=\"row no-print mt-4\" *ngIf=\"data_loading\">\n      <div class=\"col-sm-12\" style=\"padding-left: 50px\">\n        <app-loader [message]=\"'Loading map...'\"></app-loader>\n      </div>\n    </div>\n\n<div class=\"map-container\">\n  <div class=\"map-frame\">\n    <div id=\"map\"></div>\n  </div>\n</div>\n  </ng-container>\n"
 
 /***/ }),
 
@@ -2427,7 +2427,7 @@ module.exports = "\n <ng-container ngProjectAs=\"table\">\n    <div class=\"cont
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map-container {\n  position: absolute;\n  top: 125px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  margin: 30px; }\n\n.map-frame {\n  border: 2px solid black;\n  height: 100%; }\n\n#map {\n  height: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hL0RvY3VtZW50cy9Qcm9qZWN0cy9GYW1pbHkgUGxhbm5pbmcvRlBfRnJvbnRFbmQvc3JjL2FwcC9tb2R1bGVzL2dlb21hcHMvZ2VvbWFwcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsT0FBTztFQUNQLFFBQVE7RUFDUixTQUFTO0VBQ1QsWUFBWSxFQUFBOztBQUdkO0VBQ0UsdUJBQXVCO0VBQ3ZCLFlBQVksRUFBQTs7QUFHZDtFQUNFLFlBQVksRUFBQSIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZ2VvbWFwcy9nZW9tYXBzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hcC1jb250YWluZXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMTI1cHg7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIG1hcmdpbjogMzBweDtcbn1cblxuLm1hcC1mcmFtZSB7XG4gIGJvcmRlcjogMnB4IHNvbGlkIGJsYWNrO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbiNtYXAge1xuICBoZWlnaHQ6IDEwMCU7XG59XG4iXX0= */"
+module.exports = ".map-container {\n  position: absolute;\n  top: 200px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  margin: 30px; }\n\n.map-frame {\n  border: 2px solid black;\n  height: 100%; }\n\n#map {\n  height: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hL0RvY3VtZW50cy9Qcm9qZWN0cy9GYW1pbHkgUGxhbm5pbmcvRlBfRnJvbnRFbmQvc3JjL2FwcC9tb2R1bGVzL2dlb21hcHMvZ2VvbWFwcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsT0FBTztFQUNQLFFBQVE7RUFDUixTQUFTO0VBQ1QsWUFBWSxFQUFBOztBQUdkO0VBQ0UsdUJBQXVCO0VBQ3ZCLFlBQVksRUFBQTs7QUFHZDtFQUNFLFlBQVksRUFBQSIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZ2VvbWFwcy9nZW9tYXBzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hcC1jb250YWluZXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMjAwcHg7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIG1hcmdpbjogMzBweDtcbn1cblxuLm1hcC1mcmFtZSB7XG4gIGJvcmRlcjogMnB4IHNvbGlkIGJsYWNrO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbiNtYXAge1xuICBoZWlnaHQ6IDEwMCU7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -2472,13 +2472,15 @@ var GeomapsComponent = /** @class */ (function () {
         this.locationService = locationService;
         this.orgunitService = orgunitService;
         this.settingsService = settingsService;
+        this.markersLayer = new leaflet__WEBPACK_IMPORTED_MODULE_2__["LayerGroup"]();
+        this.card1DataLoading = false;
+        this.data_loading = false;
     }
     GeomapsComponent.prototype.ngAfterViewInit = function () {
         this.initMap();
     };
     GeomapsComponent.prototype.initMap = function () {
         this.map = leaflet__WEBPACK_IMPORTED_MODULE_2__["map"]('map', {
-            // center: [ 6.3690, 35.7516 ],
             zoom: 7
         });
         this.map.panTo(new leaflet__WEBPACK_IMPORTED_MODULE_2__["LatLng"](-6.3690, 35.7516));
@@ -2490,19 +2492,95 @@ var GeomapsComponent = /** @class */ (function () {
     };
     GeomapsComponent.prototype.updateMap = function (filter) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var reportUrl, data;
+            var reportUrl;
+            var _this = this;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        reportUrl = 'map_summary/';
-                        return [4 /*yield*/, this.http.postDJANGOURL(reportUrl, filter).toPromise()];
-                    case 1:
-                        data = _a.sent();
-                        if (data) {
-                            console.log(data);
+                this.data_loading = true;
+                this.markersLayer.clearLayers();
+                reportUrl = 'map_summary/';
+                this.http.postDJANGOURL(reportUrl, filter)
+                    .subscribe(function (data) {
+                    if (data) {
+                        _this.data_loading = false;
+                        var icon = new leaflet__WEBPACK_IMPORTED_MODULE_2__["icon"]();
+                        var blueIcon = new leaflet__WEBPACK_IMPORTED_MODULE_2__["icon"]({
+                            iconUrl: 'assets/img/blue.png',
+                            iconSize: [40, 40]
+                        });
+                        var redIcon = new leaflet__WEBPACK_IMPORTED_MODULE_2__["icon"]({
+                            iconUrl: 'assets/img/red.png',
+                            iconSize: [40, 40]
+                        });
+                        var greenIcon = new leaflet__WEBPACK_IMPORTED_MODULE_2__["icon"]({
+                            iconUrl: 'assets/img/green.png',
+                            iconSize: [40, 40]
+                        });
+                        var blackIcon = new leaflet__WEBPACK_IMPORTED_MODULE_2__["icon"]({
+                            iconUrl: 'assets/img/black.png',
+                            iconSize: [40, 40]
+                        });
+                        var coordinates = {
+                            Latitude: {
+                                'Ugalla Ward': -5.4707,
+                                'Tongwe Ward': -5.1331,
+                                'Bitale Ward': -4.7667,
+                                'Kagunga Ward': -4.4907,
+                                'Kalinzi Ward': -4.6058,
+                                'Mkigo Ward': -4.4941,
+                                'Mkongoro Ward': -1.3308,
+                                'Mwamgongo Ward': -4.6243,
+                                'Mwandiga Ward': -4.8254,
+                                'Nyarubanda Ward': -4.5677,
+                                'Simbo Ward': -4.8944,
+                                'Ziwani Ward': -3.3799,
+                                'Ilagala Ward': -5.1925,
+                                'Sunuka Ward': -5.3489,
+                            },
+                            Longitude: {
+                                'Ugalla Ward': 31.0954,
+                                'Tongwe Ward': 38.7029,
+                                'Bitale Ward': 29.6833,
+                                'Kagunga Ward': 29.6833,
+                                'Kalinzi Ward': 29.7292,
+                                'Mkigo Ward': 29.7562,
+                                'Mkongoro Ward': 33.8760,
+                                'Mwamgongo Ward': 29.6398,
+                                'Mwandiga Ward': 29.6586,
+                                'Nyarubanda Ward': 29.7485,
+                                'Simbo Ward': 29.7455,
+                                'Ziwani Ward': 37.7886,
+                                'Ilagala Ward': 29.8381,
+                                'Sunuka Ward': 29.7878,
+                            },
+                        };
+                        for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
+                            var village = data_1[_i];
+                            var villageName = village["village_name"];
+                            var villageValue = village["value"];
+                            var villageCoordinateCheck = coordinates.Latitude["" + villageName + ""];
+                            if (villageValue < 100) {
+                                icon = redIcon;
+                            }
+                            if (villageValue > 100 && villageValue <= 500) {
+                                icon = blueIcon;
+                            }
+                            if (villageValue > 500) {
+                                icon = greenIcon;
+                            }
+                            if (villageCoordinateCheck != undefined) {
+                                _this.marker = leaflet__WEBPACK_IMPORTED_MODULE_2__["marker"]([
+                                    coordinates.Latitude["" + villageName + ""],
+                                    coordinates.Longitude["" + villageName + ""]
+                                ], { title: "" + villageName + " : " + villageValue + " ", icon: icon, alt: "Village Value", draggable: false });
+                                _this.markersLayer.addLayer(_this.marker);
+                                // this.marker.myData = { id: coordinates.Longitude[""+villageName+""] };
+                                _this.markersLayer.addTo(_this.map);
+                            }
                         }
-                        return [2 /*return*/];
-                }
+                    }
+                    _this.card1DataLoading = false;
+                }, function (error1) { return _this.card1DataLoading = false; });
+                return [2 /*return*/];
             });
         });
     };
@@ -2532,7 +2610,7 @@ var GeomapsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <!--      Start Date-->\n    <div class=\"col-sm-2\">\n      <mat-form-field appearance=\"outline\">\n        <mat-label>Start Date</mat-label>\n        <input\n          [(ngModel)]=\"start_date\"\n          [matDatepicker]=\"dw\"\n          matInput\n          placeholder=\"From\"\n          [max]=\"end_date\"\n          required/>\n        <mat-datepicker-toggle matSuffix [for]=\"dw\"></mat-datepicker-toggle>\n        <mat-datepicker #dw></mat-datepicker>\n      </mat-form-field>\n    </div>\n\n    <!--      End Date-->\n    <div class=\"col-sm-2\">\n      <mat-form-field appearance=\"outline\">\n        <mat-label>End Date</mat-label>\n        <input\n          [(ngModel)]=\"end_date\"\n          [matDatepicker]=\"dw1\"\n          matInput\n          placeholder=\"To\"\n          [min]=\"start_date\"\n          required/>\n        <mat-datepicker-toggle matSuffix [for]=\"dw1\"></mat-datepicker-toggle>\n        <mat-datepicker #dw1></mat-datepicker>\n      </mat-form-field>\n    </div>\n\n\n    <div class=\"col-sm-3 mt-1\">\n        <mat-form-field>\n      <mat-select *ngIf=\"services\" [value]=\"selectedService\" (selectionChange)=\"onChangeService($event.value)\" formControlName=\"service\" id=\"ddService\">\n        <mat-option [value]=\"0\" disabled>Select Service</mat-option>\n        <mat-option *ngFor=\"let service of services\" [value]=\"service.id\">{{service.name}}</mat-option>\n      </mat-select>\n      </mat-form-field>\n    </div>\n    \n    <div class=\"col-sm-3 mt-1\">\n      <app-org-unit-filter\n        (onOrgUnitChange)=\"changeOrgUnit($event)\"\n        [orgunit_tree_config]=\"orgunit_tree_config\">\n      </app-org-unit-filter>\n    </div>\n    <div class=\"col-sm-2\">\n      <button\n        style=\"margin-top: 5px; height: 46px;\"\n        [disabled]=\"start_date == '' || end_date == '' || orgunit == null\"\n        class=\"btn btn-block btn-outline-primary\"\n        (click)=\"getReport()\"\n      >Load Map</button>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container-fluid\" style=\"padding-top: 10px\">\n  <div class=\"row\">\n    <!--      Start Date-->\n    <div class=\"col-sm-2\">\n      <mat-form-field appearance=\"outline\">\n        <mat-label>Start Date</mat-label>\n        <input\n          [(ngModel)]=\"start_date\"\n          [matDatepicker]=\"dw\"\n          matInput\n          placeholder=\"From\"\n          [max]=\"end_date\"\n          required/>\n        <mat-datepicker-toggle matSuffix [for]=\"dw\"></mat-datepicker-toggle>\n        <mat-datepicker #dw></mat-datepicker>\n      </mat-form-field>\n    </div>\n\n    <!--      End Date-->\n    <div class=\"col-sm-2\">\n      <mat-form-field appearance=\"outline\">\n        <mat-label>End Date</mat-label>\n        <input\n          [(ngModel)]=\"end_date\"\n          [matDatepicker]=\"dw1\"\n          matInput\n          placeholder=\"To\"\n          [min]=\"start_date\"\n          required/>\n        <mat-datepicker-toggle matSuffix [for]=\"dw1\"></mat-datepicker-toggle>\n        <mat-datepicker #dw1></mat-datepicker>\n      </mat-form-field>\n    </div>\n\n\n    <div class=\"col-sm-3 mt-1\">\n        <mat-form-field>\n      <mat-select *ngIf=\"services\" [value]=\"selectedService\" (selectionChange)=\"onChangeService($event.value)\" id=\"ddService\">\n        <mat-option [value]=\"0\" disabled>Select Service</mat-option>\n        <mat-option *ngFor=\"let service of services\" [value]=\"service.id\">{{service.name}}</mat-option>\n      </mat-select>\n      </mat-form-field>\n    </div>\n    \n    <div class=\"col-sm-3 mt-1\">\n      <app-org-unit-filter\n        (onOrgUnitChange)=\"changeOrgUnit($event)\"\n        [orgunit_tree_config]=\"orgunit_tree_config\">\n      </app-org-unit-filter>\n    </div>\n    <div class=\"col-sm-2\">\n      <button\n        style=\"margin-top: 5px; height: 46px;\"\n        [disabled]=\"start_date == '' || end_date == '' || orgunit == null\"\n        class=\"btn btn-block btn-outline-primary\"\n        (click)=\"getReport()\"\n      >Load Map</button>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2579,8 +2657,8 @@ var MapFilterComponent = /** @class */ (function () {
             { id: 5, name: 'Family Planning Method Issued' },
             { id: 6, name: 'Family Planning Discontinuation' },
             { id: 7, name: 'ANC Referral' },
-            { id: 9, name: 'Family Planning Referral' },
-            { id: 10, name: 'Family Planning Referral Followup' },
+            { id: 8, name: 'Family Planning Referral' },
+            { id: 9, name: 'Family Planning Referral Followup' },
         ];
         this.selectedService = 0;
         this.orgunit_tree_config = {
@@ -2609,9 +2687,12 @@ var MapFilterComponent = /** @class */ (function () {
         var from_date = start_date.replace('-', '/').replace('-', '/');
         var to_date = end_date.replace('-', '/').replace('-', '/');
         var service = this.selectedService;
+        var orgUnits = this.orgunit.visit_locations;
+        console.log("visit locations are", this.orgunit.visit_locations);
         this.reportFilter.emit({
             from_date: from_date,
             to_date: to_date,
+            orgUnits: orgUnits,
             facilities: facilities,
             service: service,
             ouName: ouName,

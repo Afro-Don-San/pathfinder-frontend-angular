@@ -12,6 +12,7 @@ import * as _ from 'lodash';
 import * as Highcharts from 'highcharts';
 import {SettingsService} from '../../services/settings.service';
 import exporting from 'highcharts/modules/exporting';
+import { markParentViewsForCheck } from '@angular/core/src/view/util';
 exporting(Highcharts);
 
 @Component({
@@ -21,9 +22,11 @@ exporting(Highcharts);
 })
 export class GeomapsComponent implements AfterViewInit {
   private map;
+  private marker;
+  private markersLayer = new L.LayerGroup();
   card1DataLoading = false;
   data_loading = false;
-
+  
   constructor(
     private breakpointObserver: BreakpointObserver,
     private http: HttpClientService,
@@ -56,6 +59,8 @@ export class GeomapsComponent implements AfterViewInit {
 
     this.data_loading = true;
 
+    this.markersLayer.clearLayers();
+    
     const reportUrl = 'map_summary/';
 
     this.http.postDJANGOURL(reportUrl, filter)
@@ -151,14 +156,16 @@ export class GeomapsComponent implements AfterViewInit {
         if (villageCoordinateCheck != undefined)
         {
          
-          const marker = L.marker([
+         this.marker = L.marker([
             coordinates.Latitude[""+villageName+""],
             coordinates.Longitude[""+villageName+""]
           ],{title: ""+villageName+" : "+villageValue+" ", icon:icon, alt:"Village Value",draggable:false} );
 
-          marker.myData = { id: coordinates.Longitude[""+villageName+""] };
+          this.markersLayer.addLayer(this.marker);
+
+          // this.marker.myData = { id: coordinates.Longitude[""+villageName+""] };
     
-          marker.addTo(this.map);
+          this.markersLayer.addTo(this.map);
         }
         
       }
