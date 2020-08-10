@@ -83,14 +83,14 @@ const routes: Routes = [
 
         ]
       },
-      {
-        path: 'superset',
-        resolve: {
-          url: externalUrlProvider,
-      },
-      // We need a component here because we cannot define the route otherwise
-      component: SupersetComponent,
-      },
+      // {
+      //   path: 'superset',
+      //   resolve: {
+      //     url: externalUrlProvider,
+      // },
+      // // We need a component here because we cannot define the route otherwise
+      // component: SupersetComponent,
+      // },
       // {
       //   path: 'providers_report',
       //   component: ProvidersReportComponent,

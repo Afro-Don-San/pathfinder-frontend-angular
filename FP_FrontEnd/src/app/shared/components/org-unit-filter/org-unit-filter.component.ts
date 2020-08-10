@@ -200,7 +200,7 @@ export class OrgUnitFilterComponent implements OnInit {
                                     name: facility.name,
                                     id: facility.uuid,
                                     level: 5,
-                                    // children: lastest.childLocations
+      
                                   }
                                 })
                             };

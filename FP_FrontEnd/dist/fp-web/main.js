@@ -49,12 +49,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_settings_registration_reason_registration_reason_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/settings/registration-reason/registration-reason.component */ "./src/app/modules/settings/registration-reason/registration-reason.component.ts");
 /* harmony import */ var _modules_locations_locations_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/locations/locations.component */ "./src/app/modules/locations/locations.component.ts");
 /* harmony import */ var _modules_users_users_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/users/users.component */ "./src/app/modules/users/users.component.ts");
-/* harmony import */ var _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/superset/superset.component */ "./src/app/modules/superset/superset.component.ts");
-/* harmony import */ var _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./change-password/change-password.component */ "./src/app/change-password/change-password.component.ts");
-/* harmony import */ var _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component */ "./src/app/modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component.ts");
-/* harmony import */ var _modules_fp_reports_citizen_card_report_citizen_card_report_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/fp-reports/citizen-card-report/citizen-card-report.component */ "./src/app/modules/fp-reports/citizen-card-report/citizen-card-report.component.ts");
-/* harmony import */ var _modules_geomaps_geomaps_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/geomaps/geomaps.component */ "./src/app/modules/geomaps/geomaps.component.ts");
-
+/* harmony import */ var _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./change-password/change-password.component */ "./src/app/change-password/change-password.component.ts");
+/* harmony import */ var _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component */ "./src/app/modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component.ts");
+/* harmony import */ var _modules_fp_reports_citizen_card_report_citizen_card_report_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/fp-reports/citizen-card-report/citizen-card-report.component */ "./src/app/modules/fp-reports/citizen-card-report/citizen-card-report.component.ts");
+/* harmony import */ var _modules_geomaps_geomaps_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/geomaps/geomaps.component */ "./src/app/modules/geomaps/geomaps.component.ts");
 
 
 
@@ -88,7 +86,7 @@ var routes = [
             },
             {
                 path: 'geomaps',
-                component: _modules_geomaps_geomaps_component__WEBPACK_IMPORTED_MODULE_20__["GeomapsComponent"],
+                component: _modules_geomaps_geomaps_component__WEBPACK_IMPORTED_MODULE_19__["GeomapsComponent"],
                 data: { state: 'geomaps' }
             },
             {
@@ -108,12 +106,12 @@ var routes = [
                 children: [
                     {
                         path: 'issued-referrals-by-location-report',
-                        component: _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_18__["IssuedReferralsByLocationComponent"],
+                        component: _modules_fp_reports_issued_referrals_by_location_issued_referrals_by_location_component__WEBPACK_IMPORTED_MODULE_17__["IssuedReferralsByLocationComponent"],
                         data: { state: 'providers-report' }
                     },
                     {
                         path: 'citizens-report',
-                        component: _modules_fp_reports_citizen_card_report_citizen_card_report_component__WEBPACK_IMPORTED_MODULE_19__["CitizenCardReportComponent"],
+                        component: _modules_fp_reports_citizen_card_report_citizen_card_report_component__WEBPACK_IMPORTED_MODULE_18__["CitizenCardReportComponent"],
                         data: { state: 'providers-report' }
                     },
                     {
@@ -133,14 +131,14 @@ var routes = [
                     },
                 ]
             },
-            {
-                path: 'superset',
-                resolve: {
-                    url: externalUrlProvider,
-                },
-                // We need a component here because we cannot define the route otherwise
-                component: _modules_superset_superset_component__WEBPACK_IMPORTED_MODULE_16__["SupersetComponent"],
-            },
+            // {
+            //   path: 'superset',
+            //   resolve: {
+            //     url: externalUrlProvider,
+            // },
+            // // We need a component here because we cannot define the route otherwise
+            // component: SupersetComponent,
+            // },
             // {
             //   path: 'providers_report',
             //   component: ProvidersReportComponent,
@@ -209,7 +207,7 @@ var routes = [
     },
     {
         path: 'change-password',
-        component: _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_17__["ChangePasswordComponent"],
+        component: _change_password_change_password_component__WEBPACK_IMPORTED_MODULE_16__["ChangePasswordComponent"],
         data: { state: 'change-password' }
     }
 ];
@@ -2522,7 +2520,7 @@ var GeomapsComponent = /** @class */ (function () {
                         var coordinates = {
                             Latitude: {
                                 'Ugalla Ward': -5.4707,
-                                'Tongwe Ward': -5.1331,
+                                'Tongwe Ward': -5.3331,
                                 'Bitale Ward': -4.7667,
                                 'Kagunga Ward': -4.4907,
                                 'Kalinzi Ward': -4.6058,
@@ -2532,13 +2530,13 @@ var GeomapsComponent = /** @class */ (function () {
                                 'Mwandiga Ward': -4.8254,
                                 'Nyarubanda Ward': -4.5677,
                                 'Simbo Ward': -4.8944,
-                                'Ziwani Ward': -3.3799,
+                                'Ziwani Ward': -4.3799,
                                 'Ilagala Ward': -5.1925,
                                 'Sunuka Ward': -5.3489,
                             },
                             Longitude: {
                                 'Ugalla Ward': 31.0954,
-                                'Tongwe Ward': 38.7029,
+                                'Tongwe Ward': 31.9529,
                                 'Bitale Ward': 29.6833,
                                 'Kagunga Ward': 29.6833,
                                 'Kalinzi Ward': 29.7292,
@@ -2548,7 +2546,7 @@ var GeomapsComponent = /** @class */ (function () {
                                 'Mwandiga Ward': 29.6586,
                                 'Nyarubanda Ward': 29.7485,
                                 'Simbo Ward': 29.7455,
-                                'Ziwani Ward': 37.7886,
+                                'Ziwani Ward': 29.7886,
                                 'Ilagala Ward': 29.8381,
                                 'Sunuka Ward': 29.7878,
                             },
