@@ -38,22 +38,46 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.loginNotification.loading = true;
       try {
-        const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
+        // const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
         const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
         
-        if (openSrpResult) {
-          if (openSrpResult.team && openSrpResult.team.team) {
-            if (openSrpResult.team.team.location) {
-              const location = openSrpResult.team.team.location;
-              const starting_location = location ? location.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
-              console.log("location from login", starting_location);
-              localStorage.setItem('htmr-starting-location', starting_location);
-            }
-          }
-        }
+        // if (openSrpResult) {
+        //   if (openSrpResult.team && openSrpResult.team.team) {
+        //     if (openSrpResult.team.team.location) {
+        //       const location = openSrpResult.team.team.location;
+        //       const starting_location = location ? location.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
+        //       console.log("location from login", starting_location);
+        //       localStorage.setItem('htmr-starting-location', starting_location);
+        //     }
+        //   }
+        // }
         if (openMrsResult && openMrsResult.results) {
           if (openMrsResult.results.length > 0) {
-              const username = openMrsResult.results[0].display;
+
+            try {
+              const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
+              if (openSrpResult) {
+                if (openSrpResult.team && openSrpResult.team.team) {
+                  if (openSrpResult.team.team.location) {
+                    const location = openSrpResult.team.team.location;
+                    const starting_location = location ? location.uuid : 't4f60f022-9390-41e1-8803-7a68f3a7fe98';
+                    localStorage.setItem('htmr-starting-location', starting_location);
+                  }
+                }
+              }
+
+            }
+            catch (e)
+            {
+              if (e.status = 500) {
+                //USer has access to openmrs but not mobile, hence Country Level
+                const starting_location = '4f60f022-9390-41e1-8803-7a68f3a7fe98';
+                localStorage.setItem('htmr-starting-location', starting_location);
+              }
+            }
+
+
+            const username = openMrsResult.results[0].display;
               localStorage.setItem('trcmis-user', username);
               this.userService.setNavigation(openMrsResult);
           }
@@ -71,8 +95,6 @@ export class LoginComponent implements OnInit {
         if (e.status == 401) {
           this.loginNotification.message = 'Login failure, wrong username or password';
         // tslint:disable-next-line: no-conditional-assignment
-        } else if (e.status = 500) {
-          this.loginNotification.message = 'Something went wrong, please try again.'
         }
 
         console.log(e);

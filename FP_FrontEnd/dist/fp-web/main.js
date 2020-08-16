@@ -880,7 +880,7 @@ module.exports = ".outer{\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"outer bgimage\">\n  <div class=\"outer bgcolor\">\n\n  </div>\n</div>\n<div class=\"logos\">\n <img src=\"assets/partners/rsz_tanzania_logo.jpg\"> \n <img src=\"assets/partners/rsz_usaid_logo.png\"> \n</div>\n\n<div class=\"title\">\n  <table>\n    <tr>\n      <td style=\"vertical-align: top\">\n    <!--  <img src=\"assets/img/logo.png\" style=\"height: 70px\"> -->\n        &nbsp;&nbsp;&nbsp;\n      </td>\n      <td style=\"color: white\">\n        <h1 style=\"font-weight: bolder;\">Family Planning</h1>\n        <h5>Provision Of Quality Reproductive Health</h5>\n      </td>\n    </tr>\n  </table>\n</div>\n\n<div class=\"login\">\n  <div class=\"logintop\">\n    <img src=\"assets/img/lock.png\" style=\"height: 50px; padding-top: 10px;margin-left: 20px;\">\n  </div>\n  <div class=\"loginbottom\" style=\"padding: 20px;\">\n    <h2 style=\"font-weight: bold;margin-bottom: 0px; color: #2D69A5\">Login</h2>\n    <p class=\"lead\" style=\"margin: 0px\">Enter Username and Password</p>\n\n    <div class=\"loginform\">\n      <form [formGroup]=\"loginForm\" (ngSubmit)=\"login(loginForm.value)\" validate>\n\n        <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"username\" matInput placeholder=\"Username\" type=\"text\" autocomplete=\"off\">\n            <mat-icon matSuffix>email</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('username').valid && loginForm.get('username').touched\" >Please Enter Username\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n        <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"password\" matInput placeholder=\"Password\" [type]=\"hide ? 'password' : 'text'\" autocomplete=\"off\">\n            <mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('password').valid && loginForm.get('password').touched\">Please Enter Password\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n<!--        <div class=\"col-md-12\">-->\n<!--          <button class=\"pull-right\" mat-flat-button color=\"primary\" type=\"submit\">-->\n<!--            <i class=\"fa fa-login\"></i> Login-->\n<!--          </button>-->\n<!--        </div>-->\n\n<!--        <div class=\"form-group\">-->\n<!--          <input type=\"text\" formControlName=\"username\" class=\"form-control\"  placeholder=\"Enter username\">-->\n<!--          <small *ngIf=\"loginForm.controls.username.invalid&&customeUsernameNotifier\" class=\"form-text  important-field\">Username-->\n<!--            is important-->\n<!--          </small>-->\n<!--        </div>-->\n<!--        <div class=\"form-group\">-->\n<!--          <input type=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\">-->\n<!--          <small *ngIf=\"loginForm.controls.password.invalid&&(customePasswordNotifier)\" class=\"form-text  important-field\">Password-->\n<!--            is important-->\n<!--          </small>-->\n<!--        </div>-->\n\n        <div class=\"col-md-12 mb-5\">\n          <button style=\"border-radius: 5px\" mat-raised-button color=\"primary\" type=\"submit\" class=\"cursor btn-block\" >Login</button>\n          <div *ngIf=\"!loginNotification.isError&&loginNotification.attempted\"  style=\"padding:.35rem 0.25rem!important;color: forestgreen!important;font-weight: bolder;font-size: 14px\" class=\"\" role=\"alert\">\n            {{loginNotification.message}}\n            <button type=\"button\" class=\"close\" style=\"padding-top: 0px!important;margin-top: 0px!important;\" data-dismiss=\"alert\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n          <div>\n            <img *ngIf=\"loginNotification.loading\" src=\"assets/img/loading.gif\">\n          </div>\n          <div class=\"\" style=\"padding:.35rem 0.25rem!important;color: orangered!important;font-weight: bolder;font-size: 14px\" *ngIf=\"loginNotification.isError&&loginNotification.attempted\" role=\"alert\">\n            {{loginNotification.message}}\n            <button type=\"button\" class=\"close\" (click)=\"closeNotification()\"  style=\"padding-top: 0px!important;margin-top: 0px!important;\"  data-dismiss=\"alert\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n        </div>\n      </form>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"outer bgimage\">\n  <div class=\"outer bgcolor\">\n\n  </div>\n</div>\n<!--<div class=\"logos\">-->\n<!-- <img src=\"assets/partners/rsz_tanzania_logo.jpg\"> -->\n<!-- <img src=\"assets/partners/rsz_usaid_logo.png\"> -->\n<!--</div>-->\n\n<div class=\"title\">\n  <table>\n    <tr>\n      <td style=\"vertical-align: top\">\n    <!--  <img src=\"assets/img/logo.png\" style=\"height: 70px\"> -->\n        &nbsp;&nbsp;&nbsp;\n      </td>\n      <td style=\"color: white\">\n        <h1 style=\"font-weight: bolder;\">Family Planning</h1>\n        <h5>Provision Of Quality Reproductive Health</h5>\n      </td>\n    </tr>\n  </table>\n</div>\n\n<div class=\"login\">\n  <div class=\"logintop\">\n    <img src=\"assets/img/lock.png\" style=\"height: 50px; padding-top: 10px;margin-left: 20px;\">\n  </div>\n  <div class=\"loginbottom\" style=\"padding: 20px;\">\n    <h2 style=\"font-weight: bold;margin-bottom: 0px; color: #2D69A5\">Login</h2>\n    <p class=\"lead\" style=\"margin: 0px\">Enter Username and Password</p>\n\n    <div class=\"loginform\">\n      <form [formGroup]=\"loginForm\" (ngSubmit)=\"login(loginForm.value)\" validate>\n\n        <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"username\" matInput placeholder=\"Username\" type=\"text\" autocomplete=\"off\">\n            <mat-icon matSuffix>email</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('username').valid && loginForm.get('username').touched\" >Please Enter Username\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n        <div class=\"col-md-12\">\n          <mat-form-field>\n            <input formControlName=\"password\" matInput placeholder=\"Password\" [type]=\"hide ? 'password' : 'text'\" autocomplete=\"off\">\n            <mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n            <mat-error *ngIf=\"!loginForm.get('password').valid && loginForm.get('password').touched\">Please Enter Password\n            </mat-error>\n          </mat-form-field>\n        </div>\n\n<!--        <div class=\"col-md-12\">-->\n<!--          <button class=\"pull-right\" mat-flat-button color=\"primary\" type=\"submit\">-->\n<!--            <i class=\"fa fa-login\"></i> Login-->\n<!--          </button>-->\n<!--        </div>-->\n\n<!--        <div class=\"form-group\">-->\n<!--          <input type=\"text\" formControlName=\"username\" class=\"form-control\"  placeholder=\"Enter username\">-->\n<!--          <small *ngIf=\"loginForm.controls.username.invalid&&customeUsernameNotifier\" class=\"form-text  important-field\">Username-->\n<!--            is important-->\n<!--          </small>-->\n<!--        </div>-->\n<!--        <div class=\"form-group\">-->\n<!--          <input type=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\">-->\n<!--          <small *ngIf=\"loginForm.controls.password.invalid&&(customePasswordNotifier)\" class=\"form-text  important-field\">Password-->\n<!--            is important-->\n<!--          </small>-->\n<!--        </div>-->\n\n        <div class=\"col-md-12 mb-5\">\n          <button style=\"border-radius: 5px\" mat-raised-button color=\"primary\" type=\"submit\" class=\"cursor btn-block\" >Login</button>\n          <div *ngIf=\"!loginNotification.isError&&loginNotification.attempted\"  style=\"padding:.35rem 0.25rem!important;color: forestgreen!important;font-weight: bolder;font-size: 14px\" class=\"\" role=\"alert\">\n            {{loginNotification.message}}\n            <button type=\"button\" class=\"close\" style=\"padding-top: 0px!important;margin-top: 0px!important;\" data-dismiss=\"alert\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n          <div>\n            <img *ngIf=\"loginNotification.loading\" src=\"assets/img/loading.gif\">\n          </div>\n          <div class=\"\" style=\"padding:.35rem 0.25rem!important;color: orangered!important;font-weight: bolder;font-size: 14px\" *ngIf=\"loginNotification.isError&&loginNotification.attempted\" role=\"alert\">\n            {{loginNotification.message}}\n            <button type=\"button\" class=\"close\" (click)=\"closeNotification()\"  style=\"padding-top: 0px!important;margin-top: 0px!important;\"  data-dismiss=\"alert\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n        </div>\n      </form>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -927,39 +927,50 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent.prototype.login = function (loginCredentials) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var openSrpResult, openMrsResult, location_1, starting_location, username, e_1;
+            var openMrsResult, openSrpResult, location_1, starting_location, e_1, starting_location, username, e_2;
             var _this = this;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!this.loginForm.valid) return [3 /*break*/, 5];
+                        if (!this.loginForm.valid) return [3 /*break*/, 9];
                         this.loginNotification.loading = true;
                         _a.label = 1;
                     case 1:
-                        _a.trys.push([1, 4, , 5]);
-                        return [4 /*yield*/, this.userService.login1(loginCredentials).toPromise()];
-                    case 2:
-                        openSrpResult = _a.sent();
+                        _a.trys.push([1, 8, , 9]);
                         return [4 /*yield*/, this.userService.login(loginCredentials).toPromise()];
-                    case 3:
+                    case 2:
                         openMrsResult = _a.sent();
+                        if (!(openMrsResult && openMrsResult.results)) return [3 /*break*/, 7];
+                        if (!(openMrsResult.results.length > 0)) return [3 /*break*/, 7];
+                        _a.label = 3;
+                    case 3:
+                        _a.trys.push([3, 5, , 6]);
+                        return [4 /*yield*/, this.userService.login1(loginCredentials).toPromise()];
+                    case 4:
+                        openSrpResult = _a.sent();
                         if (openSrpResult) {
                             if (openSrpResult.team && openSrpResult.team.team) {
                                 if (openSrpResult.team.team.location) {
                                     location_1 = openSrpResult.team.team.location;
-                                    starting_location = location_1 ? location_1.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
-                                    console.log("location from login", starting_location);
+                                    starting_location = location_1 ? location_1.uuid : 't4f60f022-9390-41e1-8803-7a68f3a7fe98';
                                     localStorage.setItem('htmr-starting-location', starting_location);
                                 }
                             }
                         }
-                        if (openMrsResult && openMrsResult.results) {
-                            if (openMrsResult.results.length > 0) {
-                                username = openMrsResult.results[0].display;
-                                localStorage.setItem('trcmis-user', username);
-                                this.userService.setNavigation(openMrsResult);
-                            }
+                        return [3 /*break*/, 6];
+                    case 5:
+                        e_1 = _a.sent();
+                        if (e_1.status = 500) {
+                            starting_location = '4f60f022-9390-41e1-8803-7a68f3a7fe98';
+                            localStorage.setItem('htmr-starting-location', starting_location);
                         }
+                        return [3 /*break*/, 6];
+                    case 6:
+                        username = openMrsResult.results[0].display;
+                        localStorage.setItem('trcmis-user', username);
+                        this.userService.setNavigation(openMrsResult);
+                        _a.label = 7;
+                    case 7:
                         this.loginNotification.isError = false;
                         this.loginNotification.message = 'Login successful';
                         this.loginNotification.attempted = true;
@@ -968,18 +979,15 @@ var LoginComponent = /** @class */ (function () {
                         setTimeout(function () {
                             _this.router.navigate(['', 'dashboard']);
                         }, 2000);
-                        return [3 /*break*/, 5];
-                    case 4:
-                        e_1 = _a.sent();
+                        return [3 /*break*/, 9];
+                    case 8:
+                        e_2 = _a.sent();
                         // tslint:disable-next-line: triple-equals
-                        if (e_1.status == 401) {
+                        if (e_2.status == 401) {
                             this.loginNotification.message = 'Login failure, wrong username or password';
                             // tslint:disable-next-line: no-conditional-assignment
                         }
-                        else if (e_1.status = 500) {
-                            this.loginNotification.message = 'Something went wrong, please try again.';
-                        }
-                        console.log(e_1);
+                        console.log(e_2);
                         this.loginNotification.isError = true;
                         this.loginNotification.attempted = true;
                         this.loginNotification.loading = false;
@@ -988,8 +996,8 @@ var LoginComponent = /** @class */ (function () {
                         setTimeout(function () {
                             _this.closeNotification();
                         }, 6000);
-                        return [3 /*break*/, 5];
-                    case 5: return [2 /*return*/];
+                        return [3 /*break*/, 9];
+                    case 9: return [2 /*return*/];
                 }
             });
         });
@@ -7763,13 +7771,14 @@ var UserService = /** @class */ (function () {
                 icon: 'fa fa-map-signs',
                 roles: ['System Developer'],
                 accessibility: false
-            }, {
-                name: 'Superset Analytics',
-                links: ['', 'superset'],
-                icon: 'fa fa-line-chart',
-                roles: ['System Developer'],
-                accessibility: false
             }
+            // , {
+            //   name: 'Superset Analytics',
+            //   links: ['', 'superset'],
+            //   icon: 'fa fa-line-chart',
+            //   roles: ['System Developer'],
+            //   accessibility: false
+            // }
         ];
         if (this.http.getToken()) {
             this.loggedIn = true;
