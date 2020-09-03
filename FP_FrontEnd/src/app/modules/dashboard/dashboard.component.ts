@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   endDate: any;
   end_date: any;
 
-  total_registration = 0;
+  total_anc_referrals = 0;
   total_services = 0;
   total_fp_initiations = 0;
   total_fp_discontinuations = 0;
@@ -139,7 +139,7 @@ export class DashboardComponent implements OnInit {
       'events_summary/',filter
     ).toPromise();
     if (data) {
-      this.total_registration = data['total_family_planning_registrations'];
+      this.total_anc_referrals = data['total_anc_referrals'];
       this.label3DataLoading = false;
     }
   }
@@ -416,6 +416,23 @@ export class DashboardComponent implements OnInit {
                               id: facility.uuid,
                               level: 5,
                               // children: lastest.childLocations
+
+                              children:facility.childLocations.map(
+                                  (level5child: any) => {
+                                    const village = this.getChildOrgunits(top_locations, level5child.uuid);
+                                    visit_locations.push({
+                                      name: village.name,
+                                      id: village.uuid,
+                                      level: 6,
+                                      parents: `${visit_location.uuid};${child_loc.uuid};${facility.uuid};${village.uuid}`
+                                    });
+                                    return {
+                                      name: village.name,
+                                      id: village.uuid,
+                                      level: 6
+                                    }
+                                  }
+                              )
                             }
                           })
                       };

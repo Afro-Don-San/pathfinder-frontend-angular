@@ -10,7 +10,7 @@ export class OrgUnitService {
   ) { }
 
   getLevel4OrgunitsIds(orgunits: any[], uuid) {
-    console.log({orgunits});
+    console.log("org units passed are",{orgunits});
     let orgunitItems = orgunits
       .filter((ou: any) => ou.parents.indexOf(uuid) !== -1)
       .map(ou => ou.id);

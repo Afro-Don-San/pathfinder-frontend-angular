@@ -200,6 +200,23 @@ export class OrgUnitFilterComponent implements OnInit {
                                     name: facility.name,
                                     id: facility.uuid,
                                     level: 5,
+
+                                    children:facility.childLocations.map(
+                                        (level5child: any) => {
+                                          const village = this.getChildOrgunits(top_locations, level5child.uuid);
+                                          this.visit_locations.push({
+                                            name: village.name,
+                                            id: village.uuid,
+                                            level: 6,
+                                            parents: `${visit_location.uuid};${child_loc.uuid};${facility.uuid};${village.uuid}`
+                                          });
+                                          return {
+                                            name: village.name,
+                                            id: village.uuid,
+                                            level: 6
+                                          }
+                                        }
+                                    )
       
                                   }
                                 })

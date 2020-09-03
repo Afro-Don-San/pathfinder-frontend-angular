@@ -19,12 +19,12 @@
     <div class="main-stats-container p-3" style="margin-bottom: 25px">
       <app-summary-card
         image="registration"
-        [value]="total_registration || 0"
+        [value]="total_anc_referrals || 0"
         [loading]="location_loading || label3DataLoading"
         [route]="['report']"
         [additional_information]="start_date + ' to ' + end_date + ' ' + orgunitName"
-        top_title="Family Planning"
-        low_title="Registrations">
+        top_title="ANC"
+        low_title="Referrals">
       </app-summary-card>
 
       <app-summary-card
@@ -64,7 +64,7 @@
       <mat-grid-list cols="1" rowHeight="470px">
         <mat-grid-tile [ngClass]="routeAnimationsElements" [colspan]="1" [rowspan]="1">
           <mat-card class="dashboard-card">
-            <mat-card-content class="dashboard-card-content">
+            <mat-card-content class="dashboard-card- content">
 <!--              <div *ngIf="!location_loading">-->
 <!--                <app-card-filter [start_date]="startDate" [end_date]="endDate" (reportFilter)="updateCard1($event)"></app-card-filter>-->
 <!--              </div>-->
