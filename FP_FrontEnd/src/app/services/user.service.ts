@@ -86,13 +86,6 @@ export class UserService {
       roles: ['System Developer'],
       accessibility: false
     }
-    // , {
-    //   name: 'Superset Analytics',
-    //   links: ['', 'superset'],
-    //   icon: 'fa fa-line-chart',
-    //   roles: ['System Developer'],
-    //   accessibility: false
-    // }
   ];
 
   constructor(private http: HttpClientService) {

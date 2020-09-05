@@ -45,6 +45,8 @@ import { TotalFamilyPlanningMethodsIssuedComponent } from './modules/fp-reports/
 import { CitizenCardReportComponent } from './modules/fp-reports/citizen-card-report/citizen-card-report.component';
 import { GeomapsComponent } from './modules/geomaps/geomaps.component';
 import { MapFilterComponent } from './modules/geomaps/map-filter/map-filter.component';
+import { ReferralsComponent } from './modules/dashboard/dashboard-summary/referrals/referrals.component';
+import { ClientsComponent } from './modules/dashboard/dashboard-summary/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +90,8 @@ import { MapFilterComponent } from './modules/geomaps/map-filter/map-filter.comp
     CitizenCardReportComponent,
     GeomapsComponent,
     MapFilterComponent,
+    ReferralsComponent,
+    ClientsComponent,
   ],
   imports: [
     BrowserModule,

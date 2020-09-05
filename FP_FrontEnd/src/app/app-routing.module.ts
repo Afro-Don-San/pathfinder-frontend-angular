@@ -22,6 +22,8 @@ import {ChangePasswordComponent} from './change-password/change-password.compone
 import {IssuedReferralsByLocationComponent} from './modules/fp-reports/issued-referrals-by-location/issued-referrals-by-location.component'
 import {CitizenCardReportComponent} from './modules/fp-reports/citizen-card-report/citizen-card-report.component'
 import {GeomapsComponent} from './modules/geomaps/geomaps.component'
+import {ReferralsComponent} from './modules/dashboard/dashboard-summary/referrals/referrals.component'
+import {ClientsComponent} from './modules/dashboard/dashboard-summary/clients/clients.component'
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -83,41 +85,6 @@ const routes: Routes = [
 
         ]
       },
-      // {
-      //   path: 'superset',
-      //   resolve: {
-      //     url: externalUrlProvider,
-      // },
-      // // We need a component here because we cannot define the route otherwise
-      // component: SupersetComponent,
-      // },
-      // {
-      //   path: 'providers_report',
-      //   component: ProvidersReportComponent,
-      //   data: {state: 'providers-report'},
-      //   children: [
-      //     {
-      //     path: 'issued-referrals-by-location-report',
-      //     component: IssuedReferralsByLocationComponent,
-      //     data: {state: 'providers-report'}
-      //     },
-      //     {
-      //       path: 'provide-report',
-      //       component: ProvidersRefferalReportComponent,
-      //       data: {state: 'providers-report'}
-      //     },
-      //     {
-      //       path: 'facility-report',
-      //       component: FacilityRefferalReportComponent,
-      //       data: {state: 'providers-report'}
-      //     },
-      //     {
-      //       path: 'inter-facility-report',
-      //       component: InterFacilityRefferalReportComponent,
-      //       data: {state: 'providers-report'}
-      //     }
-      //   ]
-      // },
       {
         path: 'settings',
         component: SettingsComponent,
@@ -150,6 +117,16 @@ const routes: Routes = [
           },
         ]
       },
+      {
+        path: 'referral-summary',
+        component: ReferralsComponent,
+        data: {state: 'referral-summary'}
+      },
+      {
+        path: 'client',
+        component: ClientsComponent,
+        data: {state: 'client'}
+      }
     ]
   },
   {

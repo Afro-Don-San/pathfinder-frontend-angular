@@ -2,21 +2,21 @@
   <!--<mat-toolbar class="toolbar no-print" style="background-color: #07587f"> -->
   <mat-toolbar class="toolbar no-print" style="background-color: #3F997B">
     <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="drawer.toggle()"
-      *ngIf="isHandset$ | async">
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
 
     <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="isOpen = !isOpen"
-      title="Toggle Menu"
-      *ngIf="!(isHandset$ | async)">
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="isOpen = !isOpen"
+            title="Toggle Menu"
+            *ngIf="!(isHandset$ | async)">
       <mat-icon class="secondary-color" aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <span class="secondary-color">
@@ -33,12 +33,12 @@
 
     <!--    user dropdown menu-->
     <mat-menu #appMenu="matMenu">
-    <!--
-      <a (click)="logout()" mat-menu-item>
-        <i class="fa fa-user"></i>
-        Profile
-      </a>
-      -->
+      <!--
+        <a (click)="logout()" mat-menu-item>
+          <i class="fa fa-user"></i>
+          Profile
+        </a>
+        -->
       <a (click)="goToChangePass()" mat-menu-item>
         <i class="fa fa-key"></i>
         Change Password
@@ -64,7 +64,7 @@
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async) && isOpen">
-    <mat-toolbar>TRCMIS</mat-toolbar>
+    <mat-toolbar>FP</mat-toolbar>
     <app-placeholder *ngIf="loading$ | async" [numberOfLines]="30"></app-placeholder>
     <mat-nav-list>
       <ng-container *ngFor="let linkItem of navigation">
@@ -80,36 +80,36 @@
       </ng-container><br /><br />
 
       <ng-container>
-      <p> &nbsp;&nbsp; Dashboard Summary</p>
-         <mat-divider></mat-divider>
-        <a mat-list-item> &nbsp;&nbsp;
+        <p> &nbsp;&nbsp; Dashboard Summary</p>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/client"> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-user"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Clients</span> &nbsp;&nbsp;
-               <span style="font-weight: 500">{{ total_clients }}</span>
+          <span style="font-weight: 500">{{ total_clients }}</span>
         </a>
 
         <a mat-list-item> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Families</span> &nbsp;&nbsp;
-               <span style="font-weight: 500">{{ total_families }}</span>
+          <span style="font-weight: 500">{{ total_families }}</span>
         </a>
-        
-         <a mat-list-item> &nbsp;&nbsp;
+
+        <a mat-list-item> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-thumbs-up"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Initiations</span> &nbsp;&nbsp;
-               <span style="font-weight: 500">{{ total_initiations }}</span>
+          <span style="font-weight: 500">{{ total_initiations }}</span>
         </a>
-         <a mat-list-item> &nbsp;&nbsp;
+        <a mat-list-item> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-thumbs-down"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Discontinuations</span> &nbsp;&nbsp;
           <span style="font-weight: 500">{{ total_discontinuations }}</span>
         </a>
-            <a mat-list-item> &nbsp;&nbsp;
-          <i style="color: #0DA98F" class="fa fa-scissors"></i> &nbsp;&nbsp;
-          <span style="font-weight: 250">Services</span> &nbsp;&nbsp;
-          <span style="font-weight: 500">{{ total_services }}</span>
-        </a>
-                 <a mat-list-item> &nbsp;&nbsp;
+<!--        <a mat-list-item> &nbsp;&nbsp;-->
+<!--          <i style="color: #0DA98F" class="fa fa-scissors"></i> &nbsp;&nbsp;-->
+<!--          <span style="font-weight: 250">Services</span> &nbsp;&nbsp;-->
+<!--          <span style="font-weight: 500">{{ total_services }}</span>-->
+<!--        </a>-->
+        <a mat-list-item routerLink='/referral-summary'> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="	fa fa-arrows-alt"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Referrals</span> &nbsp;&nbsp;
           <span style="font-weight: 500">{{ total_referrals }}</span>
