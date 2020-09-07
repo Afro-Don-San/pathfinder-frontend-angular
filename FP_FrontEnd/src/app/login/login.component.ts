@@ -40,17 +40,7 @@ export class LoginComponent implements OnInit {
       try {
         // const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
         const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
-        
-        // if (openSrpResult) {
-        //   if (openSrpResult.team && openSrpResult.team.team) {
-        //     if (openSrpResult.team.team.location) {
-        //       const location = openSrpResult.team.team.location;
-        //       const starting_location = location ? location.uuid : 'ed787525-d770-11e8-ba9c-f23c917bb7ec';
-        //       console.log("location from login", starting_location);
-        //       localStorage.setItem('htmr-starting-location', starting_location);
-        //     }
-        //   }
-        // }
+
         if (openMrsResult && openMrsResult.results) {
           if (openMrsResult.results.length > 0) {
 
@@ -76,25 +66,42 @@ export class LoginComponent implements OnInit {
               }
             }
 
-
             const username = openMrsResult.results[0].display;
               localStorage.setItem('trcmis-user', username);
               this.userService.setNavigation(openMrsResult);
           }
+
+          this.loginNotification.isError = false;
+          this.loginNotification.message = 'Login successful';
+          this.loginNotification.attempted = true;
+          this.loginNotification.loading = false;
+          this.userService.loggedIn = true;
+          setTimeout(() => {
+            this.router.navigate(['', 'dashboard']);
+          }, 2000);
         }
-        this.loginNotification.isError = false;
-        this.loginNotification.message = 'Login successful';
-        this.loginNotification.attempted = true;
-        this.loginNotification.loading = false;
-        this.userService.loggedIn = true;
-        setTimeout(() => {
-          this.router.navigate(['', 'dashboard']);
-        }, 2000);
+        else
+        {
+          this.loginNotification.isError = true;
+          this.loginNotification.message = 'Login failed';
+          this.loginNotification.attempted = true;
+          this.loginNotification.loading = false;
+          this.userService.loggedIn = false;
+          localStorage.removeItem('htmr-web-token');
+          setTimeout(() => {
+            this.closeNotification();
+          }, 6000);
+        }
+
       } catch (e) {
         // tslint:disable-next-line: triple-equals
         if (e.status == 401) {
           this.loginNotification.message = 'Login failure, wrong username or password';
         // tslint:disable-next-line: no-conditional-assignment
+        }
+        if (e.status == 403) {
+          this.loginNotification.message = 'User missing right permissions.';
+          // tslint:disable-next-line: no-conditional-assignment
         }
 
         console.log(e);
