@@ -88,32 +88,40 @@
           <span style="font-weight: 500">{{ total_clients }}</span>
         </a>
 
-        <a mat-list-item> &nbsp;&nbsp;
-          <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;
-          <span style="font-weight: 250">Families</span> &nbsp;&nbsp;
-          <span style="font-weight: 500">{{ total_families }}</span>
+        <a mat-list-item routerLink='/referral-summary'> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-arrows-alt"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Referrals</span> &nbsp;&nbsp;
+          <span style="font-weight: 500">{{ total_referrals }}</span>
         </a>
 
-        <a mat-list-item> &nbsp;&nbsp;
+<!--        <a mat-list-item> &nbsp;&nbsp;-->
+<!--          <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;-->
+<!--          <span style="font-weight: 250">Families</span> &nbsp;&nbsp;-->
+<!--          <span style="font-weight: 500">{{ total_families }}</span>-->
+<!--        </a>-->
+
+        <a mat-list-item routerLink="/initiation"> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-thumbs-up"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Initiations</span> &nbsp;&nbsp;
           <span style="font-weight: 500">{{ total_initiations }}</span>
         </a>
-        <a mat-list-item> &nbsp;&nbsp;
+        <a mat-list-item routerLink="/discontinuation"> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-thumbs-down"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Discontinuations</span> &nbsp;&nbsp;
           <span style="font-weight: 500">{{ total_discontinuations }}</span>
         </a>
+
 <!--        <a mat-list-item> &nbsp;&nbsp;-->
 <!--          <i style="color: #0DA98F" class="fa fa-scissors"></i> &nbsp;&nbsp;-->
 <!--          <span style="font-weight: 250">Services</span> &nbsp;&nbsp;-->
 <!--          <span style="font-weight: 500">{{ total_services }}</span>-->
 <!--        </a>-->
-        <a mat-list-item routerLink='/referral-summary'> &nbsp;&nbsp;
-          <i style="color: #0DA98F" class="	fa fa-arrows-alt"></i> &nbsp;&nbsp;
-          <span style="font-weight: 250">Referrals</span> &nbsp;&nbsp;
-          <span style="font-weight: 500">{{ total_referrals }}</span>
+        <a mat-list-item routerLink="/providers_report/citizens-report"> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-thumbs-down"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Citizen Reports</span> &nbsp;&nbsp;
+          <span style="font-weight: 500">{{ total_citizen_reports }}</span>
         </a>
+
         <mat-divider></mat-divider>
       </ng-container>
 

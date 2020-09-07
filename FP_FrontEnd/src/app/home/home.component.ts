@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   total_discontinuations = 0;
   total_services = 0;
   total_referrals = 0;
+  total_citizen_reports = 0;
 
   navigation = [];
   username = '';
@@ -154,6 +155,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
+  async getTotalCitizenReports(filter: {facilities}) {
+
+    const data = await this.http.postDJANGOURL(
+        'dashboard_summary/',filter
+    ).toPromise();
+    if (data) {
+      this.total_citizen_reports = data['total_citizen_reports'];
+
+    }
+  }
 
 
   goToChangePass() {

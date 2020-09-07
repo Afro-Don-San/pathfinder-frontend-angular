@@ -24,6 +24,8 @@ import {CitizenCardReportComponent} from './modules/fp-reports/citizen-card-repo
 import {GeomapsComponent} from './modules/geomaps/geomaps.component'
 import {ReferralsComponent} from './modules/dashboard/dashboard-summary/referrals/referrals.component'
 import {ClientsComponent} from './modules/dashboard/dashboard-summary/clients/clients.component'
+import {InitiationsComponent} from './modules/dashboard/dashboard-summary/initiations/initiations.component'
+import {DiscontinuationsComponent} from './modules/dashboard/dashboard-summary/discontinuations/discontinuations.component'
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -126,6 +128,16 @@ const routes: Routes = [
         path: 'client',
         component: ClientsComponent,
         data: {state: 'client'}
+      },
+      {
+        path: 'initiation',
+        component: InitiationsComponent,
+        data: {state: 'initiation'}
+      },
+      {
+        path: 'discontinuation',
+        component: DiscontinuationsComponent,
+        data: {state: 'discontinuation'}
       }
     ]
   },

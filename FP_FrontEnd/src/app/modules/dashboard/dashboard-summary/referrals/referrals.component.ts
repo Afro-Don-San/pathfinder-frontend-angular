@@ -33,6 +33,8 @@ export class ReferralsComponent implements OnInit {
   card3Data = null;
   card4Data = null;
 
+  data_loading = false;
+
   card1DataLoading = false;
   card2DataLoading = false;
   card3DataLoading = false;
@@ -76,8 +78,6 @@ export class ReferralsComponent implements OnInit {
       this.updateCard1({from_date: start_date, to_date: end_date, facilities});
       this.updateCard2({from_date: start_date, to_date: end_date, facilities});
       this.updateCard3({from_date: start_date, to_date: end_date, facilities});
-      this.updateCard4({from_date: start_date, to_date: end_date, facilities});
-      this.updateCard5({from_date: start_date, to_date: end_date, facilities});
     });
   }
 
@@ -86,8 +86,6 @@ export class ReferralsComponent implements OnInit {
     this.updateCard1Chart(filter);
     this.updateCard2Chart(filter);
     this.updateCard3Chart(filter);
-    this.updateCard4Chart(filter);
-    this.updateCard5Chart(filter);
   }
 
   updateCard1(filter: { from_date, to_date, facilities }) {
@@ -177,6 +175,7 @@ export class ReferralsComponent implements OnInit {
 
   updateCard3Chart(filter: { from_date, to_date, facilities }) {
     this.card3DataLoading = true;
+    this.data_loading = true;
     const reportUrl = 'referral_summary/';
     this.http.postDJANGOURL(reportUrl, filter)
         .subscribe((data: any[]) => {
@@ -184,80 +183,9 @@ export class ReferralsComponent implements OnInit {
             this.values = data['referral_issued_by_chw'];
           }
           this.card3DataLoading = false;
+            this.data_loading = false;
         }, error1 => this.card3DataLoading = false);
   }
-
-  updateCard4(filter: { from_date, to_date, facilities }) {
-    this.card4DataLoading = true;
-    this.updateCard4Chart(filter);
-    // const reportUrl = 'reports/dashboard_total_failed_referrals/html';
-    // this.http.postOpenSRP1(reportUrl,
-    //   filter)
-    //   .subscribe((data: any) => {
-    //     this.card4Data = data;
-    //     this.card4DataLoading = false;
-    //   }, error1 => this.card4DataLoading = false);
-  }
-
-  updateCard4Chart(filter: { from_date, to_date, facilities }) {
-    this.card4DataLoading = true;
-    const reportUrl = 'events_summary/';
-    this.http.postDJANGOURL(reportUrl, filter)
-        .subscribe((data: any[]) => {
-          if (data) {
-            const series = [{
-              name: 'Family Planning Methods',
-              data: data['total_family_planning_method_given'].map(item => item.value)
-            }];
-            const categories = data['total_family_planning_method_given'].map(item => item.field_code_3);
-            const chartConfig: any = this.settingsService.drawChart(
-                categories,
-                series,
-                'Number of Clients',
-                'Total Number of Clients Issued Family Planning Methods' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
-            );
-            Highcharts.chart('card4Chart', chartConfig);
-          }
-          this.card4DataLoading = false;
-        }, error1 => this.card4DataLoading = false);
-  }
-
-  updateCard5(filter: { from_date, to_date, facilities }) {
-    this.card5DataLoading = true;
-    this.updateCard5Chart(filter);
-    // const reportUrl = 'reports/dashboard_total_failed_referrals/html';
-    // this.http.postOpenSRP1(reportUrl,
-    //   filter)
-    //   .subscribe((data: any) => {
-    //     this.card4Data = data;
-    //     this.card4DataLoading = false;
-    //   }, error1 => this.card4DataLoading = false);
-  }
-
-  updateCard5Chart(filter: { from_date, to_date, facilities }) {
-    this.card5DataLoading = true;
-    const reportUrl = 'family_planning_methods_given/';
-    this.http.postDJANGOURL(reportUrl, filter)
-        .subscribe((data: any[]) => {
-          if (data) {
-            const series = [{
-              name: 'Family Planning Methods',
-              data: data.map(item => item.number_of_items)
-            }];
-            const categories = data
-                .map(item => item.method_type);
-            const chartConfig: any = this.settingsService.drawChart(
-                categories,
-                series,
-                'Number of items',
-                'Total Number of  Family Planning Methods Issued' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`
-            );
-            Highcharts.chart('card5Chart', chartConfig);
-          }
-          this.card5DataLoading = false;
-        }, error1 => this.card5DataLoading = false);
-  }
-
 
   // this method was coppied form the orguni component and is to be moved to service letter
   async getLocation(starting_location) {

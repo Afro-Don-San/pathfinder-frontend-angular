@@ -13,12 +13,11 @@ import * as XLSX from "xlsx";
 exporting(Highcharts);
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.scss']
+  selector: 'app-initiations',
+  templateUrl: './initiations.component.html',
+  styleUrls: ['./initiations.component.scss']
 })
-export class ClientsComponent implements OnInit {
-
+export class InitiationsComponent implements OnInit {
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
   location_loading = false;
   locations: any[] = [];
@@ -73,36 +72,36 @@ export class ClientsComponent implements OnInit {
     this.updateCard3Chart(filter);
   }
 
-    updateCard1(filter: { from_date, to_date, facilities }) {
-        this.card3DataLoading = true;
-        this.updateCard1Chart(filter);
-    }
+  updateCard1(filter: { from_date, to_date, facilities }) {
+    this.card3DataLoading = true;
+    this.updateCard1Chart(filter);
+  }
 
   updateCard1Chart(filter: { from_date, to_date, facilities }) {
-      this.card1DataLoading = true;
+    this.card1DataLoading = true;
 
-      const reportUrl = 'clients_families/';
-      this.http.postDJANGOURL(reportUrl, filter)
-          .subscribe((data: any[]) => {
-              if (data) {
-                  const series = [{
-                      name: 'Months',
-                      data: data['client_registration_by_month'].map(item => item.value)
-                  }];
-                  const categories = data['client_registration_by_month'].map(item => item.month_name);
-                  const chartConfig: any = this.settingsService.drawChart(
-                      categories,
-                      series,
-                      'Client Count',
-                      'Registered Clients' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
-                      // '',
-                      // 'line'
-                  );
-                  Highcharts.chart('cardClientsChart', chartConfig);
-              }
-              this.card1DataLoading = false;
-          }, error1 => this.card1DataLoading = false);
-    }
+    const reportUrl = 'events_summary/';
+    this.http.postDJANGOURL(reportUrl, filter)
+        .subscribe((data: any[]) => {
+          if (data) {
+            const series = [{
+              name: 'Months',
+              data: data['family_planning_initiations'].map(item => item.value)
+            }];
+            const categories = data['family_planning_initiations'].map(item => item.month_name);
+            const chartConfig: any = this.settingsService.drawChart(
+                categories,
+                series,
+                'Client Count',
+                'Family Planning Initiations' + ` from ${filter.from_date} to ${filter.to_date} for ${this.orgunitName}`,
+                // '',
+                // 'line'
+            );
+            Highcharts.chart('card1Chart', chartConfig);
+          }
+          this.card1DataLoading = false;
+        }, error1 => this.card1DataLoading = false);
+  }
 
   updateCard3(filter: { from_date, to_date, facilities }) {
     this.card3DataLoading = true;

@@ -47,6 +47,8 @@ import { GeomapsComponent } from './modules/geomaps/geomaps.component';
 import { MapFilterComponent } from './modules/geomaps/map-filter/map-filter.component';
 import { ReferralsComponent } from './modules/dashboard/dashboard-summary/referrals/referrals.component';
 import { ClientsComponent } from './modules/dashboard/dashboard-summary/clients/clients.component';
+import { InitiationsComponent } from './modules/dashboard/dashboard-summary/initiations/initiations.component';
+import { DiscontinuationsComponent } from './modules/dashboard/dashboard-summary/discontinuations/discontinuations.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +94,8 @@ import { ClientsComponent } from './modules/dashboard/dashboard-summary/clients/
     MapFilterComponent,
     ReferralsComponent,
     ClientsComponent,
+    InitiationsComponent,
+    DiscontinuationsComponent,
   ],
   imports: [
     BrowserModule,
