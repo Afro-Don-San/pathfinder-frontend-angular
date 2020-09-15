@@ -15,15 +15,15 @@ export class LoginComponent implements OnInit {
   customePasswordNotifier: boolean = false;
   hide = true;
   constructor(
-    private userService: UserService,
-    private formBuilder: FormBuilder,
-    private router: Router
+      private userService: UserService,
+      private formBuilder: FormBuilder,
+      private router: Router
   ) {
     this.loginForm = this.formBuilder.group(
-      {
-        username: ['', Validators.required],
-        password: ['', Validators.required]
-      });
+        {
+          username: ['', Validators.required],
+          password: ['', Validators.required]
+        });
   }
 
   ngOnInit() {
@@ -41,35 +41,33 @@ export class LoginComponent implements OnInit {
         // const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
         const openMrsResult: any = await this.userService.login(loginCredentials).toPromise();
 
-        if (openMrsResult && openMrsResult.results) {
-          if (openMrsResult.results.length > 0) {
+        if (openMrsResult.results.length > 0) {
 
-            try {
-              const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
-              if (openSrpResult) {
-                if (openSrpResult.team && openSrpResult.team.team) {
-                  if (openSrpResult.team.team.location) {
-                    const location = openSrpResult.team.team.location;
-                    const starting_location = location ? location.uuid : 't4f60f022-9390-41e1-8803-7a68f3a7fe98';
-                    localStorage.setItem('htmr-starting-location', starting_location);
-                  }
+          try {
+            const openSrpResult: any = await this.userService.login1(loginCredentials).toPromise();
+            if (openSrpResult) {
+              if (openSrpResult.team && openSrpResult.team.team) {
+                if (openSrpResult.team.team.location) {
+                  const location = openSrpResult.team.team.location;
+                  const starting_location = location ? location.uuid : 't4f60f022-9390-41e1-8803-7a68f3a7fe98';
+                  localStorage.setItem('htmr-starting-location', starting_location);
                 }
               }
-
-            }
-            catch (e)
-            {
-              if (e.status = 500) {
-                //USer has access to openmrs but not mobile, hence Country Level
-                const starting_location = '4f60f022-9390-41e1-8803-7a68f3a7fe98';
-                localStorage.setItem('htmr-starting-location', starting_location);
-              }
             }
 
-            const username = openMrsResult.results[0].display;
-              localStorage.setItem('trcmis-user', username);
-              this.userService.setNavigation(openMrsResult);
           }
+          catch (e)
+          {
+            if (e.status = 500) {
+              //USer has access to openmrs but not mobile, hence Country Level
+              const starting_location = '4f60f022-9390-41e1-8803-7a68f3a7fe98';
+              localStorage.setItem('htmr-starting-location', starting_location);
+            }
+          }
+
+          const username = openMrsResult.results[0].display;
+          localStorage.setItem('trcmis-user', username);
+          this.userService.setNavigation(openMrsResult);
 
           this.loginNotification.isError = false;
           this.loginNotification.message = 'Login successful';
@@ -83,24 +81,20 @@ export class LoginComponent implements OnInit {
         else
         {
           this.loginNotification.isError = true;
-          this.loginNotification.message = 'Login failed';
           this.loginNotification.attempted = true;
           this.loginNotification.loading = false;
           this.userService.loggedIn = false;
-          localStorage.removeItem('htmr-web-token');
-          setTimeout(() => {
-            this.closeNotification();
-          }, 6000);
+          this.loginNotification.message = 'Login failure, wrong username or password';
         }
 
       } catch (e) {
         // tslint:disable-next-line: triple-equals
         if (e.status == 401) {
-          this.loginNotification.message = 'Login failure, wrong username or password';
-        // tslint:disable-next-line: no-conditional-assignment
+          this.loginNotification.message = 'Unauthorized Access.';
+          // tslint:disable-next-line: no-conditional-assignment
         }
         if (e.status == 403) {
-          this.loginNotification.message = 'User missing right permissions.';
+          this.loginNotification.message = 'Something went wrong, please try again.';
           // tslint:disable-next-line: no-conditional-assignment
         }
 

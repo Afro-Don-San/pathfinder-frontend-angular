@@ -150,6 +150,8 @@ export class CitizenCardReportComponent implements OnInit {
 
       this.httpClient.postDJANGOURL('citizen_report_card/', {start_date, end_date, facilities })
       .subscribe((data: any) => {
+
+        console.log(data);
         this.done_loading = true;
         this.data_loading = false;
         this.willing_to_participate_in_survey = data["willing_to_participate_in_survey_summary"];
@@ -171,7 +173,7 @@ export class CitizenCardReportComponent implements OnInit {
         this.did_the_service_providers_use_visual_aids_to_demo_fp_methods = data["did_the_service_providers_use_visual_aids_to_demo_fp_methods_summary"];
         this.did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods = data["did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods_summary"];
         this.were_you_given_info_on_dual_protection = data["were_you_given_info_on_dual_protection_summary"];
-        this.methods_not_wanted = data["methods_not_wanted_summary"];
+        // this.methods_not_wanted = data["methods_not_wanted_summary"];
       });
 
     this.httpClient.postDJANGOURL('citizen_report_card/', { start_date, end_date, facilities })

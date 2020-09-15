@@ -22,7 +22,6 @@ export class HttpClientService {
     localStorage.setItem('htmr-web-token', token);
     if (typeof(Storage) !== undefined) {
       window.sessionStorage.setItem('htmr-web-token', token);
-      console.log('ipo feeded tayari...');
     } else {
       // TODO: execute block of codes if there is not local storage support
     }

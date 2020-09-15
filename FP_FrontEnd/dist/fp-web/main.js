@@ -954,15 +954,14 @@ var LoginComponent = /** @class */ (function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!this.loginForm.valid) return [3 /*break*/, 11];
+                        if (!this.loginForm.valid) return [3 /*break*/, 10];
                         this.loginNotification.loading = true;
                         _a.label = 1;
                     case 1:
-                        _a.trys.push([1, 10, , 11]);
+                        _a.trys.push([1, 9, , 10]);
                         return [4 /*yield*/, this.userService.login(loginCredentials).toPromise()];
                     case 2:
                         openMrsResult = _a.sent();
-                        if (!(openMrsResult && openMrsResult.results)) return [3 /*break*/, 8];
                         if (!(openMrsResult.results.length > 0)) return [3 /*break*/, 7];
                         _a.label = 3;
                     case 3:
@@ -991,8 +990,6 @@ var LoginComponent = /** @class */ (function () {
                         username = openMrsResult.results[0].display;
                         localStorage.setItem('trcmis-user', username);
                         this.userService.setNavigation(openMrsResult);
-                        _a.label = 7;
-                    case 7:
                         this.loginNotification.isError = false;
                         this.loginNotification.message = 'Login successful';
                         this.loginNotification.attempted = true;
@@ -1001,28 +998,24 @@ var LoginComponent = /** @class */ (function () {
                         setTimeout(function () {
                             _this.router.navigate(['', 'dashboard']);
                         }, 2000);
-                        return [3 /*break*/, 9];
-                    case 8:
+                        return [3 /*break*/, 8];
+                    case 7:
                         this.loginNotification.isError = true;
-                        this.loginNotification.message = 'Login failed';
                         this.loginNotification.attempted = true;
                         this.loginNotification.loading = false;
                         this.userService.loggedIn = false;
-                        localStorage.removeItem('htmr-web-token');
-                        setTimeout(function () {
-                            _this.closeNotification();
-                        }, 6000);
-                        _a.label = 9;
-                    case 9: return [3 /*break*/, 11];
-                    case 10:
+                        this.loginNotification.message = 'Login failure, wrong username or password';
+                        _a.label = 8;
+                    case 8: return [3 /*break*/, 10];
+                    case 9:
                         e_2 = _a.sent();
                         // tslint:disable-next-line: triple-equals
                         if (e_2.status == 401) {
-                            this.loginNotification.message = 'Login failure, wrong username or password';
+                            this.loginNotification.message = 'Unauthorized Access.';
                             // tslint:disable-next-line: no-conditional-assignment
                         }
                         if (e_2.status == 403) {
-                            this.loginNotification.message = 'User missing right permissions.';
+                            this.loginNotification.message = 'Something went wrong, please try again.';
                             // tslint:disable-next-line: no-conditional-assignment
                         }
                         console.log(e_2);
@@ -1034,8 +1027,8 @@ var LoginComponent = /** @class */ (function () {
                         setTimeout(function () {
                             _this.closeNotification();
                         }, 6000);
-                        return [3 /*break*/, 11];
-                    case 11: return [2 /*return*/];
+                        return [3 /*break*/, 10];
+                    case 10: return [2 /*return*/];
                 }
             });
         });

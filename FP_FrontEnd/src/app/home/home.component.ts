@@ -80,6 +80,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.getTotalInitiations({facilities});
       this.getTotalDiscontinuations({ facilities});
       this.getTotalReferrals({ facilities});
+      this.getTotalCitizenReports({ facilities});
 
     });
 

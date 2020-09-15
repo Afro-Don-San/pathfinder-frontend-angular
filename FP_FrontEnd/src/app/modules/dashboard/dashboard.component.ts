@@ -284,15 +284,15 @@ export class DashboardComponent implements OnInit {
 
   updateCard4Chart(filter: { from_date, to_date, facilities }) {
     this.card4DataLoading = true;
-    const reportUrl = 'events_summary/';
+    const reportUrl = 'give_fp_methods/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
-        if (data) {
+        if (data['total_clients']) {
           const series = [{
               name: 'Family Planning Methods',
-              data: data['total_family_planning_method_given'].map(item => item.value)
+              data: data['total_clients'].map(item => item.clients)
             }];
-          const categories = data['total_family_planning_method_given'].map(item => item.field_code_3);
+          const categories = data['total_clients'].map(item => item.method_type);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
             series,
@@ -319,15 +319,16 @@ export class DashboardComponent implements OnInit {
 
   updateCard5Chart(filter: { from_date, to_date, facilities }) {
     this.card5DataLoading = true;
-    const reportUrl = 'family_planning_methods_given/';
+    const reportUrl = 'give_fp_methods/';
     this.http.postDJANGOURL(reportUrl, filter)
       .subscribe((data: any[]) => {
-        if (data) {
+        if (data['total_fp_methods']) {
+          console.log(data['total_fp_methods']);
           const series = [{
               name: 'Family Planning Methods',
-              data: data.map(item => item.number_of_items)
+              data: data['total_fp_methods'].map(item => item.items)
             }];
-          const categories = data
+          const categories = data['total_fp_methods']
           .map(item => item.method_type);
           const chartConfig: any = this.settingsService.drawChart(
             categories,
