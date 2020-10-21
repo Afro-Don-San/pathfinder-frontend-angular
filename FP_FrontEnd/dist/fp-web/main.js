@@ -707,6 +707,7 @@ var HomeComponent = /** @class */ (function () {
             _this.getTotalInitiations({ facilities: facilities });
             _this.getTotalDiscontinuations({ facilities: facilities });
             _this.getTotalReferrals({ facilities: facilities });
+            _this.getTotalCitizenReports({ facilities: facilities });
         });
         // this.getLocation(starting_location).then(locations => {
         //   const facilities = this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
@@ -2838,15 +2839,15 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard4Chart = function (filter) {
         var _this = this;
         this.card4DataLoading = true;
-        var reportUrl = 'events_summary/';
+        var reportUrl = 'give_fp_methods/';
         this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
-            if (data) {
+            if (data['total_clients']) {
                 var series = [{
                         name: 'Family Planning Methods',
-                        data: data['total_family_planning_method_given'].map(function (item) { return item.value; })
+                        data: data['total_clients'].map(function (item) { return item.clients; })
                     }];
-                var categories = data['total_family_planning_method_given'].map(function (item) { return item.field_code_3; });
+                var categories = data['total_clients'].map(function (item) { return item.method_type; });
                 var chartConfig = _this.settingsService.drawChart(categories, series, 'Number of Clients', 'Total Number of Clients Issued Family Planning Methods' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card4Chart', chartConfig);
             }
@@ -2867,15 +2868,16 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.updateCard5Chart = function (filter) {
         var _this = this;
         this.card5DataLoading = true;
-        var reportUrl = 'family_planning_methods_given/';
+        var reportUrl = 'give_fp_methods/';
         this.http.postDJANGOURL(reportUrl, filter)
             .subscribe(function (data) {
-            if (data) {
+            if (data['total_fp_methods']) {
+                console.log(data['total_fp_methods']);
                 var series = [{
                         name: 'Family Planning Methods',
-                        data: data.map(function (item) { return item.number_of_items; })
+                        data: data['total_fp_methods'].map(function (item) { return item.items; })
                     }];
-                var categories = data
+                var categories = data['total_fp_methods']
                     .map(function (item) { return item.method_type; });
                 var chartConfig = _this.settingsService.drawChart(categories, series, 'Number of items', 'Total Number of  Family Planning Methods Issued' + (" from " + filter.from_date + " to " + filter.to_date + " for " + _this.orgunitName));
                 highcharts__WEBPACK_IMPORTED_MODULE_8__["chart"]('card5Chart', chartConfig);
@@ -3287,6 +3289,7 @@ var CitizenCardReportComponent = /** @class */ (function () {
             console.log(facilities);
             _this.httpClient.postDJANGOURL('citizen_report_card/', { start_date: start_date, end_date: end_date, facilities: facilities })
                 .subscribe(function (data) {
+                console.log(data);
                 _this.done_loading = true;
                 _this.data_loading = false;
                 _this.willing_to_participate_in_survey = data["willing_to_participate_in_survey_summary"];
@@ -3308,7 +3311,7 @@ var CitizenCardReportComponent = /** @class */ (function () {
                 _this.did_the_service_providers_use_visual_aids_to_demo_fp_methods = data["did_the_service_providers_use_visual_aids_to_demo_fp_methods_summary"];
                 _this.did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods = data["did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods_summary"];
                 _this.were_you_given_info_on_dual_protection = data["were_you_given_info_on_dual_protection_summary"];
-                _this.methods_not_wanted = data["methods_not_wanted_summary"];
+                // this.methods_not_wanted = data["methods_not_wanted_summary"];
             });
             _this.httpClient.postDJANGOURL('citizen_report_card/', { start_date: start_date, end_date: end_date, facilities: facilities })
                 .subscribe(function (data) {
@@ -8124,7 +8127,6 @@ var HttpClientService = /** @class */ (function () {
         localStorage.setItem('htmr-web-token', token);
         if (typeof (Storage) !== undefined) {
             window.sessionStorage.setItem('htmr-web-token', token);
-            console.log('ipo feeded tayari...');
         }
         else {
             // TODO: execute block of codes if there is not local storage support

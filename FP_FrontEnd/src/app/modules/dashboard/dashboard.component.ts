@@ -425,13 +425,8 @@ export class DashboardComponent implements OnInit {
                                       name: village.name,
                                       id: village.uuid,
                                       level: 6,
-                                      parents: `${visit_location.uuid};${child_loc.uuid};${facility.uuid};${village.uuid}`
+                                      parents: `${visit_location.uuid};${child_loc.uuid};${before_last_child.uuid};${last_child.uuid};${facility.uuid}`
                                     });
-                                    return {
-                                      name: village.name,
-                                      id: village.uuid,
-                                      level: 6
-                                    }
                                   }
                               )
                             }

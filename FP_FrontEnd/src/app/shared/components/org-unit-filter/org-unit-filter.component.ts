@@ -133,8 +133,10 @@ export class OrgUnitFilterComponent implements OnInit {
           // filter down to remain with only visit facilities
           const starting_location = localStorage.getItem('htmr-starting-location');
           let visit_location: any = _.find(top_locations, {uuid: starting_location ? starting_location : 'ed787525-d770-11e8-ba9c-f23c917bb7ec'});
+
           this.visit_locations.push(
             {
+              //Level 1
               name: visit_location.name,
               id: visit_location.uuid,
               level: 1,
@@ -149,6 +151,7 @@ export class OrgUnitFilterComponent implements OnInit {
                 const child_loc = this.getChildOrgunits(locations, location.uuid);
                 this.visit_locations.push(
                   {
+                    //Level 2
                     name: child_loc.name,
                     id: child_loc.uuid,
                     level: 2,
@@ -163,6 +166,7 @@ export class OrgUnitFilterComponent implements OnInit {
                       const before_last_child = this.getChildOrgunits(locations, child.uuid);
                       this.visit_locations.push(
                         {
+                          //Level 3
                           name: before_last_child.name,
                           id: before_last_child.uuid,
                           level: 3,
@@ -177,6 +181,7 @@ export class OrgUnitFilterComponent implements OnInit {
                             const last_child = this.getChildOrgunits(locations, level3child.uuid);
                             this.visit_locations.push(
                               {
+                                //Level 4
                                 name: last_child.name,
                                 id: last_child.uuid,
                                 level: 4,
@@ -191,6 +196,7 @@ export class OrgUnitFilterComponent implements OnInit {
                                 (level4child: any) => {
                                   const facility = this.getChildOrgunits(top_locations, level4child.uuid);
                                   this.visit_locations.push({
+                                    //Level 5
                                       name: facility.name,
                                       id: facility.uuid,
                                       level: 5,
@@ -205,10 +211,11 @@ export class OrgUnitFilterComponent implements OnInit {
                                         (level5child: any) => {
                                           const village = this.getChildOrgunits(top_locations, level5child.uuid);
                                           this.visit_locations.push({
+                                            //Level 6
                                             name: village.name,
                                             id: village.uuid,
                                             level: 6,
-                                            parents: `${visit_location.uuid};${child_loc.uuid};${facility.uuid};${village.uuid}`
+                                            parents: `${visit_location.uuid};${child_loc.uuid};${before_last_child.uuid};${last_child.uuid}${facility.uuid};`
                                           });
                                           return {
                                             name: village.name,
