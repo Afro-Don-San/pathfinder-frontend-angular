@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Team} from '../../../models/team';
 import {TeamService} from '../../../services/team.service';
 import {HttpClientService} from '../../../services/http-client.service';
-import {MatDialog} from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import {UpdateMemberComponent} from '../update-member/update-member.component';
 import {UserService} from '../../../services/user.service';
 

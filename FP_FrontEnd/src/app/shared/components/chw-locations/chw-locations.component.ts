@@ -47,7 +47,7 @@ export class ChwLocationsComponent implements OnInit {
   root_url = '../../../';
   nodes: any[] = null;
   orgunit_levels: any[] = [];
-  @ViewChild('orgtree')
+  @ViewChild('orgtree', { static: true })
   orgtree: TreeComponent;
   visit_locations: any[] = [];
 

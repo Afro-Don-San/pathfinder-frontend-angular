@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
     const token = localStorage.getItem('htmr-web-token');
     const location = localStorage.getItem('htmr-starting-location');
     if (token && location) {
+
       this.router.navigate( ['', 'dashboard']);
     }
   }

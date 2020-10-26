@@ -10,7 +10,9 @@ import {
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ngxCsv } from 'ngx-csv/ngx-csv';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import {fadeIn, fadeSmooth, ROUTE_ANIMATIONS_ELEMENTS} from '../../animations/router-animation';
 import {ActionButton} from './action-button.model';
 
@@ -98,7 +100,7 @@ export class MainDataTableComponent implements OnInit, OnChanges {
   dataSource: MatTableDataSource<any>;
   displayedColumns: string[];
   showButtonConfirm: any = {};
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   constructor() {
     this.searchFieldControl = new FormControl('');

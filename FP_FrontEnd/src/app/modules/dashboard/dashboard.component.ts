@@ -443,7 +443,6 @@ export class DashboardComponent implements OnInit {
       )
     };
     this.location_loading = false;
-    console.log(visit_locations);
     return visit_locations;
   }
 

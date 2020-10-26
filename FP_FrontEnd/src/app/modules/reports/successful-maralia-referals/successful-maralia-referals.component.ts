@@ -31,7 +31,7 @@ export class SuccessfulMaraliaReferalsComponent implements OnInit {
     'JUU YA MIAKA 5 ME',
     'JUU YA MIAKA 5 KE',
   ];
-  @ViewChild('dataTable') dataTable: ElementRef;
+  @ViewChild('dataTable', { static: true }) dataTable: ElementRef;
   totals: any = {};
   constructor(
     private excelService: ExcelDownloadService

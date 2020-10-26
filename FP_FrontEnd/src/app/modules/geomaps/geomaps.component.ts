@@ -12,7 +12,7 @@ import * as _ from 'lodash';
 import * as Highcharts from 'highcharts';
 import {SettingsService} from '../../services/settings.service';
 import exporting from 'highcharts/modules/exporting';
-import { markParentViewsForCheck } from '@angular/core/src/view/util';
+
 exporting(Highcharts);
 
 @Component({

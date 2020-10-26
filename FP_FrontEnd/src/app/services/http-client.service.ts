@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 declare var window;
 @Injectable({providedIn: 'root'})
 export class HttpClientService {
@@ -38,6 +38,7 @@ export class HttpClientService {
   deleteToken() {
     localStorage.removeItem('htmr-web-token');
     localStorage.removeItem('htmr-starting-location');
+    window.sessionStorage.removeItem("htmr-web-token");
     if (typeof(Storage) !== undefined) {
       window.sessionStorage.removeItem('AuthToken');
     } else {
@@ -113,6 +114,7 @@ x
     const headers: string = this.createOpenMRSAuthorizationHeader(this.getToken());
     return this.http.post(this.OPENMRSURL + url, data, {
       headers: new HttpHeaders()
+      .set('Content-Type', 'application/json')
         .set('Authorization', headers)
     });
   }

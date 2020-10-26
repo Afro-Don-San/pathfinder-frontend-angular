@@ -10,20 +10,15 @@ export class OrgUnitService {
   ) { }
 
   getLevel4OrgunitsIds(orgunits: any[], uuid) {
-    console.log("the starting locaton is", uuid)
-    console.log("org units passed are",{orgunits});
 
     let orgunitItems = orgunits
       .filter((ou: any) => ou.parents.indexOf(uuid) !== -1)
       .map(ou => ou.id);
 
-      console.log("lngth of array is", orgunitItems.length);
-
-    // if (orgunitItems.length === 0)
-    // {
-    //   orgunitItems = [uuid];
-    // }
-    console.log("selected org units are",orgunitItems);
+    if (orgunitItems.length === 0)
+    {
+      orgunitItems = [uuid];
+    }
     return orgunitItems;
   }
 

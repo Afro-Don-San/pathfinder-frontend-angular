@@ -10,7 +10,6 @@ import {filter, map, mergeMap} from 'rxjs/operators';
 import {routeAnimations} from '../shared/animations/router-animation';
 import {ActivatedRoute, NavigationCancel, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {Title} from '@angular/platform-browser';
-import {load} from '@angular/core/src/render3';
 import {DashboardComponent} from '../modules/dashboard/dashboard.component'
 
 @Component({
@@ -169,8 +168,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   goToChangePass() {
-    this.userService.removeLocalStorageNavigation();
-    this.userService.deleteToken();
+  //  this.userService.removeLocalStorageNavigation();
+   // this.userService.deleteToken();
     this.userService.loggedIn = false;
     this.locationService.locations = [];
     

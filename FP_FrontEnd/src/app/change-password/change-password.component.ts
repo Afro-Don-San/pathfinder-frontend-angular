@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class ChangePasswordComponent implements OnInit {
   loginNotification = {isError: false, message: '', attempted: false, loading: false};
-  loginForm: FormGroup;
+  ChangePasswordForm: FormGroup;
   customeUsernameNotifier: boolean = false;
   customePasswordNotifier: boolean = false;
   hide = true;
@@ -19,7 +19,7 @@ export class ChangePasswordComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
   ) {
-    this.loginForm = this.formBuilder.group(
+    this.ChangePasswordForm = this.formBuilder.group(
       {
         oldpassword: ['', Validators.required],
         newpassword: ['', Validators.required],
@@ -34,38 +34,59 @@ export class ChangePasswordComponent implements OnInit {
   }
 
   async changePassword(loginCredentials) {
-    if (this.loginForm.valid) {
+    if (this.ChangePasswordForm.valid) {
       this.loginNotification.loading = true;
 
-      if (this.loginForm.value.newpassword == this.loginForm.value.confirmpassword )
+      if (this.ChangePasswordForm.value.newpassword == this.ChangePasswordForm.value.confirmpassword )
       {
         try {
         
-          const openMrsResult: any = await this.userService.changePassword(loginCredentials).toPromise();
+          // const openMrsResult: any = await this.userService.changePassword(loginCredentials).toPromise();
 
-          console.log(openMrsResult);
+          // console.log(openMrsResult);
   
-          if (openMrsResult)
+          // if (openMrsResult)
+
+         await this.userService.changePassword(loginCredentials).toPromise();
+
           {
             this.loginNotification.isError = false;
+            this.loginNotification.message = "Password change successful."
             this.loginNotification.attempted = true;
             this.loginNotification.loading = false;
+            setTimeout(() => {
+              this.closeNotification();
+            }, 6000);
+            
+            this.userService.deleteToken();
+            this.router.navigate( ['', 'login']);
   
           }
+          // else
+          // {
+          //   this.loginNotification.isError = true;
+          //   this.loginNotification.message = "Old password is incorrect."
+          //   this.loginNotification.attempted = true;
+          //   this.loginNotification.loading = false;
+          //   setTimeout(() => {
+          //     this.closeNotification();
+          //   }, 6000);
+          // }
   
         } catch (e) {
     
           console.log(e);
           this.loginNotification.isError = true;
-          this.loginNotification.message = "Password changing failed."
+          this.loginNotification.message = "Operation failed, please check password and try again."
           this.loginNotification.attempted = true;
           this.loginNotification.loading = false;
           this.userService.loggedIn = false;
-          localStorage.removeItem('htmr-web-token');
           setTimeout(() => {
             this.closeNotification();
           }, 6000);
         }  
+
+ 
       }
       else
       {    
@@ -73,6 +94,9 @@ export class ChangePasswordComponent implements OnInit {
         this.loginNotification.attempted = true;
         this.loginNotification.loading = false;
         this.loginNotification.message = "Passwords do not match."; 
+        setTimeout(() => {
+          this.closeNotification();
+        }, 6000);
       }
       
     }

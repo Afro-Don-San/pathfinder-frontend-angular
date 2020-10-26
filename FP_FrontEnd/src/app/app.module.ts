@@ -49,6 +49,7 @@ import { ReferralsComponent } from './modules/dashboard/dashboard-summary/referr
 import { ClientsComponent } from './modules/dashboard/dashboard-summary/clients/clients.component';
 import { InitiationsComponent } from './modules/dashboard/dashboard-summary/initiations/initiations.component';
 import { DiscontinuationsComponent } from './modules/dashboard/dashboard-summary/discontinuations/discontinuations.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,8 @@ import { DiscontinuationsComponent } from './modules/dashboard/dashboard-summary
     BrowserAnimationsModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   entryComponents: [UpdateMemberComponent],
   providers: [],

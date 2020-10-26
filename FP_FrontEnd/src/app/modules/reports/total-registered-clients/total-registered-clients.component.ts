@@ -45,7 +45,7 @@ export class TotalRegisteredClientsComponent implements OnInit {
     'MIAKA 60+ ME',
     'MIAKA 60+ KE',
   ];
-  @ViewChild('dataTable') dataTable: ElementRef;
+  @ViewChild('dataTable', { static: true }) dataTable: ElementRef;
   totals: any = {};
   constructor(
     private excelService: ExcelDownloadService

@@ -176,18 +176,22 @@ export class UserService {
 
       var payload = {
         "oldPassword" : ""+loginCredentials.oldpassword+"",
-        "newPassword" : ""+loginCredentials.newpassword+"",
+        "newPassword" : ""+loginCredentials.newpassword+""
       };
+
+      console.log(payload);
 
       this.http.postOpenMRS(`password`, payload)
         .subscribe((personResponse: any) => {
             this.loadingMessage = 'password changed successfully';
             observer.next(personResponse);
             observer.complete();
+            console.log("successful");
           },
           error => {
+            console.log(error);
             this.loadingMessage = 'password change  failed';
-            observer.error('some error occur');
+            observer.error('some error occurrd.');
           });
     });
   }
@@ -238,7 +242,7 @@ export class UserService {
           },
           error => {
             this.loadingMessage = 'person creation  failed';
-            observer.error('some error occur');
+            observer.error('some error occurred.');
           });
     });
   }
