@@ -13,6 +13,19 @@ export class CardFilterComponent implements OnInit {
   orgunit: any = null;
   orgunitnames: string = '';
 
+  periods = [
+    { id: 1, name: 'USG_QUARTER' }
+ ];
+
+ usg_quarters = [
+  { id: 1, name: 'USG FY Q1 2020' },
+  { id: 1, name: 'USG FY Q2 2020' },
+  { id: 1, name: 'USG FY Q3 2020' },
+  { id: 1, name: 'USG FY Q4 2020' }
+];
+
+ selectedService: number = 0;
+
   @Input() orgunit_tree_config: any = {
     show_search : true,
     search_text : 'Search',
@@ -51,5 +64,9 @@ export class CardFilterComponent implements OnInit {
       ouId
     });
   }
+
+    onChangeService(selectedServiceId: number) {
+    this.selectedService = selectedServiceId;
+ }
 
 }

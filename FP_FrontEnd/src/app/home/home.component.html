@@ -85,13 +85,14 @@
         <a mat-list-item routerLink="/client"> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-user"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Clients</span> &nbsp;&nbsp;
-          <span style="font-weight: 500">{{ total_clients }}</span>
+          <span style="font-weight: 500">{{ total_clients | number }}</span>
         </a>
+
 
         <a mat-list-item routerLink='/referral-summary'> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-arrows-alt"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Referrals</span> &nbsp;&nbsp;
-          <span style="font-weight: 500">{{ total_referrals }}</span>
+          <span style="font-weight: 500">{{ total_referrals | number }}</span>
         </a>
 
 <!--        <a mat-list-item> &nbsp;&nbsp;-->
@@ -99,6 +100,12 @@
 <!--          <span style="font-weight: 250">Families</span> &nbsp;&nbsp;-->
 <!--          <span style="font-weight: 500">{{ total_families }}</span>-->
 <!--        </a>-->
+
+        <a mat-list-item routerLink="/visits"> &nbsp;&nbsp;
+          <i style="color: #0DA98F" class="fa fa-car"></i> &nbsp;&nbsp;
+          <span style="font-weight: 250">Visits</span> &nbsp;&nbsp;
+          <span style="font-weight: 500">{{ total_visits | number }}</span>
+        </a>
 
         <a mat-list-item routerLink="/initiation"> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-thumbs-up"></i> &nbsp;&nbsp;
@@ -119,7 +126,7 @@
         <a mat-list-item routerLink="/providers_report/citizens-report"> &nbsp;&nbsp;
           <i style="color: #0DA98F" class="fa fa-users"></i> &nbsp;&nbsp;
           <span style="font-weight: 250">Citizen Reports</span> &nbsp;&nbsp;
-          <span style="font-weight: 500">{{ total_citizen_reports }}</span>
+          <span style="font-weight: 500">{{ total_citizen_reports | number}}</span>
         </a>
 
         <mat-divider></mat-divider>

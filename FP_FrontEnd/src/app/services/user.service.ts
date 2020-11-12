@@ -85,6 +85,13 @@ export class UserService {
       icon: 'fa fa-map-signs',
       roles: ['System Developer'],
       accessibility: false
+    },
+    {
+      name: 'Methods',
+      links: ['', 'methods'],
+      icon: 'fa fa-scissors',
+      roles: ['System Developer'],
+      accessibility: false
     }
   ];
 

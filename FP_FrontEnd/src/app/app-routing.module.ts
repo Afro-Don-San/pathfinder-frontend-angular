@@ -26,6 +26,8 @@ import {ReferralsComponent} from './modules/dashboard/dashboard-summary/referral
 import {ClientsComponent} from './modules/dashboard/dashboard-summary/clients/clients.component'
 import {InitiationsComponent} from './modules/dashboard/dashboard-summary/initiations/initiations.component'
 import {DiscontinuationsComponent} from './modules/dashboard/dashboard-summary/discontinuations/discontinuations.component'
+import {MethodsComponent} from './modules/dashboard/dashboard-summary/methods/methods.component';
+import {VisitsComponent} from './modules/dashboard/dashboard-summary/visits/visits.component';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
@@ -135,10 +137,20 @@ const routes: Routes = [
         data: {state: 'initiation'}
       },
       {
+        path: 'visits',
+        component: VisitsComponent,
+        data: {state: 'visits'}
+      },
+      {
         path: 'discontinuation',
         component: DiscontinuationsComponent,
         data: {state: 'discontinuation'}
-      }
+      },
+      {
+        path: 'methods',
+        component: MethodsComponent,
+        data: {state: 'methods'}
+      },
     ]
   },
   {

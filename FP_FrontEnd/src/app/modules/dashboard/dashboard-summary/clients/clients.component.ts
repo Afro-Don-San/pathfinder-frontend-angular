@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ROUTE_ANIMATIONS_ELEMENTS} from '../../../../shared/animations/router-animation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {HttpClientService} from '../../../../services/http-client.service';
 import {LocationService} from '../../../../services/location.service';
@@ -9,6 +10,7 @@ import * as _ from 'lodash';
 import * as Highcharts from 'highcharts';
 import {SettingsService} from '../../../../services/settings.service';
 import exporting from 'highcharts/modules/exporting';
+import  {DataTableModule} from "angular2-datatable";
 import * as XLSX from "xlsx";
 exporting(Highcharts);
 
@@ -28,11 +30,32 @@ export class ClientsComponent implements OnInit {
   endDate: any;
   end_date: any;
 
+  tableConfigurations = {
+    tableColumns: [
+      {name: 'first_name', label: 'First Name'},
+      {name: 'middle_name', label: 'Middle Name'},
+      {name: 'last_name', label: 'Last Name'},
+      {name: 'gender', label: 'Gender'},
+      {name: 'phone_number', label: 'Phone Number'}
+    ],
+    tableCaption: '',
+    tableNotifications: '',
+    showSearch: true,
+    showBorder: true,
+    allowPagination: true,
+    actionIcons: {edit: false, delete: false, more: false, print: false},
+    doneLoading: false,
+    deleting: {},
+    active: {},
+    empty_msg: 'No Clients'
+  };
+
   card2Data = null;
 
   card1DataLoading = false;
   card3DataLoading = false;
   data_loading = false;
+  items: any[] = [];
 
   @ViewChild('reportArea1') el1: ElementRef;
   @ViewChild('reportArea2') el2: ElementRef;
@@ -50,7 +73,6 @@ export class ClientsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.startDate = new Date(new Date().setDate(new Date().getDate() - 90));
     this.endDate = new Date(new Date().setDate(new Date().getDate() + 2));
     const start_date = new Date(this.startDate).toISOString().substr(0, 10).replace('-', '/').replace('-', '/');
@@ -64,6 +86,7 @@ export class ClientsComponent implements OnInit {
       this.orgunitName = this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
       this.updateCard1({from_date: start_date, to_date: end_date, facilities});
       this.updateCard3({from_date: start_date, to_date: end_date, facilities});
+      this.loadClients({from_date: start_date, to_date: end_date, facilities});
     });
   }
 
@@ -121,6 +144,23 @@ export class ClientsComponent implements OnInit {
           this.card3DataLoading = false;
           this.data_loading = false;
         }, error1 => this.card3DataLoading = false);
+  }
+
+  loadClients(filter: { from_date, to_date, facilities }) {
+    const reportUrl = 'clients_families/';
+    this.http.postDJANGOURL(reportUrl, filter)
+        .subscribe((data: any[]) => {
+          this.items = data['clients'].map((item: any) => ({
+            first_name: item.first_name,
+            middle_name: item.middle_name,
+            last_name: item.last_name,
+            gender: item.gender,
+            phone_number: item.phone_number,
+          }));
+        }, (error) => {
+          this.http.showError('Something went wrong while loading locations');
+        });
+
   }
 
   // this method was coppied form the orguni component and is to be moved to service letter

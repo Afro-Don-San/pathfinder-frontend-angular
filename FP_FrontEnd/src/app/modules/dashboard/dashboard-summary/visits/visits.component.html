@@ -1,0 +1,85 @@
+<app-table-form
+        title="Visits"
+        image="fa fa-user"
+        [viewDetails]="false"
+        [hideAdd]="true"
+>
+  <ng-container ngProjectAs="table">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div *ngIf="!location_loading">
+            <app-card-filter [start_date]="startDate" [end_date]="endDate" (reportFilter)="updateCards($event)"></app-card-filter>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row no-print mt-4" *ngIf="data_loading">
+      <div class="col-sm-12" style="padding-left: 50px">
+        <app-loader [message]="'Loading visits...'"></app-loader>
+      </div>
+    </div>
+
+
+    <div class="grid-container">
+
+      <mat-grid-list cols="1" rowHeight="470px">
+        <mat-grid-tile [ngClass]="routeAnimationsElements" [colspan]="1" [rowspan]="1">
+          <mat-card class="dashboard-card">
+            <mat-card-content class="dashboard-card- content">
+              <!--              <div *ngIf="!location_loading">-->
+              <!--                <app-card-filter [start_date]="startDate" [end_date]="endDate" (reportFilter)="updateCard1($event)"></app-card-filter>-->
+              <!--              </div>-->
+              <app-placeholder *ngIf="location_loading || card1DataLoading" [numberOfLines]="16"></app-placeholder>
+              <div
+                      [ngClass]="{'hidden': location_loading || card1DataLoading}"
+                      id="card1Chart"
+                      class="chart-block"
+                      style="width: 100%; height: 400px"></div>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+<!--      <mat-grid-list cols="1" rowHeight="1000px">-->
+<!--        <mat-grid-tile [ngClass]="routeAnimationsElements" [colspan]="1" [rowspan]="1">-->
+<!--          <mat-card class="dashboard-card">-->
+<!--            <mat-card-content class="dashboard-card-content">-->
+<!--              <div class="col">-->
+<!--                <h4>Registered Users from {{start_date | date:'mediumDate' }} to {{ end_date | date:'mediumDate' }} </h4>-->
+
+<!--                <button (click)="exportexcel('summary-table', 'Registered Clients.xlsx')" mat-raised-button class="pull-right no-print">-->
+<!--                  <img src="assets/img/csv.png" style="height: 26px">-->
+<!--                </button>-->
+<!--                <button (click)="print()" mat-raised-button class="pull-right no-print" style="margin-right: 5px">-->
+<!--                  <img src="assets/img/print.png" style="height: 26px">-->
+<!--                </button>-->
+
+<!--                <table class="table table-bordered" id='summary-table'>-->
+<!--                  <tr>-->
+<!--                    <th>Full Name</th>-->
+<!--                    <th>Gender</th>-->
+<!--                    <th>Birth Date</th>-->
+<!--                    <th>Phone Number</th>-->
+<!--                  </tr>-->
+<!--                  <tr *ngFor="let data of values">-->
+<!--                    <td>{{ data.first_name }} {{ data.middle_name }} {{data.last_name }}</td>-->
+<!--                    <td>{{ data.gender }}</td>-->
+<!--                    <td>{{ data.birth_date }}</td>-->
+<!--                    <td>{{ data.phone_number }}</td>-->
+<!--                  </tr>-->
+<!--                </table>-->
+<!--              </div>-->
+<!--              <app-placeholder *ngIf="location_loading || card3DataLoading" [numberOfLines]="16"></app-placeholder>-->
+
+<!--            </mat-card-content>-->
+<!--          </mat-card>-->
+
+<!--        </mat-grid-tile>-->
+<!--      </mat-grid-list>-->
+    </div>
+  </ng-container>
+</app-table-form>
+

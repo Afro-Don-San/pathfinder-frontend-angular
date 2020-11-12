@@ -1,4 +1,26 @@
 <div class="container-fluid">
+
+  <div class="row">
+  <div class="col-sm-3 mt-1">
+    <mat-form-field>
+  <mat-select *ngIf="periods" [value]="selectedService" (selectionChange)="onChangeService($event.value)" id="ddService">
+    <mat-option [value]="0" disabled>Period Type</mat-option>
+    <mat-option *ngFor="let period of periods" [value]="period.id">{{period.name}}</mat-option>
+  </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="col-sm-3 mt-1">
+  <mat-form-field>
+<mat-select *ngIf="usg_quarters" [value]="" (selectionChange)="onChangeService($event.value)" id="ddUsgQuarters">
+  <mat-option [value]="0" disabled>USG_QUARTER</mat-option>
+  <mat-option *ngFor="let usg_quarter of usg_quarters" [value]="usg_quarter.id">{{usg_quarter.name}}</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+
+  </div>
+
   <div class="row">
     <!--      Start Date-->
     <div class="col-sm-3">

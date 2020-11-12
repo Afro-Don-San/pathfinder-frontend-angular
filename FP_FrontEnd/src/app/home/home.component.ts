@@ -31,12 +31,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   location_loading = false;
 
   total_clients = 0;
+  total_visits = 0;
   total_families = 0;
   total_initiations = 0;
   total_discontinuations = 0;
   total_services = 0;
   total_referrals = 0;
   total_citizen_reports = 0;
+  total_methods = 7000000;
 
   navigation = [];
   username = '';
@@ -74,6 +76,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       const facilities = this.orgunitService.getLevel4OrgunitsIds(locations, starting_location);
       this.orgunitName = this.orgunitService.getLevel4OrgunitsNames(locations, starting_location);
       this.getTotalClients({facilities});
+      this.getTotalVisits({facilities});
       this.getTotalClientFamilies({facilities});
       this.getTotalServices({facilities});
       this.getTotalInitiations({facilities});
@@ -99,6 +102,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.total_clients = data['total_clients'];
     }
   }
+
+  async getTotalVisits(filter: {facilities}) {
+    
+    const data = await this.http.postDJANGOURL(
+      'dashboard_summary/',filter
+    ).toPromise();
+    if (data) {
+      this.total_visits = data['total_visits'];
+    }
+  }
+
 
   async getTotalClientFamilies(filter: {facilities}) {
     

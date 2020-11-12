@@ -27,6 +27,25 @@ export class ReferralsComponent implements OnInit {
   start_date: any;
   endDate: any;
   end_date: any;
+  items: any[] = [];
+
+  tableConfigurations = {
+    tableColumns: [
+      {name: 'chw_name', label: 'CHW Name'},
+      {name: 'value', label: 'Number of Referrals Issued'},
+
+    ],
+    tableCaption: '',
+    tableNotifications: '',
+    showSearch: true,
+    showBorder: true,
+    allowPagination: true,
+    actionIcons: {edit: false, delete: false, more: false, print: false},
+    doneLoading: false,
+    deleting: {},
+    active: {},
+    empty_msg: 'No CHW Data'
+  };
 
   card1Data = null;
   card2Data = null;
@@ -78,6 +97,7 @@ export class ReferralsComponent implements OnInit {
       this.updateCard1({from_date: start_date, to_date: end_date, facilities});
       this.updateCard2({from_date: start_date, to_date: end_date, facilities});
       this.updateCard3({from_date: start_date, to_date: end_date, facilities});
+      this.loadCHW({from_date: start_date, to_date: end_date, facilities});
     });
   }
 
@@ -86,6 +106,20 @@ export class ReferralsComponent implements OnInit {
     this.updateCard1Chart(filter);
     this.updateCard2Chart(filter);
     this.updateCard3Chart(filter);
+  }
+
+  loadCHW(filter: { from_date, to_date, facilities }) {
+    const reportUrl = 'referral_summary/';
+    this.http.postDJANGOURL(reportUrl, filter)
+        .subscribe((data: any[]) => {
+          this.items = data['referral_issued_by_chw'].map((item: any) => ({
+            chw_name: item.chw_name,
+            value: item.value
+          }));
+        }, (error) => {
+          this.http.showError('Something went wrong while loading locations');
+        });
+
   }
 
   updateCard1(filter: { from_date, to_date, facilities }) {

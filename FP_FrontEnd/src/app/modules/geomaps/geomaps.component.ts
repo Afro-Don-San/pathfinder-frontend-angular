@@ -75,6 +75,12 @@ export class GeomapsComponent implements AfterViewInit {
               iconUrl: 'assets/img/blue.png',
               iconSize: [40, 40]
             })
+            
+            // var redMarker = L.AwesomeMarkers.icon({
+            //   icon: 'coffee',
+            //   markerColor: 'red',
+            //   prefix: 'fa'
+            // });
 
             let redIcon = new L.icon({
               iconUrl: 'assets/img/red.png',
@@ -126,8 +132,6 @@ export class GeomapsComponent implements AfterViewInit {
               },
             };
 
-
-
             for (let village of data)
 
             {
@@ -137,18 +141,18 @@ export class GeomapsComponent implements AfterViewInit {
 
               var villageCoordinateCheck = coordinates.Latitude[""+villageName+""];
 
-              if (villageValue < 100)
+              if (villageValue < 10)
               {
                 icon = redIcon;
               }
 
-              if (villageValue > 100 && villageValue<= 500)
+              if (villageValue > 10 && villageValue<= 50)
 
               {
                 icon = blueIcon;
               }
 
-              if (villageValue > 500)
+              if (villageValue > 50)
               {
                 icon = greenIcon;
               }
@@ -159,15 +163,13 @@ export class GeomapsComponent implements AfterViewInit {
                 this.marker = L.marker([
                   coordinates.Latitude[""+villageName+""],
                   coordinates.Longitude[""+villageName+""]
-                ],{title: ""+villageName+" : "+villageValue+" ", icon:icon, alt:"Village Value",draggable:false} );
+                ],{title: ""+villageName+" : "+villageValue+" ",icon:L.Icon.Default,  alt:"Village Value",draggable:false} );
 
                 this.markersLayer.addLayer(this.marker);
-
-                // this.marker.myData = { id: coordinates.Longitude[""+villageName+""] };
-
                 this.markersLayer.addTo(this.map);
               }
 
+           
             }
 
           }
